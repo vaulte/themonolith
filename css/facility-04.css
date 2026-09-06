@@ -1,0 +1,368 @@
+/* =========================================================
+   FACILITY 04 — CORRUPTED RECORD
+   ========================================================= */
+
+.facility-corrupt .main-content {
+    position: relative;
+}
+
+
+/* RECORD WARNING */
+
+.corrupt-warning {
+    margin-bottom: 25px;
+    padding: 14px 16px;
+    border: 1px solid #b9a9a9;
+    background: #f4eeee;
+}
+
+.corrupt-warning-title {
+    margin-bottom: 5px;
+    font-family: "Courier New", monospace;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: var(--accent);
+}
+
+.corrupt-warning-text {
+    font-size: 13px;
+    color: var(--text);
+}
+
+.corrupt-warning-code {
+    margin-top: 8px;
+    font-family: "Courier New", monospace;
+    font-size: 10px;
+    color: var(--muted);
+}
+
+
+/* FACILITY STATUS */
+
+.corrupted-overview {
+    border-color: #c6bebe;
+    background: #f7f3f3;
+}
+
+.facility-status-large.restricted {
+    color: #7a2424;
+    background: #f4e8e8;
+    border: 1px solid #d7bcbc;
+}
+
+.facility-status-large.restricted .status-dot {
+    background: #8b2929;
+}
+
+
+/* REDACTIONS */
+
+.redacted {
+    font-family: "Courier New", monospace;
+    letter-spacing: 1px;
+}
+
+.crossed-out {
+    color: #999;
+    text-decoration: line-through;
+    margin-right: 8px;
+}
+
+.replacement {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+
+/* CORRUPTED TEXT */
+
+.glitch-text {
+    color: var(--accent);
+    font-family: "Courier New", monospace;
+    font-size: 11px;
+    opacity: 0.75;
+}
+
+.missing-line {
+    padding: 9px 12px;
+    border-left: 3px solid #b4b4b4;
+    background: #eeeeee;
+    color: #777;
+    font-family: "Courier New", monospace;
+    font-size: 11px !important;
+}
+
+.strange-text {
+    position: relative;
+}
+
+.strange-text::after {
+    content: " [REVIEW REQUIRED]";
+    font-family: "Courier New", monospace;
+    font-size: 9px;
+    color: var(--accent);
+}
+
+
+/* FACILITY PLAN */
+
+.facility-plan {
+    border: 1px solid var(--border);
+    background: #eeeeed;
+    box-shadow: var(--shadow);
+}
+
+.plan-header {
+    padding: 9px 12px;
+    border-bottom: 1px solid var(--border);
+    background: #e1e2e1;
+    font-family: "Courier New", monospace;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.plan-body {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,0.035) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            rgba(0,0,0,0.035) 1px,
+            transparent 1px
+        );
+    background-size: 20px 20px;
+}
+
+.plan-room {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #707475;
+    background: rgba(255,255,255,0.65);
+    font-family: "Courier New", monospace;
+    font-size: 12px;
+    color: #666;
+}
+
+.room-a {
+    left: 7%;
+    top: 10%;
+    width: 25%;
+    height: 28%;
+}
+
+.room-b {
+    left: 32%;
+    top: 10%;
+    width: 27%;
+    height: 28%;
+}
+
+.room-c {
+    left: 59%;
+    top: 10%;
+    width: 25%;
+    height: 28%;
+}
+
+.room-d {
+    left: 7%;
+    top: 38%;
+    width: 30%;
+    height: 40%;
+}
+
+.room-e {
+    left: 37%;
+    top: 38%;
+    width: 22%;
+    height: 40%;
+}
+
+.room-f {
+    left: 59%;
+    top: 38%;
+    width: 25%;
+    height: 40%;
+    border-color: #8b2929;
+    background: rgba(139,41,41,0.035);
+}
+
+.plan-label {
+    position: absolute;
+    font-family: "Courier New", monospace;
+    font-size: 8px;
+    color: #777;
+    pointer-events: none;
+}
+
+.label-a {
+    left: 9%;
+    top: 14%;
+}
+
+.label-b {
+    left: 35%;
+    top: 14%;
+}
+
+.label-c {
+    left: 62%;
+    top: 14%;
+}
+
+.label-d {
+    left: 10%;
+    top: 43%;
+}
+
+.label-e {
+    left: 40%;
+    top: 43%;
+}
+
+.label-f {
+    left: 62%;
+    top: 43%;
+    color: var(--accent);
+}
+
+.plan-footer {
+    padding: 8px 12px;
+    border-top: 1px solid var(--border);
+    font-family: "Courier New", monospace;
+    font-size: 9px;
+    color: var(--muted);
+}
+
+
+/* CORRUPTED DEPARTMENT */
+
+.department-corrupt {
+    border-color: #bfa8a8;
+    background: #faf6f6;
+}
+
+.department-corrupt strong {
+    color: #6f2929;
+}
+
+
+/* PERSONNEL NOTICE */
+
+.personnel-notice {
+    display: flex;
+    gap: 15px;
+    padding: 16px;
+    border: 1px solid #cdbebe;
+    background: #f7f1f1;
+}
+
+.notice-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 25px;
+    height: 25px;
+    background: var(--accent);
+    color: white;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.personnel-notice strong {
+    font-size: 13px;
+}
+
+.personnel-notice p {
+    margin: 6px 0 0;
+    font-size: 12px;
+    line-height: 1.6;
+    color: var(--muted);
+}
+
+
+/* HISTORY CORRUPTION */
+
+.corrupted-history {
+    background: #faf5f5;
+}
+
+.corrupted-history strong {
+    color: var(--accent);
+}
+
+
+/* ARCHIVE */
+
+.archival-note {
+    padding: 18px;
+    border: 1px solid var(--border);
+    background: var(--paper);
+    box-shadow: var(--shadow);
+}
+
+.archival-heading {
+    margin-bottom: 8px;
+    font-family: "Courier New", monospace;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.archival-note p {
+    margin: 0 0 12px;
+    font-size: 13px;
+    color: var(--muted);
+}
+
+.archival-note a {
+    color: var(--accent);
+    font-family: "Courier New", monospace;
+    font-size: 11px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.archival-note a:hover {
+    text-decoration: underline;
+}
+
+.archive-message {
+    display: none;
+    margin-top: 15px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+    font-family: "Courier New", monospace;
+    font-size: 10px;
+    line-height: 1.7;
+    color: var(--accent);
+}
+
+.archive-message.visible {
+    display: block;
+}
+
+.archive-message span {
+    color: var(--muted);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .plan-body {
+        height: 220px;
+    }
+
+}
