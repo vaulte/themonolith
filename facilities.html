@@ -1,0 +1,826 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Facilities — THE DIRECTORATE</title>
+
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+
+<header class="site-header">
+
+    <div class="header-inner">
+
+        <a href="index.html" class="organisation">
+
+            <div class="organisation-mark">D</div>
+
+            <div>
+                <div class="organisation-name">
+                    THE DIRECTORATE
+                </div>
+
+                <div class="organisation-subtitle">
+                    NATIONAL RESEARCH &amp; SECURITY ADMINISTRATION
+                </div>
+            </div>
+
+        </a>
+
+        <div class="header-tools">
+
+            <div class="system-status">
+                SYSTEM STATUS:
+                <span class="status-online">OPERATIONAL</span>
+            </div>
+
+            <form class="search-box">
+
+                <input
+                    type="text"
+                    placeholder="Search this site..."
+                    aria-label="Search"
+                >
+
+                <button type="submit">
+                    SEARCH
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<nav class="top-navigation">
+
+    <div class="nav-inner">
+
+        <a href="index.html">
+            HOME
+        </a>
+
+        <a href="facilities.html" class="active">
+            FACILITIES
+        </a>
+
+        <a href="research.html">
+            RESEARCH
+        </a>
+
+        <a href="personnel.html">
+            PERSONNEL
+        </a>
+
+        <a href="archives.html">
+            ARCHIVES
+        </a>
+
+        <a href="contact.html">
+            CONTACT
+        </a>
+
+    </div>
+
+</nav>
+
+
+<div class="page-layout">
+
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-section">
+
+            <div class="sidebar-heading">
+                FACILITIES
+            </div>
+
+            <a href="facilities.html">
+                Facility Directory
+            </a>
+
+            <a href="#research">
+                Research Facilities
+            </a>
+
+            <a href="#administrative">
+                Administrative Facilities
+            </a>
+
+            <a href="#restricted">
+                Restricted Facilities
+            </a>
+
+        </div>
+
+
+        <div class="sidebar-section">
+
+            <div class="sidebar-heading">
+                INFORMATION
+            </div>
+
+            <a href="reports.html">
+                Facility Reports
+            </a>
+
+            <a href="maintenance.html">
+                Maintenance Notices
+            </a>
+
+            <a href="archives.html">
+                Historical Records
+            </a>
+
+        </div>
+
+
+        <div class="sidebar-classification">
+
+            <div class="classification-label">
+                DIRECTORY STATUS
+            </div>
+
+            <div class="classification-value">
+                PUBLIC ACCESS
+            </div>
+
+            <div class="classification-note">
+                Facility information may be
+                incomplete where security
+                restrictions apply.
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main-content">
+
+        <div class="breadcrumb">
+            DIRECTORATE
+            <span>/</span>
+            FACILITIES
+            <span>/</span>
+            DIRECTORY
+        </div>
+
+
+        <section class="page-heading">
+
+            <h1>
+                Facility Directory
+            </h1>
+
+            <p>
+                Directorate-operated facilities and research sites
+            </p>
+
+        </section>
+
+
+        <!-- INTRO -->
+
+        <section class="content-panel">
+
+            <h2>
+                Directorate Facilities
+            </h2>
+
+            <p>
+                The Directorate maintains a network of administrative,
+                scientific and operational facilities throughout the
+                country.
+            </p>
+
+            <p>
+                Facility records are maintained by the Office of
+                Infrastructure &amp; Operations and reviewed annually.
+            </p>
+
+        </section>
+
+
+        <!-- FILTER -->
+
+        <div class="directory-controls">
+
+            <div>
+
+                <label for="facility-search">
+                    FILTER FACILITIES
+                </label>
+
+                <input
+                    type="text"
+                    id="facility-search"
+                    placeholder="Facility name, number or department..."
+                >
+
+            </div>
+
+
+            <div>
+
+                <label for="facility-status">
+                    STATUS
+                </label>
+
+                <select id="facility-status">
+
+                    <option value="all">
+                        All facilities
+                    </option>
+
+                    <option value="operational">
+                        Operational
+                    </option>
+
+                    <option value="restricted">
+                        Restricted
+                    </option>
+
+                    <option value="inactive">
+                        Inactive
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             FACILITY CARDS
+        ================================================== -->
+
+        <section id="research">
+
+            <div class="section-label">
+                RESEARCH &amp; OPERATIONAL FACILITIES
+            </div>
+
+
+            <div class="facility-grid">
+
+
+                <!-- FACILITY 01 -->
+
+                <article
+                    class="facility-card"
+                    data-status="operational"
+                    data-search="facility 01 central administration administration"
+                >
+
+                    <div class="facility-number">
+                        FACILITY 01
+                    </div>
+
+                    <div class="facility-status operational">
+                        ● OPERATIONAL
+                    </div>
+
+                    <h2>
+                        Central Administration
+                    </h2>
+
+                    <p class="facility-location">
+                        CENTRAL DISTRICT
+                    </p>
+
+                    <p>
+                        Primary administrative headquarters of
+                        the Directorate.
+                    </p>
+
+                    <dl>
+
+                        <div>
+                            <dt>Established</dt>
+                            <dd>1964</dd>
+                        </div>
+
+                        <div>
+                            <dt>Directorate</dt>
+                            <dd>Administration</dd>
+                        </div>
+
+                        <div>
+                            <dt>Access</dt>
+                            <dd>Staff / Public</dd>
+                        </div>
+
+                    </dl>
+
+                    <a
+                        href="facility-01.html"
+                        class="facility-link"
+                    >
+                        VIEW FACILITY RECORD →
+                    </a>
+
+                </article>
+
+
+                <!-- FACILITY 02 -->
+
+                <article
+                    class="facility-card"
+                    data-status="operational"
+                    data-search="facility 02 environmental research environmental science"
+                >
+
+                    <div class="facility-number">
+                        FACILITY 02
+                    </div>
+
+                    <div class="facility-status operational">
+                        ● OPERATIONAL
+                    </div>
+
+                    <h2>
+                        Environmental Research Centre
+                    </h2>
+
+                    <p class="facility-location">
+                        NORTHERN REGION
+                    </p>
+
+                    <p>
+                        Research facility specialising in
+                        environmental monitoring and field studies.
+                    </p>
+
+                    <dl>
+
+                        <div>
+                            <dt>Established</dt>
+                            <dd>1972</dd>
+                        </div>
+
+                        <div>
+                            <dt>Directorate</dt>
+                            <dd>Environmental Sciences</dd>
+                        </div>
+
+                        <div>
+                            <dt>Access</dt>
+                            <dd>Authorised</dd>
+                        </div>
+
+                    </dl>
+
+                    <a
+                        href="facility-02.html"
+                        class="facility-link"
+                    >
+                        VIEW FACILITY RECORD →
+                    </a>
+
+                </article>
+
+
+                <!-- FACILITY 03 -->
+
+                <article
+                    class="facility-card"
+                    data-status="operational"
+                    data-search="facility 03 biological sciences biological research laboratory"
+                >
+
+                    <div class="facility-number">
+                        FACILITY 03
+                    </div>
+
+                    <div class="facility-status operational">
+                        ● OPERATIONAL
+                    </div>
+
+                    <h2>
+                        Biological Sciences Laboratory
+                    </h2>
+
+                    <p class="facility-location">
+                        WESTERN REGION
+                    </p>
+
+                    <p>
+                        Laboratory complex supporting biological
+                        research and controlled environmental studies.
+                    </p>
+
+                    <dl>
+
+                        <div>
+                            <dt>Established</dt>
+                            <dd>1981</dd>
+                        </div>
+
+                        <div>
+                            <dt>Directorate</dt>
+                            <dd>Biological Sciences</dd>
+                        </div>
+
+                        <div>
+                            <dt>Access</dt>
+                            <dd>Restricted</dd>
+                        </div>
+
+                    </dl>
+
+                    <a
+                        href="facility-03.html"
+                        class="facility-link"
+                    >
+                        VIEW FACILITY RECORD →
+                    </a>
+
+                </article>
+
+
+                <!-- FACILITY 04 -->
+
+                <article
+                    class="facility-card facility-restricted"
+                    data-status="restricted"
+                    data-search="facility 04"
+                >
+
+                    <div class="facility-number">
+                        FACILITY 04
+                    </div>
+
+                    <div class="facility-status restricted">
+                        ● RESTRICTED
+                    </div>
+
+                    <h2>
+                        Facility 04
+                    </h2>
+
+                    <p class="facility-location">
+                        LOCATION WITHHELD
+                    </p>
+
+                    <p>
+                        Information concerning the purpose and
+                        operation of this facility is restricted.
+                    </p>
+
+                    <dl>
+
+                        <div>
+                            <dt>Established</dt>
+                            <dd>—</dd>
+                        </div>
+
+                        <div>
+                            <dt>Directorate</dt>
+                            <dd>████████</dd>
+                        </div>
+
+                        <div>
+                            <dt>Access</dt>
+                            <dd>Level 4+</dd>
+                        </div>
+
+                    </dl>
+
+                    <a
+                        href="facility-04.html"
+                        class="facility-link restricted-link"
+                    >
+                        VIEW RESTRICTED RECORD →
+                    </a>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ADMINISTRATIVE -->
+
+        <section id="administrative" class="facility-section">
+
+            <div class="section-label">
+                ADMINISTRATIVE FACILITIES
+            </div>
+
+            <div class="facility-grid">
+
+
+                <article
+                    class="facility-card"
+                    data-status="operational"
+                    data-search="facility 05 records archives records office"
+                >
+
+                    <div class="facility-number">
+                        FACILITY 05
+                    </div>
+
+                    <div class="facility-status operational">
+                        ● OPERATIONAL
+                    </div>
+
+                    <h2>
+                        Records &amp; Information Office
+                    </h2>
+
+                    <p class="facility-location">
+                        CENTRAL DISTRICT
+                    </p>
+
+                    <p>
+                        Management and preservation of Directorate
+                        records and historical documentation.
+                    </p>
+
+                    <dl>
+
+                        <div>
+                            <dt>Established</dt>
+                            <dd>1978</dd>
+                        </div>
+
+                        <div>
+                            <dt>Directorate</dt>
+                            <dd>Records Management</dd>
+                        </div>
+
+                        <div>
+                            <dt>Access</dt>
+                            <dd>Staff</dd>
+                        </div>
+
+                    </dl>
+
+                    <a
+                        href="facility-05.html"
+                        class="facility-link"
+                    >
+                        VIEW FACILITY RECORD →
+                    </a>
+
+                </article>
+
+
+                <article
+                    class="facility-card"
+                    data-status="inactive"
+                    data-search="facility 06 former storage depot inactive"
+                >
+
+                    <div class="facility-number">
+                        FACILITY 06
+                    </div>
+
+                    <div class="facility-status inactive">
+                        ● INACTIVE
+                    </div>
+
+                    <h2>
+                        Former Storage Depot
+                    </h2>
+
+                    <p class="facility-location">
+                        SOUTHERN REGION
+                    </p>
+
+                    <p>
+                        Former Directorate storage and logistics
+                        facility. No longer in active use.
+                    </p>
+
+                    <dl>
+
+                        <div>
+                            <dt>Established</dt>
+                            <dd>1959</dd>
+                        </div>
+
+                        <div>
+                            <dt>Decommissioned</dt>
+                            <dd>2004</dd>
+                        </div>
+
+                        <div>
+                            <dt>Access</dt>
+                            <dd>None</dd>
+                        </div>
+
+                    </dl>
+
+                    <a
+                        href="facility-06.html"
+                        class="facility-link"
+                    >
+                        VIEW HISTORICAL RECORD →
+                    </a>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- RESTRICTED -->
+
+        <section id="restricted" class="facility-section">
+
+            <div class="section-label restricted-section-label">
+                RESTRICTED RECORDS
+            </div>
+
+            <div class="restricted-notice">
+
+                <div class="restricted-icon">
+                    !
+                </div>
+
+                <div>
+
+                    <strong>
+                        ADDITIONAL AUTHORISATION REQUIRED
+                    </strong>
+
+                    <p>
+                        The following facility records have been
+                        withheld from the public directory under
+                        Section 14 of the National Security
+                        Information Act.
+                    </p>
+
+                    <p>
+                        Requests for access must be submitted through
+                        the Records &amp; Information Office.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FOOTNOTE -->
+
+        <div class="page-note">
+
+            <strong>Directory last updated:</strong>
+            07 September 2026
+
+            &nbsp; | &nbsp;
+
+            <strong>Facilities listed:</strong>
+            6
+
+            &nbsp; | &nbsp;
+
+            <strong>Publicly accessible records:</strong>
+            5
+
+        </div>
+
+
+    </main>
+
+</div>
+
+
+<footer class="site-footer">
+
+    <div class="footer-inner">
+
+        <div>
+
+            <strong>THE DIRECTORATE</strong>
+
+            <br>
+
+            National Research &amp; Security Administration
+
+        </div>
+
+        <div class="footer-links">
+
+            <a href="accessibility.html">
+                Accessibility
+            </a>
+
+            <a href="privacy.html">
+                Privacy
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="footer-warning">
+
+        This website is an archival representation for
+        informational purposes.
+
+    </div>
+
+</footer>
+
+
+<script src="./js/main.js"></script>
+
+<script>
+
+/* =========================================================
+   FACILITY DIRECTORY FILTER
+   ========================================================= */
+
+const facilitySearch =
+    document.getElementById("facility-search");
+
+const facilityStatus =
+    document.getElementById("facility-status");
+
+const facilityCards =
+    document.querySelectorAll(".facility-card");
+
+
+function filterFacilities() {
+
+    const searchTerm =
+        facilitySearch.value.toLowerCase().trim();
+
+    const status =
+        facilityStatus.value;
+
+
+    facilityCards.forEach(card => {
+
+        const cardSearch =
+            card.dataset.search.toLowerCase();
+
+        const cardStatus =
+            card.dataset.status;
+
+
+        const matchesSearch =
+            cardSearch.includes(searchTerm);
+
+        const matchesStatus =
+            status === "all" ||
+            cardStatus === status;
+
+
+        if (matchesSearch && matchesStatus) {
+
+            card.style.display = "";
+
+        } else {
+
+            card.style.display = "none";
+
+        }
+
+    });
+
+}
+
+
+facilitySearch.addEventListener(
+    "input",
+    filterFacilities
+);
+
+facilityStatus.addEventListener(
+    "change",
+    filterFacilities
+);
+
+</script>
+
+</body>
+</html>
+```
