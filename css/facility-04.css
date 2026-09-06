@@ -2,367 +2,636 @@
    FACILITY 04 — CORRUPTED RECORD
    ========================================================= */
 
-.facility-corrupt .main-content {
+
+/* ---------------------------------------------------------
+   PAGE
+   --------------------------------------------------------- */
+
+.facility04-content {
     position: relative;
 }
 
 
-/* RECORD WARNING */
+/* ---------------------------------------------------------
+   RECORD INTEGRITY WARNING
+   --------------------------------------------------------- */
 
-.corrupt-warning {
-    margin-bottom: 25px;
-    padding: 14px 16px;
-    border: 1px solid #b9a9a9;
-    background: #f4eeee;
+.facility04-integrity-warning {
+    margin-bottom: 24px;
+    border: 1px solid #d2bcbc;
+    background: #f8f3f3;
 }
 
-.corrupt-warning-title {
-    margin-bottom: 5px;
-    font-family: "Courier New", monospace;
-    font-size: 10px;
-    font-weight: bold;
+.facility04-warning-heading {
+    padding: 9px 14px;
+    background: #ece0e0;
+    border-bottom: 1px solid #d2bcbc;
+
+    color: #6e2929;
+    font-size: 11px;
+    font-weight: 700;
     letter-spacing: 1px;
-    color: var(--accent);
 }
 
-.corrupt-warning-text {
+.facility04-warning-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    padding: 14px;
+}
+
+.facility04-warning-message {
+    color: #555;
     font-size: 13px;
-    color: var(--text);
+    line-height: 1.6;
 }
 
-.corrupt-warning-code {
-    margin-top: 8px;
-    font-family: "Courier New", monospace;
-    font-size: 10px;
-    color: var(--muted);
-}
+.facility04-integrity {
+    flex-shrink: 0;
 
-
-/* FACILITY STATUS */
-
-.corrupted-overview {
-    border-color: #c6bebe;
-    background: #f7f3f3;
-}
-
-.facility-status-large.restricted {
-    color: #7a2424;
-    background: #f4e8e8;
-    border: 1px solid #d7bcbc;
-}
-
-.facility-status-large.restricted .status-dot {
-    background: #8b2929;
-}
-
-
-/* REDACTIONS */
-
-.redacted {
-    font-family: "Courier New", monospace;
-    letter-spacing: 1px;
-}
-
-.crossed-out {
-    color: #999;
-    text-decoration: line-through;
-    margin-right: 8px;
-}
-
-.replacement {
-    color: var(--accent);
-    font-weight: 600;
-}
-
-
-/* CORRUPTED TEXT */
-
-.glitch-text {
-    color: var(--accent);
     font-family: "Courier New", monospace;
     font-size: 11px;
-    opacity: 0.75;
-}
-
-.missing-line {
-    padding: 9px 12px;
-    border-left: 3px solid #b4b4b4;
-    background: #eeeeee;
     color: #777;
-    font-family: "Courier New", monospace;
-    font-size: 11px !important;
+    white-space: nowrap;
 }
 
-.strange-text {
-    position: relative;
-}
-
-.strange-text::after {
-    content: " [REVIEW REQUIRED]";
-    font-family: "Courier New", monospace;
-    font-size: 9px;
-    color: var(--accent);
+.facility04-integrity strong {
+    color: #8b2929;
 }
 
 
-/* FACILITY PLAN */
+/* ---------------------------------------------------------
+   STATUS
+   --------------------------------------------------------- */
 
-.facility-plan {
-    border: 1px solid var(--border);
-    background: #eeeeed;
-    box-shadow: var(--shadow);
+.facility04-status {
+    margin-bottom: 28px;
+    padding: 16px 18px;
+
+    background: #f5f5f4;
+    border: 1px solid #c9cbcb;
 }
 
-.plan-header {
-    padding: 9px 12px;
-    border-bottom: 1px solid var(--border);
-    background: #e1e2e1;
-    font-family: "Courier New", monospace;
+.facility04-status-label {
+    margin-bottom: 8px;
+
+    color: #686c6e;
     font-size: 10px;
-    font-weight: bold;
-    letter-spacing: 0.5px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
 }
 
-.plan-body {
-    position: relative;
-    width: 100%;
-    height: 300px;
-    background:
-        linear-gradient(
-            90deg,
-            rgba(0,0,0,0.035) 1px,
-            transparent 1px
-        ),
-        linear-gradient(
-            rgba(0,0,0,0.035) 1px,
-            transparent 1px
-        );
-    background-size: 20px 20px;
-}
-
-.plan-room {
-    position: absolute;
+.facility04-status-value {
     display: flex;
     align-items: center;
-    justify-content: center;
-    border: 1px solid #707475;
-    background: rgba(255,255,255,0.65);
-    font-family: "Courier New", monospace;
-    font-size: 12px;
-    color: #666;
-}
+    gap: 9px;
 
-.room-a {
-    left: 7%;
-    top: 10%;
-    width: 25%;
-    height: 28%;
-}
-
-.room-b {
-    left: 32%;
-    top: 10%;
-    width: 27%;
-    height: 28%;
-}
-
-.room-c {
-    left: 59%;
-    top: 10%;
-    width: 25%;
-    height: 28%;
-}
-
-.room-d {
-    left: 7%;
-    top: 38%;
-    width: 30%;
-    height: 40%;
-}
-
-.room-e {
-    left: 37%;
-    top: 38%;
-    width: 22%;
-    height: 40%;
-}
-
-.room-f {
-    left: 59%;
-    top: 38%;
-    width: 25%;
-    height: 40%;
-    border-color: #8b2929;
-    background: rgba(139,41,41,0.035);
-}
-
-.plan-label {
-    position: absolute;
-    font-family: "Courier New", monospace;
-    font-size: 8px;
-    color: #777;
-    pointer-events: none;
-}
-
-.label-a {
-    left: 9%;
-    top: 14%;
-}
-
-.label-b {
-    left: 35%;
-    top: 14%;
-}
-
-.label-c {
-    left: 62%;
-    top: 14%;
-}
-
-.label-d {
-    left: 10%;
-    top: 43%;
-}
-
-.label-e {
-    left: 40%;
-    top: 43%;
-}
-
-.label-f {
-    left: 62%;
-    top: 43%;
-    color: var(--accent);
-}
-
-.plan-footer {
-    padding: 8px 12px;
-    border-top: 1px solid var(--border);
-    font-family: "Courier New", monospace;
-    font-size: 9px;
-    color: var(--muted);
-}
-
-
-/* CORRUPTED DEPARTMENT */
-
-.department-corrupt {
-    border-color: #bfa8a8;
-    background: #faf6f6;
-}
-
-.department-corrupt strong {
-    color: #6f2929;
-}
-
-
-/* PERSONNEL NOTICE */
-
-.personnel-notice {
-    display: flex;
-    gap: 15px;
-    padding: 16px;
-    border: 1px solid #cdbebe;
-    background: #f7f1f1;
-}
-
-.notice-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex: 0 0 25px;
-    height: 25px;
-    background: var(--accent);
-    color: white;
-    font-family: Arial, sans-serif;
-    font-weight: bold;
+    color: #6e2929;
     font-size: 14px;
 }
 
-.personnel-notice strong {
+.facility04-status-dot {
+    width: 9px;
+    height: 9px;
+
+    display: inline-block;
+
+    background: #8b2929;
+    border-radius: 50%;
+}
+
+.facility04-status-note {
+    margin-top: 8px;
+
+    color: #777;
+    font-size: 12px;
+}
+
+.facility04-faded-word {
+    margin-left: 5px;
+
+    color: #b3b3b3;
+    text-decoration: line-through;
+}
+
+
+/* ---------------------------------------------------------
+   INFORMATION TABLE
+   --------------------------------------------------------- */
+
+.facility04-information-table {
+    border: 1px solid #d0d2d2;
+    background: #fff;
+}
+
+.facility04-info-row {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+
+    min-height: 44px;
+
+    border-bottom: 1px solid #e0e1e1;
+}
+
+.facility04-info-row:last-child {
+    border-bottom: none;
+}
+
+.facility04-info-label {
+    display: flex;
+    align-items: center;
+
+    padding: 10px 14px;
+
+    background: #f2f3f3;
+    border-right: 1px solid #d9dada;
+
+    color: #666;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+}
+
+.facility04-info-value {
+    display: flex;
+    align-items: center;
+
+    padding: 10px 14px;
+
+    color: #292b2c;
     font-size: 13px;
 }
 
-.personnel-notice p {
-    margin: 6px 0 0;
+
+/* ---------------------------------------------------------
+   REDACTIONS
+   --------------------------------------------------------- */
+
+.facility04-redacted {
+    color: #202122;
+    font-family: "Courier New", monospace;
+    letter-spacing: 1px;
+}
+
+
+/* ---------------------------------------------------------
+   DATE CORRECTION
+   --------------------------------------------------------- */
+
+.facility04-date-value {
+    gap: 10px;
+}
+
+.facility04-old-date {
+    color: #999;
+    text-decoration: line-through;
+}
+
+.facility04-date-arrow {
+    color: #aaa;
     font-size: 12px;
-    line-height: 1.6;
-    color: var(--muted);
+}
+
+.facility04-new-date {
+    color: #8b2929;
+    font-weight: 700;
 }
 
 
-/* HISTORY CORRUPTION */
+/* ---------------------------------------------------------
+   DESCRIPTION
+   --------------------------------------------------------- */
 
-.corrupted-history {
-    background: #faf5f5;
-}
+.facility04-removed {
+    margin: 20px 0;
+    padding: 10px 12px;
 
-.corrupted-history strong {
-    color: var(--accent);
-}
+    background: #eeeeee;
+    border-left: 3px solid #777;
 
-
-/* ARCHIVE */
-
-.archival-note {
-    padding: 18px;
-    border: 1px solid var(--border);
-    background: var(--paper);
-    box-shadow: var(--shadow);
-}
-
-.archival-heading {
-    margin-bottom: 8px;
+    color: #555;
     font-family: "Courier New", monospace;
     font-size: 11px;
-    font-weight: bold;
+    letter-spacing: 0.4px;
+}
+
+.facility04-observation-note {
+    position: relative;
+
+    padding-left: 14px;
+}
+
+.facility04-observation-note::before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    top: 5px;
+    bottom: 5px;
+
+    width: 2px;
+
+    background: #b7b8b8;
+}
+
+
+/* ---------------------------------------------------------
+   FLOOR PLAN
+   --------------------------------------------------------- */
+
+.facility04-plan {
+    border: 1px solid #bfc1c1;
+    background: #f8f8f7;
+
+    font-family: "Courier New", monospace;
+}
+
+.facility04-plan-header {
+    padding: 9px 12px;
+
+    background: #e9eaea;
+    border-bottom: 1px solid #bfc1c1;
+
+    color: #555;
+    font-size: 11px;
+    font-weight: 700;
     letter-spacing: 0.5px;
 }
 
-.archival-note p {
-    margin: 0 0 12px;
-    font-size: 13px;
-    color: var(--muted);
+.facility04-plan-body {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 115px 115px;
+
+    padding: 14px;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.025) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.025) 1px,
+            transparent 1px
+        );
+
+    background-size: 12px 12px;
 }
 
-.archival-note a {
-    color: var(--accent);
+.facility04-room {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 8px;
+
+    background: rgba(255, 255, 255, 0.65);
+    border: 1px solid #999;
+
+    text-align: center;
+}
+
+.facility04-room span {
+    position: absolute;
+    top: 5px;
+    left: 7px;
+
+    color: #777;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.facility04-room small {
+    max-width: 90%;
+
+    color: #555;
+    font-size: 9px;
+    line-height: 1.4;
+    letter-spacing: 0.4px;
+}
+
+.facility04-room-a {
+    border-right: none;
+    border-bottom: none;
+}
+
+.facility04-room-b {
+    border-bottom: none;
+}
+
+.facility04-room-c {
+    border-bottom: none;
+    border-left: none;
+}
+
+.facility04-room-d {
+    border-right: none;
+}
+
+.facility04-room-e {
+    background: #f0f0ef;
+}
+
+.facility04-room-f {
+    background: #ececeb;
+}
+
+.facility04-plan-footer {
+    padding: 8px 12px;
+
+    border-top: 1px solid #bfc1c1;
+
+    color: #777;
+    font-size: 10px;
+}
+
+
+/* ---------------------------------------------------------
+   DEPARTMENTS
+   --------------------------------------------------------- */
+
+.facility04-departments {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    border-top: 1px solid #d0d2d2;
+    border-left: 1px solid #d0d2d2;
+}
+
+.facility04-department {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    min-height: 80px;
+    padding: 13px 15px;
+
+    background: #fff;
+    border-right: 1px solid #d0d2d2;
+    border-bottom: 1px solid #d0d2d2;
+}
+
+.facility04-department strong {
+    color: #353738;
+    font-size: 12px;
+}
+
+.facility04-department span {
+    color: #777;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.facility04-department-strange {
+    position: relative;
+}
+
+.facility04-department-strange::after {
+    content: "";
+
+    position: absolute;
+    right: 12px;
+    top: 12px;
+
+    width: 5px;
+    height: 5px;
+
+    background: #999;
+}
+
+
+/* ---------------------------------------------------------
+   PERSONNEL NOTICE
+   --------------------------------------------------------- */
+
+.facility04-personnel-notice {
+    display: grid;
+    grid-template-columns: 38px 1fr;
+    gap: 14px;
+
+    margin: 28px 0;
+    padding: 15px;
+
+    background: #f4f4f3;
+    border: 1px solid #c9cbcb;
+    border-left: 3px solid #777;
+}
+
+.facility04-notice-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 30px;
+    height: 30px;
+
+    background: #e3e4e4;
+    border: 1px solid #aeb0b0;
+
+    color: #555;
+    font-family: "Courier New", monospace;
+    font-weight: 700;
+}
+
+.facility04-notice-heading {
+    margin-bottom: 8px;
+
+    color: #444;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.facility04-personnel-notice p {
+    margin: 5px 0;
+
+    color: #666;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+
+/* ---------------------------------------------------------
+   RECORD HISTORY
+   --------------------------------------------------------- */
+
+.facility04-history {
+    border: 1px solid #d0d2d2;
+    background: #fff;
+}
+
+.facility04-history > div {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    padding: 11px 14px;
+
+    border-bottom: 1px solid #e0e1e1;
+}
+
+.facility04-history > div:last-child {
+    border-bottom: none;
+}
+
+.facility04-history span {
+    color: #777;
+    font-size: 11px;
+}
+
+.facility04-history strong {
+    color: #444;
     font-family: "Courier New", monospace;
     font-size: 11px;
-    font-weight: bold;
+    font-weight: 400;
+}
+
+.facility04-history-error strong {
+    color: #8b2929;
+}
+
+
+/* ---------------------------------------------------------
+   ARCHIVE
+   --------------------------------------------------------- */
+
+.facility04-archive {
+    margin-top: 30px;
+    padding: 17px;
+
+    background: #f5f5f4;
+    border: 1px solid #c8caca;
+}
+
+.facility04-archive-heading {
+    margin-bottom: 8px;
+
+    color: #555;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.facility04-archive-status {
+    margin-bottom: 9px;
+
+    color: #6d2929;
+    font-family: "Courier New", monospace;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.facility04-archive p {
+    margin: 0 0 12px;
+
+    color: #666;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.facility04-archive a {
+    color: var(--accent);
+    font-size: 11px;
+    font-weight: 700;
     text-decoration: none;
 }
 
-.archival-note a:hover {
+.facility04-archive a:hover {
     text-decoration: underline;
 }
 
-.archive-message {
+.facility04-archive-error {
     display: none;
-    margin-top: 15px;
+
+    margin-top: 14px;
     padding-top: 12px;
-    border-top: 1px solid var(--border);
+
+    border-top: 1px dashed #c3c4c4;
+
+    color: #777;
     font-family: "Courier New", monospace;
     font-size: 10px;
     line-height: 1.7;
-    color: var(--accent);
 }
 
-.archive-message.visible {
+.facility04-archive-error.visible {
     display: block;
 }
 
-.archive-message span {
-    color: var(--muted);
+.facility04-archive-error span {
+    display: block;
+
+    color: #999;
 }
 
 
-/* MOBILE */
+/* ---------------------------------------------------------
+   FOOTNOTE
+   --------------------------------------------------------- */
+
+.facility04-footnote {
+    margin-top: 25px;
+
+    color: #999;
+    font-family: "Courier New", monospace;
+    font-size: 9px;
+    letter-spacing: 0.5px;
+    text-align: right;
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE
+   --------------------------------------------------------- */
 
 @media (max-width: 700px) {
 
-    .plan-body {
-        height: 220px;
+    .facility04-warning-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .facility04-info-row {
+        grid-template-columns: 1fr;
+    }
+
+    .facility04-info-label {
+        border-right: none;
+        border-bottom: 1px solid #d9dada;
+    }
+
+    .facility04-date-value {
+        min-height: 42px;
+    }
+
+    .facility04-plan-body {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 100px);
+    }
+
+    .facility04-room-a,
+    .facility04-room-b,
+    .facility04-room-c,
+    .facility04-room-d,
+    .facility04-room-e,
+    .facility04-room-f {
+        border: 1px solid #999;
+    }
+
+    .facility04-departments {
+        grid-template-columns: 1fr;
+    }
+
+    .facility04-history > div {
+        flex-direction: column;
+        gap: 5px;
     }
 
 }
