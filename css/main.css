@@ -1002,14 +1002,12 @@ a:hover {
 
 }
 
-
 /* =========================================================
    NEW SLOP
    ========================================================= */
 
 
 
-```css
 /* =========================================================
    FACILITY DIRECTORY
    ========================================================= */
@@ -1467,4 +1465,319 @@ a:hover {
     }
 
 }
-```
+
+
+
+/* =========================================================
+   NEW SLOP
+   ========================================================= */
+
+
+
+/* =========================================================
+   FACILITY RECORD PAGES
+   ========================================================= */
+
+.page-kicker {
+    font-family: "Courier New", monospace;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: var(--muted);
+    margin-bottom: 7px;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    margin-bottom: 25px;
+}
+
+.page-header h1 {
+    margin: 0 0 7px;
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.page-description {
+    margin: 0;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.record-id {
+    padding: 9px 12px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    font-family: "Courier New", monospace;
+    font-size: 12px;
+    color: var(--muted);
+    white-space: nowrap;
+}
+
+
+/* FACILITY STATUS */
+
+.facility-overview {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 18px;
+    margin-bottom: 28px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+}
+
+.facility-status-large {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 10px;
+    font-family: "Courier New", monospace;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+.facility-status-large.operational {
+    color: #315b38;
+    background: #edf4ee;
+    border: 1px solid #cbdccc;
+}
+
+.facility-status-large .status-dot {
+    width: 7px;
+    height: 7px;
+    background: #4d7955;
+    border-radius: 50%;
+}
+
+.facility-overview-text {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+
+/* INFORMATION TABLE */
+
+.information-table {
+    border: 1px solid var(--border);
+    background: var(--paper);
+}
+
+.info-row {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    border-bottom: 1px solid var(--border);
+}
+
+.info-row:last-child {
+    border-bottom: none;
+}
+
+.info-label {
+    padding: 11px 13px;
+    background: var(--surface);
+    border-right: 1px solid var(--border);
+    font-family: "Courier New", monospace;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    color: var(--muted);
+}
+
+.info-value {
+    padding: 11px 13px;
+    font-size: 13px;
+    color: var(--text);
+}
+
+
+/* DOCUMENT SECTIONS */
+
+.document-section {
+    margin-bottom: 30px;
+}
+
+.document-panel {
+    padding: 18px 20px;
+    border: 1px solid var(--border);
+    background: var(--paper);
+    box-shadow: var(--shadow);
+}
+
+.document-panel p {
+    margin: 0 0 14px;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.document-panel p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* DEPARTMENTS */
+
+.facility-departments {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.department-card {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 14px;
+    border: 1px solid var(--border);
+    background: var(--paper);
+}
+
+.department-card strong {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.department-card span {
+    font-size: 12px;
+    line-height: 1.5;
+    color: var(--muted);
+}
+
+
+/* CONTACT */
+
+.contact-row {
+    display: grid;
+    grid-template-columns: 190px 1fr;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 13px;
+}
+
+.contact-row:last-child {
+    border-bottom: none;
+}
+
+.contact-row strong {
+    font-weight: 600;
+}
+
+.contact-row span {
+    color: var(--muted);
+}
+
+
+/* RECORD HISTORY */
+
+.record-history {
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.history-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+    font-size: 12px;
+}
+
+.history-row:last-child {
+    border-bottom: none;
+}
+
+.history-row span {
+    color: var(--muted);
+}
+
+.history-row strong {
+    font-family: "Courier New", monospace;
+    font-size: 11px;
+    font-weight: normal;
+}
+
+
+/* PAGE ACTIONS */
+
+.page-actions {
+    margin-top: 35px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+}
+
+.button-secondary {
+    display: inline-block;
+    padding: 9px 13px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.button-secondary:hover {
+    background: var(--paper);
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+
+/* FOOTNOTE */
+
+.page-footnote {
+    margin-top: 25px;
+    font-family: "Courier New", monospace;
+    font-size: 10px;
+    color: var(--muted);
+    text-align: right;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 700px) {
+
+    .page-header {
+        flex-direction: column;
+    }
+
+    .record-id {
+        align-self: flex-start;
+    }
+
+    .facility-overview {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .info-row {
+        grid-template-columns: 1fr;
+    }
+
+    .info-label {
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .facility-departments {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-row {
+        grid-template-columns: 1fr;
+        gap: 4px;
+    }
+
+    .history-row {
+        flex-direction: column;
+        gap: 4px;
+    }
+
+}
