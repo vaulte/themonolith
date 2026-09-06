@@ -1,4 +1,4 @@
-```css
+
 /* =========================================================
    THE DIRECTORATE
    Government / Research Portal Theme
@@ -998,6 +998,472 @@ a:hover {
     .footer-inner {
 
         flex-direction: column;
+    }
+
+}
+
+
+/* =========================================================
+   NEW SLOP
+   ========================================================= */
+
+
+
+```css
+/* =========================================================
+   FACILITY DIRECTORY
+   ========================================================= */
+
+
+/* DIRECTORY CONTROLS */
+
+.directory-controls {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-end;
+
+    gap: 20px;
+
+    margin-bottom: 25px;
+
+    padding: 15px;
+
+    background: #dadcdc;
+
+    border: 1px solid var(--border);
+
+}
+
+.directory-controls label {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: var(--muted);
+
+    font-size: 9px;
+
+    font-weight: bold;
+
+    letter-spacing: 0.1em;
+}
+
+.directory-controls input,
+.directory-controls select {
+
+    height: 34px;
+
+    border: 1px solid var(--border-dark);
+
+    background: white;
+
+    padding: 0 10px;
+
+    color: var(--text);
+
+    font-family: var(--font);
+
+    font-size: 12px;
+
+    outline: none;
+}
+
+.directory-controls input {
+
+    width: 300px;
+}
+
+.directory-controls select {
+
+    min-width: 150px;
+}
+
+.directory-controls input:focus,
+.directory-controls select:focus {
+
+    border-color: var(--accent);
+}
+
+
+/* SECTION LABEL */
+
+.section-label {
+
+    margin: 28px 0 10px;
+
+    color: var(--muted);
+
+    font-family: var(--mono);
+
+    font-size: 9px;
+
+    font-weight: bold;
+
+    letter-spacing: 0.12em;
+
+    border-bottom: 1px solid var(--border);
+
+    padding-bottom: 7px;
+}
+
+
+/* FACILITY GRID */
+
+.facility-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 15px;
+
+}
+
+
+/* FACILITY CARD */
+
+.facility-card {
+
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    min-height: 330px;
+
+    padding: 19px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    transition:
+        box-shadow 0.15s ease,
+        transform 0.15s ease;
+
+}
+
+.facility-card:hover {
+
+    box-shadow:
+        0 3px 12px rgba(0,0,0,0.09);
+
+    transform: translateY(-1px);
+
+}
+
+
+/* FACILITY NUMBER */
+
+.facility-number {
+
+    color: var(--muted);
+
+    font-family: var(--mono);
+
+    font-size: 9px;
+
+    letter-spacing: 0.1em;
+
+}
+
+
+/* STATUS */
+
+.facility-status {
+
+    position: absolute;
+
+    top: 17px;
+
+    right: 17px;
+
+    font-family: var(--mono);
+
+    font-size: 9px;
+
+    font-weight: bold;
+
+}
+
+.facility-status.operational {
+
+    color: #356d43;
+
+}
+
+.facility-status.restricted {
+
+    color: var(--restricted);
+
+}
+
+.facility-status.inactive {
+
+    color: #777;
+
+}
+
+
+/* CARD TITLE */
+
+.facility-card h2 {
+
+    margin: 22px 0 3px;
+
+    max-width: 80%;
+
+    color: var(--dark);
+
+    font-size: 19px;
+
+    line-height: 1.25;
+
+    font-weight: 600;
+
+}
+
+
+/* LOCATION */
+
+.facility-location {
+
+    margin: 0 0 13px;
+
+    color: var(--accent) !important;
+
+    font-family: var(--mono);
+
+    font-size: 9px;
+
+    font-weight: bold;
+
+    letter-spacing: 0.07em;
+
+}
+
+
+/* DESCRIPTION */
+
+.facility-card > p:not(.facility-location) {
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+    line-height: 1.55;
+
+}
+
+
+/* CARD DATA */
+
+.facility-card dl {
+
+    margin: auto 0 15px;
+
+    border-top: 1px solid var(--border);
+
+}
+
+.facility-card dl div {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding: 6px 0;
+
+    border-bottom: 1px solid var(--border);
+
+}
+
+.facility-card dt {
+
+    color: var(--muted);
+
+    font-size: 10px;
+
+}
+
+.facility-card dd {
+
+    margin: 0;
+
+    color: var(--text);
+
+    font-family: var(--mono);
+
+    font-size: 9px;
+
+    text-align: right;
+
+}
+
+
+/* CARD LINK */
+
+.facility-link {
+
+    display: block;
+
+    padding-top: 11px;
+
+    border-top: 1px solid var(--border);
+
+    font-size: 9px;
+
+    font-weight: bold;
+
+    letter-spacing: 0.04em;
+
+}
+
+.facility-link:hover {
+
+    text-decoration: none;
+
+}
+
+.restricted-link {
+
+    color: var(--restricted);
+
+}
+
+
+/* RESTRICTED CARD */
+
+.facility-restricted {
+
+    background:
+        linear-gradient(
+            135deg,
+            #f5f5f4 0%,
+            #f5f5f4 94%,
+            #ece0e0 94%,
+            #ece0e0 100%
+        );
+
+    border-color: #c9b5b5;
+
+}
+
+
+/* FACILITY SECTIONS */
+
+.facility-section {
+
+    margin-top: 35px;
+
+}
+
+
+/* RESTRICTED SECTION */
+
+.restricted-section-label {
+
+    color: var(--restricted);
+
+    border-color: #d4baba;
+
+}
+
+.restricted-notice {
+
+    display: flex;
+
+    gap: 15px;
+
+    padding: 17px;
+
+    background: #f4eeee;
+
+    border: 1px solid #d5bebe;
+
+    border-left: 4px solid var(--restricted);
+
+    color: #4c3333;
+
+    font-size: 12px;
+
+}
+
+.restricted-notice strong {
+
+    font-size: 10px;
+
+    letter-spacing: 0.06em;
+
+}
+
+.restricted-notice p {
+
+    margin-bottom: 0;
+
+}
+
+.restricted-icon {
+
+    flex-shrink: 0;
+
+    width: 28px;
+
+    height: 28px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: var(--restricted);
+
+    color: white;
+
+    font-weight: bold;
+
+    font-family: var(--mono);
+
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 700px) {
+
+    .facility-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .directory-controls {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+    }
+
+    .directory-controls input {
+
+        width: 100%;
+
+    }
+
+    .directory-controls select {
+
+        width: 100%;
+
     }
 
 }
