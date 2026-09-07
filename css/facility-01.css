@@ -1,307 +1,503 @@
-/* =========================================================
-   FACILITY RECORD PAGES
-   ========================================================= */
+.facility-header {
 
-.page-kicker {
-    font-family: "Courier New", monospace;
-    font-size: 11px;
-    letter-spacing: 1.5px;
-    color: var(--muted);
-    margin-bottom: 7px;
+    padding: 65px 0 75px;
+
+    border-bottom: 1px solid var(--black);
+
 }
 
-.page-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 30px;
-    margin-bottom: 25px;
-}
+.facility-header-grid {
 
-.page-header h1 {
-    margin: 0 0 7px;
-    font-size: 32px;
-    font-weight: 600;
-    color: var(--text);
-}
-
-.page-description {
-    margin: 0;
-    color: var(--muted);
-    font-size: 14px;
-}
-
-.record-id {
-    padding: 9px 12px;
-    border: 1px solid var(--border);
-    background: var(--surface);
-    font-family: "Courier New", monospace;
-    font-size: 12px;
-    color: var(--muted);
-    white-space: nowrap;
-}
-
-
-/* FACILITY STATUS */
-
-.facility-overview {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    padding: 15px 18px;
-    margin-bottom: 28px;
-    border: 1px solid var(--border);
-    background: var(--surface);
-}
-
-.facility-status-large {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 6px 10px;
-    font-family: "Courier New", monospace;
-    font-size: 11px;
-    font-weight: bold;
-    letter-spacing: 0.5px;
-    white-space: nowrap;
-}
-
-.facility-status-large.operational {
-    color: #315b38;
-    background: #edf4ee;
-    border: 1px solid #cbdccc;
-}
-
-.facility-status-large .status-dot {
-    width: 7px;
-    height: 7px;
-    background: #4d7955;
-    border-radius: 50%;
-}
-
-.facility-overview-text {
-    color: var(--muted);
-    font-size: 13px;
-}
-
-
-/* INFORMATION TABLE */
-
-.information-table {
-    border: 1px solid var(--border);
-    background: var(--paper);
-}
-
-.info-row {
     display: grid;
-    grid-template-columns: 220px 1fr;
-    border-bottom: 1px solid var(--border);
+
+    grid-template-columns:
+        1fr
+        260px;
+
+    gap: 80px;
+
+    align-items: end;
+
 }
 
-.info-row:last-child {
-    border-bottom: none;
-}
+.facility-label {
 
-.info-label {
-    padding: 11px 13px;
-    background: var(--surface);
-    border-right: 1px solid var(--border);
-    font-family: "Courier New", monospace;
+    margin-bottom: 15px;
+
+    color: var(--grey);
+
+    font-family:
+        "Courier New",
+        monospace;
+
     font-size: 10px;
-    font-weight: bold;
-    letter-spacing: 0.5px;
-    color: var(--muted);
+
+    letter-spacing: 1px;
+
 }
 
-.info-value {
-    padding: 11px 13px;
+.facility-header h1 {
+
+    margin-bottom: 18px;
+
+    font-size: clamp(
+        42px,
+        6vw,
+        68px
+    );
+
+    font-weight: 700;
+
+    letter-spacing: -3px;
+
+    line-height: 0.98;
+
+}
+
+.facility-subtitle {
+
+    color: var(--grey);
+
     font-size: 13px;
-    color: var(--text);
+
 }
 
 
-/* DOCUMENT SECTIONS */
+/* ============================================
+   FACILITY STATUS
+   ============================================ */
 
-.document-section {
-    margin-bottom: 30px;
-}
+.facility-summary {
 
-.document-panel {
-    padding: 18px 20px;
-    border: 1px solid var(--border);
-    background: var(--paper);
-    box-shadow: var(--shadow);
-}
-
-.document-panel p {
-    margin: 0 0 14px;
-    font-size: 14px;
-    line-height: 1.7;
-}
-
-.document-panel p:last-child {
-    margin-bottom: 0;
-}
-
-
-/* DEPARTMENTS */
-
-.facility-departments {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-}
-
-.department-card {
     display: flex;
+
     flex-direction: column;
-    gap: 5px;
-    padding: 14px;
-    border: 1px solid var(--border);
-    background: var(--paper);
+
+    gap: 18px;
+
+    border-left: 1px solid var(--light-grey);
+
+    padding-left: 25px;
+
 }
 
-.department-card strong {
-    font-size: 13px;
-    font-weight: 600;
-}
+.facility-summary-item {
 
-.department-card span {
-    font-size: 12px;
-    line-height: 1.5;
-    color: var(--muted);
-}
-
-
-/* CONTACT */
-
-.contact-row {
-    display: grid;
-    grid-template-columns: 190px 1fr;
-    padding: 10px 0;
-    border-bottom: 1px solid var(--border);
-    font-size: 13px;
-}
-
-.contact-row:last-child {
-    border-bottom: none;
-}
-
-.contact-row strong {
-    font-weight: 600;
-}
-
-.contact-row span {
-    color: var(--muted);
-}
-
-
-/* RECORD HISTORY */
-
-.record-history {
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-}
-
-.history-row {
     display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    padding: 10px 12px;
-    border-bottom: 1px solid var(--border);
-    font-size: 12px;
+
+    flex-direction: column;
+
+    gap: 3px;
+
 }
 
-.history-row:last-child {
-    border-bottom: none;
+.facility-summary-item span {
+
+    color: var(--grey);
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
 }
 
-.history-row span {
-    color: var(--muted);
-}
+.facility-summary-item strong {
 
-.history-row strong {
-    font-family: "Courier New", monospace;
     font-size: 11px;
-    font-weight: normal;
+
 }
 
 
-/* PAGE ACTIONS */
+/* ============================================
+   FACILITY CONTENT
+   ============================================ */
 
-.page-actions {
-    margin-top: 35px;
-    padding-top: 20px;
-    border-top: 1px solid var(--border);
-}
+.facility-content {
 
-.button-secondary {
-    display: inline-block;
-    padding: 9px 13px;
-    border: 1px solid var(--border);
-    background: var(--surface);
-    color: var(--text);
-    text-decoration: none;
-    font-size: 12px;
-    font-weight: 600;
-}
+    display: grid;
 
-.button-secondary:hover {
-    background: var(--paper);
-    border-color: var(--accent);
-    color: var(--accent);
+    grid-template-columns:
+        2fr
+        1fr;
+
+    gap: 100px;
+
+    padding: 55px 0 90px;
+
 }
 
 
-/* FOOTNOTE */
+/* ============================================
+   CONTENT SECTIONS
+   ============================================ */
 
-.page-footnote {
-    margin-top: 25px;
-    font-family: "Courier New", monospace;
+.facility-section {
+
+    margin-bottom: 60px;
+
+}
+
+.facility-section:last-child {
+
+    margin-bottom: 0;
+
+}
+
+.facility-section-heading {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-top: 1px solid var(--black);
+
+    border-bottom: 1px solid var(--light-grey);
+
+    padding: 13px 0;
+
+    margin-bottom: 25px;
+
     font-size: 10px;
-    color: var(--muted);
-    text-align: right;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+}
+
+.facility-section-code {
+
+    color: var(--grey);
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-weight: 400;
+
+}
+
+.facility-section p {
+
+    max-width: 680px;
+
+    margin-bottom: 18px;
+
+    color: var(--dark-grey);
+
+    font-size: 13px;
+
+    line-height: 1.75;
+
 }
 
 
-/* RESPONSIVE */
+/* ============================================
+   FACILITY DETAILS
+   ============================================ */
 
-@media (max-width: 700px) {
+.facility-details {
 
-    .page-header {
-        flex-direction: column;
-    }
+    border-top: 1px solid var(--light-grey);
 
-    .record-id {
-        align-self: flex-start;
-    }
+}
 
-    .facility-overview {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+.facility-detail {
 
-    .info-row {
+    display: grid;
+
+    grid-template-columns:
+        180px
+        1fr;
+
+    gap: 25px;
+
+    border-bottom: 1px solid var(--light-grey);
+
+    padding: 15px 0;
+
+}
+
+.facility-detail-label {
+
+    color: var(--grey);
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+}
+
+.facility-detail-value {
+
+    font-size: 11px;
+
+}
+
+
+/* ============================================
+   SIDE INFORMATION
+   ============================================ */
+
+.facility-sidebar {
+
+    border-left: 1px solid var(--light-grey);
+
+    padding-left: 30px;
+
+}
+
+.sidebar-block {
+
+    margin-bottom: 45px;
+
+}
+
+.sidebar-label {
+
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: var(--grey);
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+}
+
+.sidebar-block h2 {
+
+    margin-bottom: 10px;
+
+    font-size: 16px;
+
+}
+
+.sidebar-block p {
+
+    color: var(--dark-grey);
+
+    font-size: 11px;
+
+    line-height: 1.7;
+
+}
+
+
+/* ============================================
+   CONTACT INFORMATION
+   ============================================ */
+
+.contact-list {
+
+    border-top: 1px solid var(--light-grey);
+
+}
+
+.contact-item {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 2px;
+
+    border-bottom: 1px solid var(--light-grey);
+
+    padding: 12px 0;
+
+}
+
+.contact-item span:first-child {
+
+    color: var(--grey);
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+}
+
+.contact-item span:last-child {
+
+    font-size: 10px;
+
+}
+
+
+/* ============================================
+   DOCUMENTS
+   ============================================ */
+
+.document-list {
+
+    border-top: 1px solid var(--light-grey);
+
+}
+
+.document {
+
+    display: grid;
+
+    grid-template-columns:
+        85px
+        1fr
+        20px;
+
+    gap: 15px;
+
+    align-items: center;
+
+    border-bottom: 1px solid var(--light-grey);
+
+    padding: 13px 0;
+
+    font-size: 10px;
+
+}
+
+.document-code {
+
+    color: var(--grey);
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 9px;
+
+}
+
+.document-arrow {
+
+    text-align: right;
+
+}
+
+.document:hover {
+
+    padding-left: 6px;
+
+}
+
+
+/* ============================================
+   FOOTER NOTE
+   ============================================ */
+
+.facility-footer-note {
+
+    border-top: 1px solid var(--black);
+
+    padding: 25px 0 90px;
+
+}
+
+.facility-footer-note p {
+
+    color: var(--grey);
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 9px;
+
+}
+
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 800px) {
+
+    .facility-header-grid {
+
         grid-template-columns: 1fr;
+
+        gap: 35px;
+
     }
 
-    .info-label {
-        border-right: none;
-        border-bottom: 1px solid var(--border);
+    .facility-summary {
+
+        border-left: none;
+
+        border-top: 1px solid var(--light-grey);
+
+        padding:
+            20px 0 0;
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
     }
 
-    .facility-departments {
+    .facility-content {
+
         grid-template-columns: 1fr;
+
+        gap: 60px;
+
     }
 
-    .contact-row {
+    .facility-sidebar {
+
+        border-left: none;
+
+        border-top: 1px solid var(--black);
+
+        padding:
+            40px 0 0;
+
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .facility-header {
+
+        padding:
+            50px 0
+            60px;
+
+    }
+
+    .facility-header h1 {
+
+        letter-spacing: -2px;
+
+    }
+
+    .facility-summary {
+
         grid-template-columns: 1fr;
-        gap: 4px;
+
     }
 
-    .history-row {
-        flex-direction: column;
-        gap: 4px;
+    .facility-detail {
+
+        grid-template-columns: 1fr;
+
+        gap: 5px;
+
     }
 
 }
