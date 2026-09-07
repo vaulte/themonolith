@@ -22,73 +22,172 @@ body {
 
 /* HEADER */
 
-header {
-    border-bottom: 1px solid var(--light-grey);
-    padding: 24px 30px 18px;
+/* ============================================
+   HEADER
+============================================ */
+
+.site-header {
+
+    border-bottom: 1px solid var(--black);
+
+    background: var(--white);
+
 }
+
 
 .header-inner {
-    max-width: var(--max-width);
-    margin: auto;
+
+    width: min(
+        calc(100% - 48px),
+        var(--max-width)
+    );
+
+    min-height: 110px;
+
+    margin: 0 auto;
+
     display: flex;
+
+    align-items: center;
+
     justify-content: space-between;
-    align-items: flex-end;
+
 }
 
-.logo {
-    font-size: 25px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    color: var(--black);
-}
 
-.logo-sub {
-    font-size: 11px;
-    color: var(--grey);
-    letter-spacing: 1px;
-}
+/* ============================================
+   CAS LOGO
+============================================ */
 
-.header-meta {
-    text-align: right;
-    font-family: "Courier New", monospace;
-    font-size: 9px;
-    color: var(--grey);
-    line-height: 1.4;
-}
+.cas-logo {
 
-/* NAV */
-
-nav {
-    border-bottom: 1px solid var(--light-grey);
-    padding: 0 30px;
-}
-
-.nav-inner {
-    max-width: var(--max-width);
-    margin: auto;
     display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
 }
 
-nav a {
-    display: block;
-    padding: 13px 16px;
-    color: var(--dark-grey);
-    text-decoration: none;
+
+.logo-acronym {
+
+    font-size: 38px;
+
+    font-weight: 800;
+
+    letter-spacing: -2px;
+
+    line-height: 1;
+
+}
+
+
+.logo-name {
+
+    border-left: 1px solid var(--black);
+
+    padding-left: 18px;
+
     font-size: 11px;
+
+    font-weight: 700;
+
+    line-height: 1.35;
+
+    letter-spacing: 1px;
+
 }
 
-nav a:first-child {
-    padding-left: 0;
+
+.header-information {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-end;
+
+    gap: 2px;
+
+    color: var(--grey);
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
 }
 
-nav a:hover {
+
+/* ============================================
+   NAVIGATION
+============================================ */
+
+.main-navigation {
+
+    border-bottom: 1px solid var(--light-grey);
+
+    background: var(--white);
+
+}
+
+
+.navigation-inner {
+
+    width: min(
+        calc(100% - 48px),
+        var(--max-width)
+    );
+
+    margin: 0 auto;
+
+    display: flex;
+
+    overflow-x: auto;
+
+}
+
+
+.navigation-inner a {
+
+    position: relative;
+
+    padding: 17px 20px;
+
+    color: var(--grey);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    white-space: nowrap;
+
+    transition:
+        background 0.15s ease,
+        color 0.15s ease;
+
+}
+
+
+.navigation-inner a:hover {
+
+    background: var(--very-light-grey);
+
     color: var(--black);
+
 }
 
-nav a.active {
+
+.navigation-inner a.active {
+
     color: var(--black);
-    border-bottom: 2px solid var(--black);
+
 }
+
 
 /* MAIN */
 
