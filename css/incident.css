@@ -1,0 +1,780 @@
+
+:root {
+    --black: #111111;
+    --dark-grey: #333333;
+    --grey: #777777;
+    --light-grey: #dcdcdc;
+    --very-light-grey: #eeeeee;
+    --white: #ffffff;
+    --warning: #9b0000;
+    --max-width: 1280px;
+}
+
+/* =========================================================
+   BASE
+========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background: #ffffff;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--white);
+    color: var(--black);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    color: var(--black);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    width: calc(100% - 40px);
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.site-header {
+    border-bottom: 1px solid var(--light-grey);
+    background: #fff;
+}
+
+.header-inner {
+    min-height: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.brand {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+}
+
+.brand-acronym {
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.brand-name {
+    font-size: 11px;
+    color: var(--grey);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.header-meta {
+    text-align: right;
+    font-family: "Courier New", monospace;
+    font-size: 9px;
+    line-height: 1.5;
+    color: var(--grey);
+    text-transform: uppercase;
+}
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.main-nav {
+    border-bottom: 1px solid var(--light-grey);
+}
+
+.nav-inner {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main-nav a {
+    display: block;
+    padding: 13px 18px;
+    font-size: 11px;
+    letter-spacing: .8px;
+    text-transform: uppercase;
+    color: var(--dark-grey);
+    border-right: 1px solid var(--very-light-grey);
+}
+
+.main-nav a:first-child {
+    border-left: 1px solid var(--very-light-grey);
+}
+
+.main-nav a:hover {
+    background: var(--very-light-grey);
+    text-decoration: none;
+}
+
+.main-nav a.active {
+    color: var(--black);
+    font-weight: bold;
+    border-bottom: 2px solid var(--black);
+}
+
+/* =========================================================
+   BREADCRUMB
+========================================================= */
+
+.breadcrumb {
+    padding: 17px 0 10px;
+    font-family: "Courier New", monospace;
+    font-size: 10px;
+    color: var(--grey);
+}
+
+.breadcrumb a {
+    color: var(--grey);
+}
+
+.breadcrumb span {
+    margin: 0 6px;
+}
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.page-header {
+    padding: 25px 0 40px;
+    border-bottom: 1px solid var(--light-grey);
+}
+
+.record-code {
+    font-family: "Courier New", monospace;
+    font-size: 11px;
+    color: var(--grey);
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.page-header h1 {
+    margin: 0;
+    font-size: clamp(34px, 5vw, 62px);
+    line-height: .95;
+    letter-spacing: -2px;
+    font-weight: 700;
+}
+
+.page-header h2 {
+    margin: 14px 0 0;
+    font-size: 17px;
+    font-weight: normal;
+    color: var(--grey);
+}
+
+.header-status {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 24px;
+}
+
+.status {
+    display: inline-block;
+    padding: 4px 8px;
+    border: 1px solid var(--light-grey);
+    font-family: "Courier New", monospace;
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: .7px;
+}
+
+.status-danger {
+    border-color: var(--warning);
+    color: var(--warning);
+}
+
+.status-black {
+    background: var(--black);
+    color: white;
+    border-color: var(--black);
+}
+
+/* =========================================================
+   DOCUMENT WARNING
+========================================================= */
+
+.warning-box {
+    margin: 30px 0;
+    border: 1px solid var(--warning);
+    padding: 18px 20px;
+    color: var(--warning);
+    background: #fff;
+}
+
+.warning-title {
+    font-family: "Courier New", monospace;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.warning-box p {
+    margin: 4px 0;
+    font-size: 12px;
+}
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+.section {
+    margin: 45px 0;
+}
+
+.section-title {
+    margin: 0 0 22px;
+    padding: 10px 0;
+    border-top: 2px solid var(--black);
+    border-bottom: 1px solid var(--light-grey);
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.section-title small {
+    float: right;
+    font-family: "Courier New", monospace;
+    font-size: 9px;
+    font-weight: normal;
+    color: var(--grey);
+    letter-spacing: 0;
+}
+
+/* =========================================================
+   INFORMATION GRID
+========================================================= */
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-top: 1px solid var(--light-grey);
+    border-left: 1px solid var(--light-grey);
+}
+
+.info-item {
+    padding: 14px 16px;
+    border-right: 1px solid var(--light-grey);
+    border-bottom: 1px solid var(--light-grey);
+}
+
+.info-label {
+    display: block;
+    margin-bottom: 4px;
+    font-family: "Courier New", monospace;
+    font-size: 9px;
+    color: var(--grey);
+    text-transform: uppercase;
+    letter-spacing: .7px;
+}
+
+.info-value {
+    font-size: 13px;
+}
+
+/* =========================================================
+   TIMELINE
+========================================================= */
+
+.timeline {
+    border-left: 2px solid var(--black);
+    margin-left: 8px;
+}
+
+.timeline-item {
+    position: relative;
+    padding: 0 0 28px 28px;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -6px;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    background: var(--white);
+    border: 2px solid var(--black);
+}
+
+.timeline-time {
+    font-family: "Courier New", monospace;
+    font-size: 10px;
+    color: var(--grey);
+    margin-bottom: 3px;
+}
+
+.timeline-title {
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.timeline-text {
+    max-width: 850px;
+    color: var(--dark-grey);
+}
+
+/* =========================================================
+   CAS TABLE
+========================================================= */
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.data-table th,
+.data-table td {
+    border: 1px solid var(--light-grey);
+    padding: 11px 13px;
+    text-align: left;
+    vertical-align: top;
+}
+
+.data-table th {
+    background: var(--very-light-grey);
+    font-family: "Courier New", monospace;
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: .6px;
+    font-weight: normal;
+}
+
+.data-table td {
+    font-size: 12px;
+}
+
+/* =========================================================
+   REDACTION
+========================================================= */
+
+.redacted {
+    display: inline-block;
+    background: #111;
+    color: #111;
+    padding: 0 5px;
+    user-select: none;
+}
+
+.redacted:hover {
+    color: #111;
+}
+
+/* =========================================================
+   CORRUPTION
+========================================================= */
+
+.corrupt-text {
+    position: relative;
+    display: inline-block;
+    animation: textJitter 4s infinite steps(1);
+}
+
+.corrupt-text::before,
+.corrupt-text::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    opacity: .6;
+}
+
+.corrupt-text::before {
+    transform: translate(-2px, 0);
+    clip-path: inset(10% 0 70% 0);
+    animation: glitchTop 2.4s infinite steps(1);
+}
+
+.corrupt-text::after {
+    transform: translate(2px, 0);
+    clip-path: inset(65% 0 15% 0);
+    animation: glitchBottom 1.8s infinite steps(1);
+}
+
+@keyframes textJitter {
+    0%, 89%, 100% {
+        transform: translate(0);
+    }
+    90% {
+        transform: translate(-2px, 1px);
+    }
+    91% {
+        transform: translate(3px, 0);
+    }
+    92% {
+        transform: translate(0);
+    }
+}
+
+@keyframes glitchTop {
+    0%, 90%, 100% {
+        opacity: 0;
+    }
+
+    91% {
+        opacity: .65;
+        transform: translate(-4px, -1px);
+    }
+
+    92% {
+        opacity: 0;
+    }
+}
+
+@keyframes glitchBottom {
+    0%, 82%, 100% {
+        opacity: 0;
+    }
+
+    83% {
+        opacity: .65;
+        transform: translate(4px, 1px);
+    }
+
+    84% {
+        opacity: 0;
+    }
+}
+
+/* =========================================================
+   REALITY STATIC
+========================================================= */
+
+.reality-window {
+    position: relative;
+    overflow: hidden;
+}
+
+.reality-window::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0;
+    z-index: 10;
+
+    background:
+        repeating-linear-gradient(
+            0deg,
+            rgba(0,0,0,.06) 0px,
+            rgba(0,0,0,.06) 1px,
+            transparent 1px,
+            transparent 4px
+        );
+
+    animation: staticFlash 7s infinite steps(1);
+}
+
+@keyframes staticFlash {
+
+    0%, 48%, 52%, 100% {
+        opacity: 0;
+    }
+
+    49% {
+        opacity: .2;
+    }
+
+    50% {
+        opacity: .08;
+    }
+
+    51% {
+        opacity: .32;
+    }
+}
+
+/* =========================================================
+   REALITY FRACTURE
+========================================================= */
+
+.fracture-box {
+    position: relative;
+    margin: 35px 0;
+    padding: 30px;
+    border: 1px solid var(--black);
+    background: #fafafa;
+    overflow: hidden;
+}
+
+.fracture-box::before {
+    content: "REALITY INTEGRITY FAILURE";
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    font-family: "Courier New", monospace;
+    font-size: 8px;
+    color: var(--grey);
+    letter-spacing: 1px;
+}
+
+.fracture-line {
+    height: 1px;
+    background: var(--black);
+    margin: 25px 0;
+}
+
+.fracture-text {
+    font-family: "Courier New", monospace;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.fracture-text .wrong {
+    color: var(--warning);
+    animation: unstable 1.7s infinite steps(1);
+}
+
+@keyframes unstable {
+
+    0%, 74%, 100% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: .1;
+    }
+
+    76% {
+        opacity: 1;
+    }
+
+    77% {
+        opacity: .3;
+    }
+
+    78% {
+        opacity: 1;
+    }
+}
+
+/* =========================================================
+   EVENT COUNTER
+========================================================= */
+
+.counter-box {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border: 1px solid var(--light-grey);
+}
+
+.counter {
+    padding: 20px;
+    border-right: 1px solid var(--light-grey);
+}
+
+.counter:last-child {
+    border-right: none;
+}
+
+.counter-number {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+
+.counter-label {
+    margin-top: 4px;
+    font-family: "Courier New", monospace;
+    color: var(--grey);
+    font-size: 9px;
+    text-transform: uppercase;
+}
+
+/* =========================================================
+   QUOTE / RECOVERED TEXT
+========================================================= */
+
+.recovered {
+    margin: 30px 0;
+    padding: 25px;
+    border-left: 3px solid var(--black);
+    background: var(--very-light-grey);
+}
+
+.recovered-label {
+    font-family: "Courier New", monospace;
+    font-size: 9px;
+    color: var(--grey);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.recovered p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* =========================================================
+   FINAL RECORD
+========================================================= */
+
+.final-record {
+    margin-top: 70px;
+    padding: 25px;
+    background: var(--black);
+    color: white;
+}
+
+.final-record .label {
+    color: #aaa;
+    font-family: "Courier New", monospace;
+    font-size: 9px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.final-record .value {
+    font-family: "Courier New", monospace;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.final-record .error {
+    color: #ff7777;
+    animation: finalFlicker 3s infinite steps(1);
+}
+
+@keyframes finalFlicker {
+
+    0%, 88%, 100% {
+        opacity: 1;
+    }
+
+    89% {
+        opacity: 0;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    91% {
+        opacity: .4;
+    }
+
+    92% {
+        opacity: 1;
+    }
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.site-footer {
+    margin-top: 80px;
+    padding: 30px 0;
+    background: var(--black);
+    color: #aaa;
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    font-family: "Courier New", monospace;
+    font-size: 9px;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .header-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 20px 0;
+        gap: 12px;
+    }
+
+    .header-meta {
+        text-align: left;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .counter-box {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .counter:nth-child(2) {
+        border-right: none;
+    }
+
+    .counter:nth-child(-n+2) {
+        border-bottom: 1px solid var(--light-grey);
+    }
+
+    .footer-inner {
+        flex-direction: column;
+    }
+
+    .footer-right {
+        text-align: left;
+    }
+}
+
+@media (max-width: 550px) {
+
+    .container {
+        width: calc(100% - 24px);
+    }
+
+    .main-nav a {
+        padding: 10px 11px;
+        font-size: 9px;
+    }
+
+    .page-header h1 {
+        font-size: 38px;
+    }
+
+    .counter-box {
+        grid-template-columns: 1fr;
+    }
+
+    .counter {
+        border-right: none;
+        border-bottom: 1px solid var(--light-grey);
+    }
+
+    .counter:last-child {
+        border-bottom: none;
+    }
+}
+
