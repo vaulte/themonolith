@@ -211,23 +211,7 @@
 }
 
 
-.navigation-inner a.active::after {
 
-    content: "";
-
-    position: absolute;
-
-    bottom: -1px;
-
-    left: 20px;
-
-    right: 20px;
-
-    height: 2px;
-
-    background: var(--black);
-
-}
 
 
         /* =========================
