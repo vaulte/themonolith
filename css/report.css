@@ -35,6 +35,63 @@ main {
     padding: 38px 42px 65px 42px;
 }
 
+ /* =========================
+           BREADCRUMB
+        ========================= */
+
+        .breadcrumb {
+            padding: 18px 0 0;
+            font-family: "Courier New", monospace;
+            font-size: 10px;
+            color: var(--grey);
+            letter-spacing: 0.3px;
+        }
+
+        .breadcrumb a {
+            color: var(--grey);
+        }
+
+
+        /* =========================
+           PAGE HEADER
+        ========================= */
+
+        .page-header {
+            padding: 52px 0 42px;
+            border-bottom: 1px solid var(--light-grey);
+        }
+
+        .page-code {
+            font-family: "Courier New", monospace;
+            font-size: 11px;
+            color: var(--grey);
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        .page-header h1 {
+            margin: 0;
+            font-size: 42px;
+            line-height: 1.05;
+            letter-spacing: -1.5px;
+        }
+
+        .page-description {
+            max-width: 760px;
+            margin-top: 15px;
+            color: var(--dark-grey);
+        }
+
+        .page-meta {
+            margin-top: 25px;
+            font-family: "Courier New", monospace;
+            font-size: 10px;
+            color: var(--grey);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+
 
 /* DOCUMENT HEADER */
 
