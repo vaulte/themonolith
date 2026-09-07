@@ -1,0 +1,414 @@
+
+
+:root {
+    --black: #111111;
+    --dark-grey: #333333;
+    --grey: #777777;
+    --light-grey: #dcdcdc;
+    --very-light-grey: #eeeeee;
+    --white: #ffffff;
+    --warning: #9b0000;
+    --max-width: 1280px;
+}
+
+body {
+    margin: 0;
+    background: #fff;
+    color: var(--dark-grey);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* HEADER */
+
+header {
+    border-bottom: 1px solid var(--light-grey);
+    padding: 24px 30px 18px;
+}
+
+.header-inner {
+    max-width: var(--max-width);
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: var(--black);
+}
+
+.logo-sub {
+    font-size: 11px;
+    color: var(--grey);
+    letter-spacing: 1px;
+}
+
+.header-meta {
+    text-align: right;
+    font-family: "Courier New", monospace;
+    font-size: 9px;
+    color: var(--grey);
+    line-height: 1.4;
+}
+
+/* NAV */
+
+nav {
+    border-bottom: 1px solid var(--light-grey);
+    padding: 0 30px;
+}
+
+.nav-inner {
+    max-width: var(--max-width);
+    margin: auto;
+    display: flex;
+}
+
+nav a {
+    display: block;
+    padding: 13px 16px;
+    color: var(--dark-grey);
+    text-decoration: none;
+    font-size: 11px;
+}
+
+nav a:first-child {
+    padding-left: 0;
+}
+
+nav a:hover {
+    color: var(--black);
+}
+
+nav a.active {
+    color: var(--black);
+    border-bottom: 2px solid var(--black);
+}
+
+/* MAIN */
+
+main {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 30px;
+}
+
+.breadcrumb {
+    font-family: "Courier New", monospace;
+    font-size: 10px;
+    color: var(--grey);
+    margin-bottom: 35px;
+}
+
+.breadcrumb a {
+    color: var(--grey);
+    text-decoration: none;
+}
+
+/* RECORD HEADER */
+
+.record-header {
+    border-bottom: 1px solid var(--light-grey);
+    padding-bottom: 25px;
+    margin-bottom: 30px;
+}
+
+.record-code {
+    font-family: "Courier New", monospace;
+    font-size: 10px;
+    color: var(--grey);
+    letter-spacing: 1px;
+}
+
+.record-header h1 {
+    margin: 5px 0 0;
+    font-size: 34px;
+    font-weight: normal;
+    letter-spacing: -1px;
+    color: var(--black);
+}
+
+.record-subtitle {
+    color: var(--grey);
+    font-size: 15px;
+}
+
+.status-row {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+.status {
+    border: 1px solid var(--light-grey);
+    padding: 4px 9px;
+    font-family: "Courier New", monospace;
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+.status-red {
+    color: var(--warning);
+    border-color: #c9aaaa;
+}
+
+/* CORRUPTION */
+
+.corrupt {
+    font-family: "Courier New", monospace;
+    color: #666;
+}
+
+.struck {
+    text-decoration: line-through;
+    color: #aaa;
+}
+
+.replacement {
+    color: var(--black);
+}
+
+.redacted {
+    background: var(--black);
+    color: var(--black);
+    padding: 0 4px;
+    user-select: none;
+}
+
+.redacted:hover {
+    color: var(--black);
+}
+
+.deleted {
+    color: #bbb;
+    text-decoration: line-through;
+}
+
+.system-text {
+    font-family: "Courier New", monospace;
+    font-size: 10px;
+    color: var(--grey);
+}
+
+/* WARNING */
+
+.warning-box {
+    border-left: 4px solid var(--black);
+    background: #fafafa;
+    padding: 15px 18px;
+    margin-bottom: 35px;
+    font-size: 12px;
+}
+
+.warning-box strong {
+    font-family: "Courier New", monospace;
+    font-size: 10px;
+}
+
+/* PROFILE */
+
+.profile {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 35px;
+    margin-bottom: 45px;
+}
+
+.photo {
+    border: 1px solid var(--light-grey);
+    background: #eee;
+}
+
+.photo img {
+    width: 100%;
+    display: block;
+    filter: grayscale(100%);
+}
+
+.photo-caption {
+    padding: 8px;
+    border-top: 1px solid var(--light-grey);
+    font-family: "Courier New", monospace;
+    font-size: 9px;
+    color: var(--grey);
+}
+
+.photo-notice {
+    margin-top: 8px;
+    font-family: "Courier New", monospace;
+    font-size: 8px;
+    color: #999;
+}
+
+/* SECTIONS */
+
+.section {
+    margin-bottom: 45px;
+}
+
+.section h2 {
+    font-size: 16px;
+    font-weight: normal;
+    color: var(--black);
+    border-top: 2px solid var(--black);
+    border-bottom: 1px solid var(--light-grey);
+    padding: 10px 0;
+    margin: 0 0 20px;
+    letter-spacing: .5px;
+}
+
+/* TABLE */
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.data-table tr {
+    border-bottom: 1px solid var(--very-light-grey);
+}
+
+.data-table td {
+    padding: 8px 5px;
+    vertical-align: top;
+}
+
+.data-table td:first-child {
+    width: 230px;
+    color: var(--grey);
+    font-family: "Courier New", monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+.data-table td:last-child {
+    color: var(--dark-grey);
+}
+
+/* DESCRIPTION */
+
+.description {
+    max-width: 900px;
+}
+
+.description p {
+    margin: 0 0 16px;
+}
+
+/* OBSERVATIONS */
+
+.observation {
+    border-left: 2px solid var(--light-grey);
+    padding: 8px 0 8px 15px;
+    margin-bottom: 20px;
+}
+
+.observation-label {
+    font-family: "Courier New", monospace;
+    font-size: 9px;
+    color: var(--grey);
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+/* CORRUPTED SECTION */
+
+.corruption-block {
+    border: 1px solid var(--light-grey);
+    padding: 18px;
+    background: #fafafa;
+    font-family: "Courier New", monospace;
+    font-size: 10px;
+    line-height: 1.8;
+}
+
+.corruption-line {
+    display: block;
+}
+
+.corruption-line.bad {
+    color: #aaa;
+}
+
+.corruption-line.warning {
+    color: var(--warning);
+}
+
+/* FOOTER */
+
+footer {
+    margin-top: 60px;
+    background: var(--black);
+    color: white;
+    padding: 30px;
+}
+
+.footer-inner {
+    max-width: var(--max-width);
+    margin: auto;
+    font-family: "Courier New", monospace;
+    font-size: 9px;
+    line-height: 1.7;
+}
+
+.footer-warning {
+    color: #aaa;
+    margin-top: 10px;
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    .header-inner {
+        display: block;
+    }
+
+    .header-meta {
+        text-align: left;
+        margin-top: 10px;
+    }
+
+    .nav-inner {
+        flex-wrap: wrap;
+    }
+
+    .profile {
+        grid-template-columns: 1fr;
+    }
+
+    .photo {
+        max-width: 260px;
+    }
+}
+
+@media (max-width: 550px) {
+
+    header,
+    nav,
+    main,
+    footer {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    nav a {
+        padding: 10px 8px;
+        font-size: 9px;
+    }
+
+    .record-header h1 {
+        font-size: 27px;
+    }
+
+    .data-table td:first-child {
+        width: 40%;
+    }
+}
+
