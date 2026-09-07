@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CAS — Microfiche Archive</title>
+
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/microfiche.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="cas-mark">
+        CAS
+    </div>
+
+    <div class="header-text">
+        <div class="header-title">
+            CENTRAL AUTHORITY OF SAFETY
+        </div>
+
+        <div class="header-subtitle">
+            Information Management System
+        </div>
+    </div>
+
+</header>
+
+
+<div class="breadcrumb">
+
+    CAS /
+    INFORMATION MANAGEMENT /
+    ARCHIVES /
+    <span>MICROFICHE</span>
+
+</div>
+
+
+<main class="page">
+
+    <div class="page-heading">
+
+        <h1>
+            Microfiche Archive
+        </h1>
+
+        <p>
+            Digitized records of collected materials, supporting documentation,
+            and physical evidence associated with CAS reports.
+        </p>
+
+    </div>
+
+
+    <div class="notice">
+
+        <strong>NOTICE:</strong>
+        This archive contains reproductions of physical records.
+        Original materials remain subject to applicable retention,
+        storage, and access requirements.
+
+    </div>
+
+
+    <div class="archive-terminal">
+
+
+        <!-- LEFT PANEL -->
+
+        <aside class="reel-panel">
+
+            <div class="panel-heading">
+                ARCHIVE REEL
+            </div>
+
+            <div class="reel-info">
+
+                <strong>C-02 / FACILITIES</strong>
+
+                <small>
+                    Facilities documentation and associated
+                    material records.
+                </small>
+
+            </div>
+
+            <div class="panel-heading">
+                FRAMES
+            </div>
+
+            <div id="frameList" class="frame-list"></div>
+
+        </aside>
+
+
+        <!-- VIEWER -->
+
+        <section class="viewer">
+
+            <div class="viewer-toolbar">
+
+                <div class="toolbar-group">
+
+                    <span class="toolbar-label">
+                        VIEW
+                    </span>
+
+                    <button class="toolbar-button" onclick="zoomOut()">
+                        −
+                    </button>
+
+                    <span id="zoomValue" class="zoom-value">
+                        100%
+                    </span>
+
+                    <button class="toolbar-button" onclick="zoomIn()">
+                        +
+                    </button>
+
+                    <button class="toolbar-button" onclick="resetZoom()">
+                        FIT
+                    </button>
+
+                </div>
+
+
+                <div class="toolbar-group">
+
+                    <button class="toolbar-button" onclick="rotateScan(-1)">
+                        ↶
+                    </button>
+
+                    <button class="toolbar-button" onclick="rotateScan(1)">
+                        ↷
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="scan-area">
+
+                <div id="scan" class="scan">
+
+                    <!-- DOCUMENT GENERATED HERE -->
+
+                </div>
+
+            </div>
+
+
+            <div class="viewer-navigation">
+
+                <button
+                    id="previousButton"
+                    class="nav-button"
+                    onclick="previousFrame()"
+                >
+                    ◀ PREVIOUS
+                </button>
+
+                <div
+                    id="frameCounter"
+                    class="frame-counter"
+                >
+                    FRAME 004182 / 004193
+                </div>
+
+                <button
+                    id="nextButton"
+                    class="nav-button"
+                    onclick="nextFrame()"
+                >
+                    NEXT ▶
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- RIGHT PANEL -->
+
+        <aside class="info-panel">
+
+            <div class="panel-heading">
+                RECORD INFORMATION
+            </div>
+
+
+            <div class="info-block">
+
+                <div class="info-label">
+                    Reel
+                </div>
+
+                <div
+                    id="infoReel"
+                    class="info-value"
+                >
+                    C-02 / FACILITIES
+                </div>
+
+            </div>
+
+
+            <div class="info-block">
+
+                <div class="info-label">
+                    Frame
+                </div>
+
+                <div
+                    id="infoFrame"
+                    class="info-value"
+                >
+                    004182
+                </div>
+
+            </div>
+
+
+            <div class="info-block">
+
+                <div class="info-label">
+                    Record Type
+                </div>
+
+                <div
+                    id="infoType"
+                    class="info-value"
+                >
+                    Maintenance Record
+                </div>
+
+            </div>
+
+
+            <div class="info-block">
+
+                <div class="info-label">
+                    Classification
+                </div>
+
+                <div
+                    id="infoClassification"
+                    class="info-value"
+                >
+                    INTERNAL
+                </div>
+
+            </div>
+
+
+            <div class="info-block">
+
+                <div class="info-label">
+                    Frame Navigation
+                </div>
+
+                <div class="frame-jump">
+
+                    <input
+                        id="frameInput"
+                        class="frame-input"
+                        type="text"
+                        placeholder="004182"
+                        maxlength="6"
+                    >
+
+                    <button
+                        class="go-button"
+                        onclick="jumpToFrame()"
+                    >
+                        GO
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="info-block">
+
+                <div class="info-label">
+                    Archive Status
+                </div>
+
+                <div class="info-value">
+                    AVAILABLE
+                </div>
+
+            </div>
+
+
+            <div class="info-block">
+
+                <div class="info-label">
+                    Source
+                </div>
+
+                <div
+                    id="infoSource"
+                    class="info-value"
+                >
+                    Facilities Department
+                </div>
+
+            </div>
+
+        </aside>
+
+    </div>
+
+
+    <footer>
+
+        <div>
+            CAS INFORMATION MANAGEMENT SYSTEM
+        </div>
+
+        <div>
+            MICROFICHE DATABASE REV. 4.17
+        </div>
+
+    </footer>
+
+</main>
+
+  <script src="./js/microfiche.js"></script>
+
+</body>
+</html>
