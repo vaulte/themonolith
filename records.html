@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CAS — Records & Reports Directory</title>
+<link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/records.css">
+
+</head>
+
+<body>
+
+<header>
+    <div>
+        <div class="cas-title">CENTRAL AUTHORITY OF SAFETY</div>
+        <div class="cas-subtitle">INFORMATION MANAGEMENT SYSTEM</div>
+    </div>
+
+    <div class="system-status">
+        <span class="status-indicator"></span>SYSTEM OPERATIONAL<br>
+        RECORDS DATABASE: ONLINE
+    </div>
+</header>
+
+<nav>
+    CAS
+    <span>/</span>
+    INFORMATION MANAGEMENT
+    <span>/</span>
+    RECORDS &amp; REPORTS DIRECTORY
+</nav>
+
+<main>
+
+    <div class="page-heading">
+        <h1>Records &amp; Reports Directory</h1>
+        <p>
+            Central index of reports, assessments, memoranda and administrative records
+            maintained by the Central Authority of Safety.
+        </p>
+    </div>
+
+    <div class="notice">
+        <strong>NOTICE:</strong>
+        Access to records is determined by classification level and current
+        authorization. Some records may be unavailable for review.
+        Records marked as restricted are not accessible through this directory.
+    </div>
+
+    <section class="search-panel">
+
+        <div class="panel-title">
+            Record Search
+        </div>
+
+        <div class="search-content">
+
+            <div class="search-grid">
+
+                <div class="field">
+                    <label for="keyword">Keyword / Record ID</label>
+                    <input
+                        type="text"
+                        id="keyword"
+                        placeholder="Enter search term..."
+                    >
+                </div>
+
+                <div class="field">
+                    <label for="type">Record Type</label>
+                    <select id="type">
+                        <option>All Record Types</option>
+                        <option>Incident Report</option>
+                        <option>Inspection Report</option>
+                        <option>Safety Assessment</option>
+                        <option>Personnel Report</option>
+                        <option>Maintenance Report</option>
+                        <option>Internal Memorandum</option>
+                        <option>Research Report</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="department">Department</label>
+                    <select id="department">
+                        <option>All Departments</option>
+                        <option>Central Administration</option>
+                        <option>Facilities</option>
+                        <option>Special Operations</option>
+                        <option>Research &amp; Development</option>
+                        <option>Personnel</option>
+                        <option>Safety &amp; Compliance</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="classification">Classification</label>
+                    <select id="classification">
+                        <option>All Classifications</option>
+                        <option>Public</option>
+                        <option>Internal</option>
+                        <option>Restricted</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <button class="search-button" onclick="searchRecords()">
+                SEARCH RECORDS
+            </button>
+
+        </div>
+
+    </section>
+
+    <div class="directory-header">
+
+        <div class="directory-count">
+            Displaying records <strong>001–025</strong> of <strong>1,482</strong>
+        </div>
+
+        <div class="sort-label">
+            Sort by:
+            <select>
+                <option>Date — Newest First</option>
+                <option>Date — Oldest First</option>
+                <option>Record ID</option>
+                <option>Record Type</option>
+                <option>Department</option>
+            </select>
+        </div>
+
+    </div>
+
+    <div class="table-container">
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Record ID</th>
+                    <th>Title</th>
+                    <th>Type</th>
+                    <th>Department</th>
+                    <th>Date</th>
+                    <th>Classification</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td class="record-id">RPT-2024-1102-01</td>
+                    <td>
+                        <a href="#" class="record-link">
+                            Annual Facility Safety Assessment
+                        </a>
+                    </td>
+                    <td>Safety Assessment</td>
+                    <td>Safety &amp; Compliance</td>
+                    <td>02/11/2024</td>
+                    <td>
+                        <span class="classification internal">Internal</span>
+                    </td>
+                    <td class="status status-complete">Complete</td>
+                </tr>
+
+                <tr>
+                    <td class="record-id">RPT-2024-0927-03</td>
+                    <td>
+                        <a href="#" class="record-link">
+                            Central Administration Building Inspection
+                        </a>
+                    </td>
+                    <td>Inspection Report</td>
+                    <td>Facilities</td>
+                    <td>27/09/2024</td>
+                    <td>
+                        <span class="classification public">Public</span>
+                    </td>
+                    <td class="status status-complete">Complete</td>
+                </tr>
+
+                <tr>
+                    <td class="record-id">RPT-2024-0814-07</td>
+                    <td>
+                        <a href="#" class="record-link">
+                            Employee Workplace Safety Review
+                        </a>
+                    </td>
+                    <td>Personnel Report</td>
+                    <td>Personnel</td>
+                    <td>14/08/2024</td>
+                    <td>
+                        <span class="classification internal">Internal</span>
+                    </td>
+                    <td class="status status-complete">Complete</td>
+                </tr>
+
+                <tr>
+                    <td class="record-id">RPT-2024-0711-02</td>
+                    <td>
+                        <a href="#" class="record-link">
+                            Quarterly Equipment Maintenance Report
+                        </a>
+                    </td>
+                    <td>Maintenance Report</td>
+                    <td>Facilities</td>
+                    <td>11/07/2024</td>
+                    <td>
+                        <span class="classification public">Public</span>
+                    </td>
+                    <td class="status status-complete">Complete</td>
+                </tr>
+
+                <tr>
+                    <td class="record-id">RPT-2024-0619-04</td>
+                    <td>
+                        <a href="#" class="record-link">
+                            Personnel Conduct Review
+                        </a>
+                    </td>
+                    <td>Personnel Report</td>
+                    <td>Personnel</td>
+                    <td>19/06/2024</td>
+                    <td>
+                        <span class="classification internal">Internal</span>
+                    </td>
+                    <td class="status status-review">Review Complete</td>
+                </tr>
+
+                <tr>
+                    <td class="record-id">RPT-2024-0428-09</td>
+                    <td>
+                        <a href="#" class="record-link">
+                            Environmental Monitoring Summary
+                        </a>
+                    </td>
+                    <td>Research Report</td>
+                    <td>Research &amp; Development</td>
+                    <td>28/04/2024</td>
+                    <td>
+                        <span class="classification public">Public</span>
+                    </td>
+                    <td class="status status-complete">Complete</td>
+                </tr>
+
+                <tr>
+                    <td class="record-id">RPT-2023-1214-02</td>
+                    <td>
+                        <a href="#" class="record-link">
+                            Facility Emergency Preparedness Review
+                        </a>
+                    </td>
+                    <td>Safety Assessment</td>
+                    <td>Safety &amp; Compliance</td>
+                    <td>14/12/2023</td>
+                    <td>
+                        <span class="classification internal">Internal</span>
+                    </td>
+                    <td class="status status-complete">Complete</td>
+                </tr>
+
+                <tr>
+                    <td class="record-id">RPT-2023-1011-05</td>
+                    <td>
+                        <a href="#" class="record-link">
+                            Special Operations Equipment Inventory
+                        </a>
+                    </td>
+                    <td>Maintenance Report</td>
+                    <td>Special Operations</td>
+                    <td>11/10/2023</td>
+                    <td>
+                        <span class="classification restricted">Restricted</span>
+                    </td>
+                    <td class="status status-restricted">
+                        Access Restricted
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="record-id">RPT-2023-0822-01</td>
+                    <td>
+                        <a href="#" class="record-link">
+                            Internal Safety Memorandum 08/22
+                        </a>
+                    </td>
+                    <td>Internal Memorandum</td>
+                    <td>Central Administration</td>
+                    <td>22/08/2023</td>
+                    <td>
+                        <span class="classification internal">Internal</span>
+                    </td>
+                    <td class="status status-complete">Complete</td>
+                </tr>
+
+                <tr>
+                    <td class="record-id">RPT-2022-0520-11</td>
+                    <td>
+                        <a href="#" class="record-link">
+                            Annual Personnel Records Audit
+                        </a>
+                    </td>
+                    <td>Personnel Report</td>
+                    <td>Personnel</td>
+                    <td>20/05/2022</td>
+                    <td>
+                        <span class="classification internal">Internal</span>
+                    </td>
+                    <td class="status status-complete">Complete</td>
+                </tr>
+
+                <tr>
+                    <td class="record-id">RPT-2021-1118-03</td>
+                    <td>
+                        <a href="#" class="record-link">
+                            Building Systems Maintenance Summary
+                        </a>
+                    </td>
+                    <td>Maintenance Report</td>
+                    <td>Facilities</td>
+                    <td>18/11/2021</td>
+                    <td>
+                        <span class="classification public">Public</span>
+                    </td>
+                    <td class="status status-complete">Complete</td>
+                </tr>
+
+                <tr>
+                    <td class="record-id">RPT-2020-0704-06</td>
+                    <td>
+                        <a href="#" class="record-link">
+                            Workplace Incident Summary — Q2
+                        </a>
+                    </td>
+                    <td>Incident Report</td>
+                    <td>Safety &amp; Compliance</td>
+                    <td>04/07/2020</td>
+                    <td>
+                        <span class="classification internal">Internal</span>
+                    </td>
+                    <td class="status status-complete">Complete</td>
+                </tr>
+
+                <tr>
+                    <td class="record-id">RPT-2019-0618-04</td>
+                    <td>
+                        <a href="#" class="record-link">
+                            Central Administration Facility Inspection
+                        </a>
+                    </td>
+                    <td>Inspection Report</td>
+                    <td>Facilities</td>
+                    <td>18/06/2019</td>
+                    <td>
+                        <span class="classification internal">Internal</span>
+                    </td>
+                    <td class="status status-complete">Complete</td>
+                </tr>
+
+                <tr>
+                    <td class="record-id">RPT-2019-0618-05</td>
+                    <td>
+                        <a href="#" class="record-link">
+                            Central Administration Facility Inspection — Supplement
+                        </a>
+                    </td>
+                    <td>Inspection Report</td>
+                    <td>Facilities</td>
+                    <td>18/06/2019</td>
+                    <td>
+                        <span class="classification internal">Internal</span>
+                    </td>
+                    <td class="status status-review">
+                        Record Unavailable
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="record-id">RPT-2019-0618-06</td>
+                    <td>
+                        <a href="#" class="record-link">
+                            Safety Compliance Memorandum
+                        </a>
+                    </td>
+                    <td>Internal Memorandum</td>
+                    <td>Central Administration</td>
+                    <td>18/06/2019</td>
+                    <td>
+                        <span class="classification restricted">Restricted</span>
+                    </td>
+                    <td class="status status-restricted">
+                        Access Restricted
+                    </td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <div class="pagination">
+
+        <div>
+            Page 1 of 60
+        </div>
+
+        <div class="pages">
+            <span class="current">1</span>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <span>...</span>
+            <a href="#">60</a>
+        </div>
+
+    </div>
+
+</main>
+
+<footer>
+
+    <div class="footer-left">
+        CENTRAL AUTHORITY OF SAFETY<br>
+        INFORMATION MANAGEMENT SYSTEM<br>
+        Records &amp; Reports Directory
+    </div>
+
+    <div class="footer-right">
+        Database revision: 4.17<br>
+        Last synchronization: 07/09/2026 08:42<br>
+        Internal use only
+    </div>
+
+    <div class="clear"></div>
+
+</footer>
+
+<script>
+
+function searchRecords() {
+
+    const keyword = document.getElementById("keyword").value.trim();
+
+    if (keyword === "") {
+        alert("Please enter a search term.");
+        return;
+    }
+
+    /*
+        Intentionally mundane placeholder behaviour.
+        This can later be replaced with real filtering or
+        links to individual record pages.
+    */
+
+    alert(
+        "Search submitted.\n\n" +
+        "Query: " + keyword + "\n\n" +
+        "No additional results are available through this interface."
+    );
+}
+
+</script>
+
+</body>
+</html>
