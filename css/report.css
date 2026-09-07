@@ -35,63 +35,104 @@ main {
     padding: 38px 42px 65px 42px;
 }
 
- /* =========================
-           BREADCRUMB
-        ========================= */
 
-        .breadcrumb {
-            padding: 18px 0 0;
-            font-family: "Courier New", monospace;
-            font-size: 10px;
-            color: var(--grey);
-            letter-spacing: 0.3px;
-        }
+/* ============================================
+   MAIN CONTAINER
+============================================ */
 
-        .breadcrumb a {
-            color: var(--grey);
-        }
+.page-container {
 
+    width: min(
+        calc(100% - 48px),
+        var(--max-width)
+    );
 
-        /* =========================
-           PAGE HEADER
-        ========================= */
+    margin: 0 auto;
 
-        .page-header {
-            padding: 52px 0 42px;
-            border-bottom: 1px solid var(--light-grey);
-        }
-
-        .page-code {
-            font-family: "Courier New", monospace;
-            font-size: 11px;
-            color: var(--grey);
-            letter-spacing: 1px;
-            margin-bottom: 12px;
-        }
-
-        .page-header h1 {
-            margin: 0;
-            font-size: 42px;
-            line-height: 1.05;
-            letter-spacing: -1.5px;
-        }
-
-        .page-description {
-            max-width: 760px;
-            margin-top: 15px;
-            color: var(--dark-grey);
-        }
-
-        .page-meta {
-            margin-top: 25px;
-            font-family: "Courier New", monospace;
-            font-size: 10px;
-            color: var(--grey);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
+}
 
 
+/* ============================================
+   BREADCRUMB
+============================================ */
+
+.breadcrumb {
+
+    padding: 22px 0;
+
+    color: var(--grey);
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 10px;
+
+    letter-spacing: 0.5px;
+
+}
+
+
+/* ============================================
+   HERO
+============================================ */
+
+.hero {
+
+    max-width: 900px;
+
+    padding: 90px 0 100px;
+
+}
+
+
+.hero-label {
+
+    margin-bottom: 18px;
+
+    color: var(--grey);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+}
+
+
+.hero h1 {
+
+    margin-bottom: 28px;
+
+    font-size: clamp(
+        42px,
+        6vw,
+        76px
+    );
+
+    font-weight: 700;
+
+    letter-spacing: -3px;
+
+    line-height: 0.98;
+
+}
+
+
+.hero-description {
+
+    max-width: 620px;
+
+    margin-bottom: 30px;
+
+    color: var(--dark-grey);
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+}
 
 /* DOCUMENT HEADER */
 
