@@ -1,0 +1,359 @@
+
+
+:root {
+    --black: #111111;
+    --dark-grey: #333333;
+    --grey: #777777;
+    --light-grey: #dcdcdc;
+    --very-light-grey: #eeeeee;
+    --white: #ffffff;
+    --warning: #9b0000;
+    --max-width: 1280px;
+}
+
+body {
+    margin: 0;
+    background: var(--white);
+    color: var(--dark-grey);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* HEADER */
+
+header {
+    border-bottom: 1px solid var(--light-grey);
+    padding: 24px 30px 18px 30px;
+}
+
+.header-inner {
+    max-width: var(--max-width);
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: var(--black);
+}
+
+.logo-sub {
+    font-size: 11px;
+    color: var(--grey);
+    letter-spacing: 1px;
+    margin-top: 2px;
+}
+
+.header-meta {
+    text-align: right;
+    font-family: "Courier New", monospace;
+    font-size: 9px;
+    color: var(--grey);
+    line-height: 1.4;
+}
+
+/* NAVIGATION */
+
+nav {
+    border-bottom: 1px solid var(--light-grey);
+    padding: 0 30px;
+}
+
+.nav-inner {
+    max-width: var(--max-width);
+    margin: auto;
+    display: flex;
+}
+
+nav a {
+    display: block;
+    padding: 13px 16px;
+    color: var(--dark-grey);
+    text-decoration: none;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+}
+
+nav a:first-child {
+    padding-left: 0;
+}
+
+nav a:hover {
+    color: var(--black);
+}
+
+nav a.active {
+    color: var(--black);
+    border-bottom: 2px solid var(--black);
+}
+
+/* MAIN */
+
+main {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 30px;
+}
+
+.breadcrumb {
+    font-family: "Courier New", monospace;
+    font-size: 10px;
+    color: var(--grey);
+    margin-bottom: 35px;
+}
+
+.breadcrumb a {
+    color: var(--grey);
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+/* PAGE HEADER */
+
+.record-header {
+    border-bottom: 1px solid var(--light-grey);
+    padding-bottom: 25px;
+    margin-bottom: 30px;
+}
+
+.record-code {
+    font-family: "Courier New", monospace;
+    font-size: 10px;
+    color: var(--grey);
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.record-header h1 {
+    margin: 0;
+    font-size: 34px;
+    font-weight: normal;
+    letter-spacing: -1px;
+    color: var(--black);
+}
+
+.record-header .position {
+    margin-top: 3px;
+    font-size: 16px;
+    color: var(--grey);
+}
+
+.record-status {
+    margin-top: 15px;
+    display: inline-block;
+    border: 1px solid var(--light-grey);
+    padding: 4px 9px;
+    font-family: "Courier New", monospace;
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+/* PROFILE */
+
+.profile {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 35px;
+    margin-bottom: 40px;
+}
+
+.photo {
+    border: 1px solid var(--light-grey);
+    background: var(--very-light-grey);
+}
+
+.photo img {
+    width: 100%;
+    display: block;
+}
+
+.photo-caption {
+    padding: 7px 9px;
+    border-top: 1px solid var(--light-grey);
+    font-family: "Courier New", monospace;
+    font-size: 9px;
+    color: var(--grey);
+}
+
+/* SECTIONS */
+
+.section {
+    margin-bottom: 40px;
+}
+
+.section h2 {
+    font-size: 16px;
+    font-weight: normal;
+    color: var(--black);
+    border-top: 2px solid var(--black);
+    border-bottom: 1px solid var(--light-grey);
+    padding: 10px 0;
+    margin: 0 0 20px 0;
+    letter-spacing: 0.5px;
+}
+
+/* DATA TABLE */
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.data-table tr {
+    border-bottom: 1px solid var(--very-light-grey);
+}
+
+.data-table td {
+    padding: 8px 5px;
+    vertical-align: top;
+}
+
+.data-table td:first-child {
+    width: 210px;
+    color: var(--grey);
+    font-family: "Courier New", monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+.data-table td:last-child {
+    color: var(--dark-grey);
+}
+
+/* TWO COLUMN DATA */
+
+.data-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+/* HISTORY */
+
+.history {
+    max-width: 900px;
+}
+
+.history p {
+    margin: 0 0 16px 0;
+}
+
+/* NOTES */
+
+.note-box {
+    border: 1px solid var(--light-grey);
+    background: #fafafa;
+    padding: 18px;
+    margin-top: 20px;
+}
+
+.note-label {
+    font-family: "Courier New", monospace;
+    font-size: 9px;
+    color: var(--grey);
+    margin-bottom: 7px;
+    letter-spacing: 1px;
+}
+
+/* INTERNAL OBSERVATIONS */
+
+.observation {
+    border-left: 3px solid var(--black);
+    padding: 5px 0 5px 15px;
+    margin-bottom: 18px;
+}
+
+.observation-label {
+    font-family: "Courier New", monospace;
+    font-size: 9px;
+    color: var(--grey);
+    margin-bottom: 3px;
+}
+
+/* FOOTER */
+
+footer {
+    margin-top: 60px;
+    background: var(--black);
+    color: #ffffff;
+    padding: 30px;
+}
+
+.footer-inner {
+    max-width: var(--max-width);
+    margin: auto;
+    font-family: "Courier New", monospace;
+    font-size: 9px;
+    line-height: 1.7;
+}
+
+.footer-warning {
+    color: #cccccc;
+    margin-top: 10px;
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    .header-inner {
+        display: block;
+    }
+
+    .header-meta {
+        text-align: left;
+        margin-top: 10px;
+    }
+
+    .nav-inner {
+        flex-wrap: wrap;
+    }
+
+    .profile {
+        grid-template-columns: 1fr;
+    }
+
+    .photo {
+        max-width: 280px;
+    }
+
+    .data-columns {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 550px) {
+
+    header,
+    nav,
+    main,
+    footer {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    nav a {
+        padding: 10px 8px;
+        font-size: 9px;
+    }
+
+    .record-header h1 {
+        font-size: 27px;
+    }
+
+    .data-table td:first-child {
+        width: 40%;
+    }
+
+}
+
+</html>
