@@ -1,0 +1,433 @@
+
+
+/* ============================================
+   CAS — FACILITIES DIRECTORY
+   ============================================ */
+
+
+/* ============================================
+   FACILITY INTRO
+   ============================================ */
+
+.facility-intro {
+
+    max-width: 760px;
+
+    padding: 70px 0 65px;
+
+}
+
+.facility-intro-label {
+
+    margin-bottom: 18px;
+
+    color: var(--grey);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+}
+
+.facility-intro h1 {
+
+    margin-bottom: 25px;
+
+    font-size: clamp(
+        42px,
+        6vw,
+        70px
+    );
+
+    font-weight: 700;
+
+    letter-spacing: -3px;
+
+    line-height: 0.98;
+
+}
+
+.facility-intro p {
+
+    max-width: 620px;
+
+    color: var(--dark-grey);
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+}
+
+
+/* ============================================
+   FACILITY DIRECTORY
+   ============================================ */
+
+.facility-directory {
+
+    margin-bottom: 90px;
+
+}
+
+
+/* ============================================
+   FACILITY LIST
+   ============================================ */
+
+.facility-list {
+
+    border-bottom: 1px solid var(--black);
+
+}
+
+
+/* ============================================
+   FACILITY ENTRY
+   ============================================ */
+
+.facility-entry {
+
+    display: grid;
+
+    grid-template-columns:
+        90px
+        minmax(250px, 1.5fr)
+        1fr
+        150px
+        30px;
+
+    align-items: center;
+
+    gap: 25px;
+
+    min-height: 120px;
+
+    border-bottom: 1px solid var(--light-grey);
+
+    padding: 22px 0;
+
+    transition:
+        background 0.15s ease,
+        padding 0.15s ease;
+
+}
+
+.facility-entry:last-child {
+
+    border-bottom: none;
+
+}
+
+.facility-entry:hover {
+
+    padding-left: 10px;
+
+    background: var(--very-light-grey);
+
+}
+
+
+/* ============================================
+   FACILITY NUMBER
+   ============================================ */
+
+.facility-number {
+
+    color: var(--grey);
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 11px;
+
+}
+
+
+/* ============================================
+   FACILITY NAME
+   ============================================ */
+
+.facility-name h2 {
+
+    margin-bottom: 5px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.3px;
+
+}
+
+.facility-name span {
+
+    color: var(--grey);
+
+    font-size: 10px;
+
+}
+
+
+/* ============================================
+   FACILITY LOCATION
+   ============================================ */
+
+.facility-location {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+
+}
+
+.facility-location span:first-child {
+
+    color: var(--grey);
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+}
+
+.facility-location span:last-child {
+
+    font-size: 11px;
+
+}
+
+
+/* ============================================
+   FACILITY STATUS
+   ============================================ */
+
+.facility-status {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+}
+
+.facility-status-dot {
+
+    width: 7px;
+
+    height: 7px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: var(--black);
+
+}
+
+.facility-status span {
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.8px;
+
+}
+
+
+/* ============================================
+   FACILITY ARROW
+   ============================================ */
+
+.facility-arrow {
+
+    text-align: right;
+
+    font-size: 17px;
+
+}
+
+
+/* ============================================
+   DIRECTORY INFORMATION
+   ============================================ */
+
+.facility-information {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 80px;
+
+    border-top: 1px solid var(--black);
+
+    padding: 45px 0 90px;
+
+}
+
+.facility-information-column {
+
+    max-width: 500px;
+
+}
+
+.facility-information-column h2 {
+
+    margin-bottom: 15px;
+
+    font-size: 22px;
+
+    letter-spacing: -0.5px;
+
+}
+
+.facility-information-column p {
+
+    margin-bottom: 22px;
+
+    color: var(--dark-grey);
+
+    font-size: 13px;
+
+}
+
+
+/* ============================================
+   RESTRICTED NOTICE
+   ============================================ */
+
+.facility-notice {
+
+    margin-top: 25px;
+
+    border-left: 2px solid var(--black);
+
+    padding-left: 18px;
+
+}
+
+.facility-notice span {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: var(--grey);
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 9px;
+
+}
+
+.facility-notice p {
+
+    margin-bottom: 0;
+
+    color: var(--dark-grey);
+
+    font-size: 11px;
+
+}
+
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 900px) {
+
+    .facility-entry {
+
+        grid-template-columns:
+            70px
+            1fr
+            130px
+            30px;
+
+    }
+
+    .facility-location {
+
+        display: none;
+
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .facility-intro {
+
+        padding:
+            60px
+            0
+            55px;
+
+    }
+
+    .facility-entry {
+
+        grid-template-columns:
+            55px
+            1fr
+            30px;
+
+        gap: 15px;
+
+        min-height: 100px;
+
+    }
+
+    .facility-status {
+
+        display: none;
+
+    }
+
+    .facility-information {
+
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .facility-intro h1 {
+
+        letter-spacing: -2px;
+
+    }
+
+    .facility-entry {
+
+        padding: 20px 0;
+
+    }
+
+    .facility-name h2 {
+
+        font-size: 13px;
+
+    }
+
+}
