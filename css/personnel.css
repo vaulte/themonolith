@@ -195,21 +195,6 @@
 }
 
 
-.navigation-inner a:hover {
-
-    background: var(--very-light-grey);
-
-    color: var(--black);
-
-}
-
-
-.navigation-inner a.active {
-
-    color: var(--black);
-
-}
-
 
 
 
