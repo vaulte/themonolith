@@ -1,0 +1,936 @@
+
+:root {
+    --black: #111;
+    --dark: #252525;
+    --grey: #777;
+    --light: #d9d9d9;
+    --lighter: #eeeeee;
+    --white: #fff;
+    --red: #8e0000;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    min-height: 100%;
+}
+
+body {
+
+    background: #fff;
+
+    color: var(--black);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 13px;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   TOP BAR
+========================================================= */
+
+.topbar {
+
+    height: 70px;
+
+    border-bottom:
+        1px solid var(--light);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding:
+        0 35px;
+
+}
+
+.logo {
+
+    display: flex;
+
+    align-items: baseline;
+
+    gap: 14px;
+
+}
+
+.logo-main {
+
+    font-size: 23px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+}
+
+.logo-sub {
+
+    color: var(--grey);
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+}
+
+.system-status {
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 9px;
+
+    color: var(--grey);
+
+    text-align: right;
+
+    text-transform: uppercase;
+
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.wrapper {
+
+    width:
+        calc(100% - 40px);
+
+    max-width: 1050px;
+
+    margin:
+        0 auto;
+
+}
+
+
+/* =========================================================
+   BREADCRUMB
+========================================================= */
+
+.breadcrumb {
+
+    padding:
+        20px 0;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 9px;
+
+    color: var(--grey);
+
+}
+
+.breadcrumb span {
+
+    margin:
+        0 7px;
+
+}
+
+
+/* =========================================================
+   ERROR HEADER
+========================================================= */
+
+.error-header {
+
+    padding:
+        55px 0 35px;
+
+    border-bottom:
+        2px solid var(--black);
+
+}
+
+.error-number {
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    color: var(--grey);
+
+    margin-bottom: 15px;
+
+}
+
+h1 {
+
+    margin: 0;
+
+    font-size:
+        clamp(55px, 10vw, 110px);
+
+    line-height: .8;
+
+    letter-spacing: -7px;
+
+}
+
+.error-title {
+
+    margin-top: 25px;
+
+    font-size: 18px;
+
+    font-weight: normal;
+
+}
+
+
+/* =========================================================
+   STATUS LABELS
+========================================================= */
+
+.status-row {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+
+    margin-top: 25px;
+
+}
+
+.status {
+
+    padding:
+        5px 9px;
+
+    border:
+        1px solid var(--light);
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 8px;
+
+    text-transform: uppercase;
+
+    letter-spacing: .6px;
+
+}
+
+.status-danger {
+
+    color: var(--red);
+
+    border-color:
+        var(--red);
+
+}
+
+
+/* =========================================================
+   DOCUMENT INFORMATION
+========================================================= */
+
+.document-box {
+
+    margin-top: 40px;
+
+    border:
+        1px solid var(--light);
+
+}
+
+.document-row {
+
+    display: grid;
+
+    grid-template-columns:
+        190px 1fr;
+
+    border-bottom:
+        1px solid var(--light);
+
+}
+
+.document-row:last-child {
+
+    border-bottom:
+        none;
+
+}
+
+.document-label {
+
+    padding: 13px 15px;
+
+    background:
+        var(--lighter);
+
+    border-right:
+        1px solid var(--light);
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 9px;
+
+    text-transform: uppercase;
+
+    color: var(--grey);
+
+}
+
+.document-value {
+
+    padding: 13px 15px;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 11px;
+
+}
+
+
+/* =========================================================
+   CORRUPTED PATH
+========================================================= */
+
+.path {
+
+    display: inline-block;
+
+    word-break: break-all;
+
+}
+
+.path-glitch {
+
+    animation:
+        pathGlitch 3s infinite steps(1);
+
+}
+
+@keyframes pathGlitch {
+
+    0%,
+    82%,
+    100% {
+
+        transform:
+            translateX(0);
+
+    }
+
+    83% {
+
+        transform:
+            translateX(-4px);
+
+    }
+
+    84% {
+
+        transform:
+            translateX(6px);
+
+    }
+
+    85% {
+
+        transform:
+            translateX(0);
+
+    }
+
+}
+
+
+/* =========================================================
+   RECOVERY SECTION
+========================================================= */
+
+.recovery {
+
+    margin-top: 45px;
+
+}
+
+.section-title {
+
+    padding:
+        9px 0;
+
+    border-top:
+        2px solid var(--black);
+
+    border-bottom:
+        1px solid var(--light);
+
+    font-size: 13px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* =========================================================
+   RECOVERY BAR
+========================================================= */
+
+.recovery-box {
+
+    margin-top: 20px;
+
+    padding: 20px;
+
+    border:
+        1px solid var(--light);
+
+}
+
+.recovery-label {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 9px;
+
+    color: var(--grey);
+
+    margin-bottom: 9px;
+
+}
+
+.progress {
+
+    width: 100%;
+
+    height: 13px;
+
+    background:
+        var(--lighter);
+
+    border:
+        1px solid var(--light);
+
+    overflow: hidden;
+
+}
+
+.progress-bar {
+
+    width: 23%;
+
+    height: 100%;
+
+    background:
+        var(--black);
+
+    animation:
+        recovery 5s infinite;
+
+}
+
+@keyframes recovery {
+
+    0% {
+        width: 23%;
+    }
+
+    25% {
+        width: 67%;
+    }
+
+    27% {
+        width: 4%;
+    }
+
+    45% {
+        width: 41%;
+    }
+
+    60% {
+        width: 89%;
+    }
+
+    61% {
+        width: 12%;
+    }
+
+    100% {
+        width: 23%;
+    }
+
+}
+
+
+/* =========================================================
+   DIAGNOSTIC LOG
+========================================================= */
+
+.diagnostic {
+
+    margin-top: 25px;
+
+    background:
+        #111;
+
+    color:
+        #ddd;
+
+    padding:
+        22px;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 10px;
+
+    line-height: 1.9;
+
+    min-height: 235px;
+
+    overflow: hidden;
+
+}
+
+.log-grey {
+
+    color:
+        #777;
+
+}
+
+.log-red {
+
+    color:
+        #ff7777;
+
+}
+
+.blink {
+
+    animation:
+        blink 1.4s infinite steps(1);
+
+}
+
+@keyframes blink {
+
+    0%,
+    48%,
+    52%,
+    100% {
+        opacity: 1;
+    }
+
+    49%,
+    51% {
+        opacity: 0;
+    }
+
+}
+
+
+/* =========================================================
+   CORRUPTED NOTICE
+========================================================= */
+
+.corrupted-notice {
+
+    position:
+        relative;
+
+    margin-top:
+        45px;
+
+    padding:
+        25px;
+
+    border:
+        1px solid var(--red);
+
+    color:
+        var(--red);
+
+    overflow:
+        hidden;
+
+}
+
+.corrupted-notice::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    pointer-events:
+        none;
+
+    background:
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 3px,
+            rgba(0,0,0,.04) 4px
+        );
+
+    animation:
+        static 2.5s infinite steps(1);
+
+}
+
+@keyframes static {
+
+    0%,
+    75%,
+    100% {
+        opacity: 0;
+    }
+
+    76% {
+        opacity: .5;
+    }
+
+    77% {
+        opacity: .1;
+    }
+
+    78% {
+        opacity: .7;
+    }
+
+    79% {
+        opacity: 0;
+    }
+
+}
+
+.notice-title {
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size:
+        10px;
+
+    font-weight:
+        bold;
+
+    letter-spacing:
+        1px;
+
+    margin-bottom:
+        10px;
+
+}
+
+
+/* =========================================================
+   CONTRADICTION
+========================================================= */
+
+.contradiction {
+
+    margin-top:
+        45px;
+
+    border:
+        1px solid var(--light);
+
+}
+
+.contradiction-row {
+
+    padding:
+        17px;
+
+    border-bottom:
+        1px solid var(--light);
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size:
+        10px;
+
+}
+
+.contradiction-row:last-child {
+
+    border-bottom:
+        none;
+
+}
+
+.question {
+
+    color:
+        var(--grey);
+
+    margin-bottom:
+        5px;
+
+}
+
+.answer {
+
+    font-size:
+        12px;
+
+}
+
+.answer-error {
+
+    color:
+        var(--red);
+
+}
+
+
+/* =========================================================
+   RETURN BUTTON
+========================================================= */
+
+.return-area {
+
+    margin:
+        55px 0;
+
+    display:
+        flex;
+
+    gap:
+        10px;
+
+    flex-wrap:
+        wrap;
+
+}
+
+.return-button {
+
+    display:
+        inline-block;
+
+    padding:
+        12px 18px;
+
+    border:
+        1px solid var(--black);
+
+    background:
+        white;
+
+    color:
+        var(--black);
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size:
+        9px;
+
+    text-transform:
+        uppercase;
+
+    cursor:
+        pointer;
+
+}
+
+.return-button:hover {
+
+    background:
+        var(--black);
+
+    color:
+        white;
+
+    text-decoration:
+        none;
+
+}
+
+.return-button.secondary {
+
+    border-color:
+        var(--light);
+
+    color:
+        var(--grey);
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+
+    margin-top:
+        80px;
+
+    padding:
+        28px 0;
+
+    background:
+        #111;
+
+    color:
+        #888;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size:
+        8px;
+
+}
+
+.footer-inner {
+
+    width:
+        calc(100% - 40px);
+
+    max-width:
+        1050px;
+
+    margin:
+        auto;
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    gap:
+        20px;
+
+}
+
+.footer-right {
+
+    text-align:
+        right;
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .topbar {
+
+        padding:
+            0 15px;
+
+    }
+
+    .logo-sub {
+
+        display:
+            none;
+
+    }
+
+    .system-status {
+
+        font-size:
+            8px;
+
+    }
+
+    .wrapper {
+
+        width:
+            calc(100% - 24px);
+
+    }
+
+    .document-row {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+    .document-label {
+
+        border-right:
+            none;
+
+        border-bottom:
+            1px solid var(--light);
+
+    }
+
+    .footer-inner {
+
+        width:
+            calc(100% - 24px);
+
+        flex-direction:
+            column;
+
+    }
+
+    .footer-right {
+
+        text-align:
+            left;
+
+    }
+
+}
+
+</style>
