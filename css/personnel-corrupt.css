@@ -158,7 +158,6 @@ main {
 .photo img {
     width: 100%;
     display: block;
-    filter: grayscale(100%);
 }
 
 .photo-caption {
