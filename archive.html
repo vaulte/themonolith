@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Archive | CAS</title>
+    <link rel="shortcut icon" href="https://i.imgur.com/7PMCzUN.png">
+        <link rel="stylesheet" href="./css/indexing.css">
+    <link rel="stylesheet" href="./css/archive.css">
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+
+    <header class="site-header">
+
+        <div class="header-inner">
+
+            <a href="index.html" class="cas-logo">
+                <span class="logo-acronym">CAS</span>
+
+                <span class="logo-name">
+                    CENTRAL AUTHORITY<br>
+                    OF SAFETY
+                </span>
+            </a>
+
+            <div class="header-information">
+                <span>GOVERNMENT INFORMATION PORTAL</span>
+                <span>DOCUMENT ACCESS SYSTEM</span>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================
+         MAIN NAVIGATION
+    ========================================== -->
+
+    <nav class="main-navigation">
+
+        <div class="navigation-inner">
+
+            <a href="./index.html">HOME</a>
+
+            <a href="./about.html">ABOUT</a>
+
+            <a href="./personnel.html">PERSONNEL</a>
+
+            <a href="./facilities.html">FACILITIES</a>
+
+            <a href="./records.html">RECORDS</a>
+
+            <a href="./research.html">RESEARCH</a>
+
+            <a href="./archive.html" class="active">ARCHIVE</a>
+
+        </div>
+
+    </nav>
+
+
+</header>
+
+
+
+<main class="container">
+
+
+        <!-- BREADCRUMB -->
+
+        <div class="breadcrumb">
+
+            <a href="./index.html">CAS</a> / ARCHIVE
+
+        </div>
+
+
+
+        <section class="page-header">
+
+            <div class="page-code">
+                Archive  Directory / INTERNAL ACCESS
+            </div>
+
+            <h1>
+                Archive Directory
+            </h1>
+    <div class="status-row">
+
+        <div class="status">
+            CLEARANCE: H
+        </div>
+
+        <div class="status status-red">
+            THREAT: RED
+        </div>
+
+        <div class="status">
+            CLASS: OMEGA
+        </div>
+
+    </div>
+            <div class="page-description">
+
+                 Central index of reports, assessments, 
+                 memoranda and administrative records maintained 
+                 by the Central Authority of Safety. 
+
+            </div>
+            
+
+        </section>
+
+<div class="notice">
+        <strong>NOTICE:</strong>
+        Access to records is determined by classification level and current
+        authorization. Some records may be unavailable for review.
+        Records marked as restricted are not accessible through this directory.
+    </div>
+    <section class="search-panel">
+
+        <div class="panel-title">
+            Record Search
+        </div>
+
+        <div class="search-content">
+
+            <div class="search-grid">
+
+                <div class="field">
+                    <label for="keyword">Keyword / Record ID</label>
+                    <input
+                        type="text"
+                        id="keyword"
+                        placeholder="Enter search term..."
+                    >
+                </div>
+
+                <div class="field">
+                    <label for="type">Record Type</label>
+                    <select id="type">
+                        <option>All Record Types</option>
+                        <option>Incident Report</option>
+                        <option>Investigation Report</option>
+                        <option>Internal Memorandum</option>
+                        <option>Interview Transcript</option>
+                        <option>Autopsy</option>
+                        <option>Safety Protocol</option>
+                        <option>Project Proposal</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="department">Department</label>
+                    <select id="department">
+                        <option>All Departments</option>
+                        <option>Central Administration</option>
+                        <option>Facilities</option>
+                        <option>Special Operations</option>
+                        <option>Research &amp; Development</option>
+                        <option>Personnel</option>
+                        <option>Safety &amp; Compliance</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="classification">Classification</label>
+                    <select id="classification">
+                        <option>All Classifications</option>
+                        <option>Internal</option>
+                        <option>Restricted</option>
+                        <option>Out of Date</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <button class="search-button" onclick="searchRecords()">
+                SEARCH RECORDS
+            </button>
+
+        </div>
+
+    </section>
+
+    <div class="directory-header">
+
+        <div class="directory-count">
+            Displaying records <strong>001–025</strong> of <strong>1,482</strong>
+        </div>
+
+        <div class="sort-label">
+            Sort by:
+            <select>
+                <option>Frequently Viewed</option>
+                <option>Date — Newest First</option>
+                <option>Date — Oldest First</option>
+                <option>Record ID</option>
+                <option>Record Type</option>
+                <option>Department</option>
+            </select>
+        </div>
+
+    </div>
+
+    <div class="table-container">
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Record ID</th>
+                    <th>Title</th>
+                    <th>Type</th>
+                    <th>Department</th>
+                    <th>Date</th>
+                    <th>Classification</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td class="record-id">RPT-2024-1102-01</td>
+                    <td>
+                        <a href="./archive-opc.html" class="record-link">
+                            Operation: Pest Control
+                        </a>
+                    </td>
+                    <td>Operational Report</td>
+                    <td>Special Operations</td>
+                    <td>02/11/2024</td>
+                    <td>
+                        <span class="classification restricted">Restricted</span>
+                    </td>
+                    <td class="status status-complete">Complete</td>
+                </tr>
+
+                <tr>
+                    <td class="record-id">RPT-2024-0927-03</td>
+                    <td>
+                        <a href="#" class="record-link">
+                            Central Administration Building Inspection
+                        </a>
+                    </td>
+                    <td>Inspection Report</td>
+                    <td>Facilities</td>
+                    <td>27/09/2024</td>
+                    <td>
+                        <span class="classification internal">Internal</span>
+                    </td>
+                    <td class="status status-complete">Complete</td>
+                </tr>
+
+                <tr>
+                    <td class="record-id">RPT-2024-0814-07</td>
+                    <td>
+                        <a href="#" class="record-link">
+                            Employee Workplace Safety Review
+                        </a>
+                    </td>
+                    <td>Personnel Report</td>
+                    <td>Personnel</td>
+                    <td>14/08/2024</td>
+                    <td>
+                        <span class="classification dated">Out of Date</span>
+                    </td>
+                    <td class="status status-complete">Complete</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <div class="pagination">
+
+        <div>
+            Page 1 of 60
+        </div>
+
+        <div class="pages">
+            <span class="current">1</span>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <span>...</span>
+            <a href="#">60</a>
+        </div>
+
+    </div>
+<br>
+</main>
+
+
+        </main>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================== -->
+
+<footer class="site-footer">
+
+    <div class="footer-inner">
+
+
+        <div>
+
+            <strong>
+                CENTRAL AUTHORITY OF SAFETY
+            </strong>
+
+            <span>
+                National Safety Administration
+            </span>
+
+        </div>
+
+
+
+        <div class="footer-links">
+
+            <a href="#">
+                ACCESSIBILITY
+            </a>
+
+            <a href="#">
+                PRIVACY
+            </a>
+
+            <a href="#">
+                CONTACT
+            </a>
+
+        </div>
+
+
+
+        <div class="footer-meta">
+
+            <span>
+                CAS INFORMATION SYSTEM
+            </span>
+
+            <span>
+                VERSION 1.0.0
+            </span>
+
+            <span>
+                © 2026 CAS
+            </span>
+
+        </div>
+
+
+    </div>
+
+</footer>
+
+<script>
+
+function searchRecords() {
+
+    const keyword = document.getElementById("keyword").value.trim();
+
+    if (keyword === "") {
+        alert("Please enter a search term.");
+        return;
+    }
+
+    /*
+        Intentionally mundane placeholder behaviour.
+        This can later be replaced with real filtering or
+        links to individual record pages.
+    */
+
+    alert(
+        "Search submitted.\n\n" +
+        "Query: " + keyword + "\n\n" +
+        "No additional results are available through this interface."
+    );
+}
+
+</script>
+
+
+</body>
