@@ -1,4 +1,5 @@
-     :root {
+
+        :root {
             --black: #111111;
             --dark-grey: #333333;
             --grey: #777777;
@@ -229,7 +230,6 @@
 }
 
 
-
 .navigation-inner a:hover {
 
     background: var(--very-light-grey);
@@ -263,6 +263,7 @@
     background: var(--black);
 
 }
+
 
 
         /* =========================
@@ -429,197 +430,279 @@
 }
 
 
+
+
 /* individual */
 
- 
 
-/* MAIN */
+/* =========================
+           DIRECTORY
+        ========================= */
 
-.record-status {
-    margin-top: 15px;
-    display: inline-block;
-    border: 1px solid var(--light-grey);
-    padding: 4px 9px;
-    font-family: "Courier New", monospace;
-    font-size: 9px;
-    letter-spacing: 1px;
-}
+        .directory {
+            padding: 45px 0 80px;
+        }
 
-/* PROFILE */
+        .directory-section {
+            margin-bottom: 60px;
+        }
 
-.profile {
-    display: grid;
-    grid-template-columns: 280px 1fr;
-    gap: 35px;
-    margin-bottom: 40px;
-}
+        .section-heading {
+            border-top: 2px solid var(--black);
+            border-bottom: 1px solid var(--light-grey);
+            padding: 12px 0;
+            margin-bottom: 30px;
 
-.photo {
-    border: 1px solid var(--light-grey);
-    background: var(--very-light-grey);
-}
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
 
-.photo img {
-    width: 100%;
-    display: block;
-}
+        .section-heading h2 {
+            margin: 0;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+        }
 
-.photo-caption {
-    padding: 7px 9px;
-    border-top: 1px solid var(--light-grey);
-    font-family: "Courier New", monospace;
-    font-size: 9px;
-    color: var(--grey);
-}
-
-/* SECTIONS */
-
-.section {
-    margin-bottom: 40px;
-}
-
-.section h2 {
-    font-size: 16px;
-    font-weight: normal;
-    color: var(--black);
-    border-top: 2px solid var(--black);
-    border-bottom: 1px solid var(--light-grey);
-    padding: 10px 0;
-    margin: 0 0 20px 0;
-    letter-spacing: 0.5px;
-}
-
-/* DATA TABLE */
-
-.data-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.data-table tr {
-    border-bottom: 1px solid var(--very-light-grey);
-}
-
-.data-table td {
-    padding: 8px 5px;
-    vertical-align: top;
-}
-
-.data-table td:first-child {
-    width: 210px;
-    color: var(--grey);
-    font-family: "Courier New", monospace;
-    font-size: 10px;
-    text-transform: uppercase;
-}
-
-.data-table td:last-child {
-    color: var(--dark-grey);
-}
-
-/* TWO COLUMN DATA */
-
-.data-columns {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-}
-
-/* HISTORY */
-
-.history {
-    max-width: 900px;
-}
-
-.history p {
-    margin: 0 0 16px 0;
-}
-
-/* NOTES */
-
-.note-box {
-    border: 1px solid var(--light-grey);
-    background: #fafafa;
-    padding: 18px;
-    margin-top: 20px;
-}
-
-.note-label {
-    font-family: "Courier New", monospace;
-    font-size: 9px;
-    color: var(--grey);
-    margin-bottom: 7px;
-    letter-spacing: 1px;
-}
-
-/* INTERNAL OBSERVATIONS */
-
-.observation {
-    border-left: 3px solid var(--black);
-    padding: 5px 0 5px 15px;
-    margin-bottom: 18px;
-}
-
-.observation-label {
-    font-family: "Courier New", monospace;
-    font-size: 9px;
-    color: var(--grey);
-    margin-bottom: 3px;
-}
+        .section-heading span {
+            font-family: "Courier New", monospace;
+            font-size: 9px;
+            color: var(--grey);
+        }
 
 
-/* MOBILE */
+        /* =========================
+           PERSONNEL GRID
+        ========================= */
 
-@media (max-width: 800px) {
+        .personnel-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 42px 26px;
+        }
 
-    .header-inner {
-        display: block;
-    }
+        .person {
+            min-width: 0;
+        }
 
-    .header-meta {
-        text-align: left;
-        margin-top: 10px;
-    }
+        .person-image {
+            width: 100%;
+            aspect-ratio: 3 / 4;
+            background: var(--very-light-grey);
+            border: 1px solid var(--light-grey);
+            overflow: hidden;
+            position: relative;
+        }
 
-    .nav-inner {
-        flex-wrap: wrap;
-    }
+        .person-image img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
-    .profile {
-        grid-template-columns: 1fr;
-    }
+        .person-image.missing {
+            background: #111111;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-    .photo {
-        max-width: 280px;
-    }
+        .person-image.missing span {
+            color: #777777;
+            font-family: "Courier New", monospace;
+            font-size: 9px;
+            letter-spacing: 1px;
+            text-align: center;
+        }
 
-    .data-columns {
-        grid-template-columns: 1fr;
-    }
+        .person-image.redacted {
+            background: var(--black);
+        }
 
-}
+        .person-image.redacted::after {
+            content: "IMAGE WITHHELD";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
 
-@media (max-width: 550px) {
+            color: var(--white);
+            font-family: "Courier New", monospace;
+            font-size: 9px;
+            letter-spacing: 1px;
+            white-space: nowrap;
+        }
 
-    header,
-    nav,
-    main,
-     {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
 
-    nav a {
-        padding: 10px 8px;
-        font-size: 9px;
-    }
+        /* =========================
+           PERSON INFORMATION
+        ========================= */
 
-    .record-header h1 {
-        font-size: 27px;
-    }
+        .person-info {
+            padding-top: 12px;
+        }
 
-    .data-table td:first-child {
-        width: 40%;
-    }
+        .person-id {
+            font-family: "Courier New", monospace;
+            font-size: 9px;
+            color: var(--grey);
+            letter-spacing: 0.7px;
+            margin-bottom: 2px;
+        }
 
-}
+        .person-name {
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 0.3px;
+            text-transform: uppercase;
+        }
+
+        .person-role {
+            margin-top: 3px;
+            font-size: 11px;
+            color: var(--dark-grey);
+        }
+
+        .person-status {
+            margin-top: 7px;
+            font-family: "Courier New", monospace;
+            font-size: 9px;
+            color: var(--grey);
+            text-transform: uppercase;
+        }
+
+        .person-status.restricted {
+            color: var(--warning);
+        }
+
+
+        /* =========================
+           REDACTED PERSON
+        ========================= */
+
+        .person-name.redacted-name {
+            display: inline-block;
+            background: var(--black);
+            color: var(--black);
+            padding: 0 5px;
+            user-select: none;
+        }
+
+
+        /* =========================
+           RECORD NOTICE
+        ========================= */
+
+        .directory-notice {
+            border: 1px solid var(--light-grey);
+            padding: 20px;
+            margin-bottom: 55px;
+
+            font-family: "Courier New", monospace;
+            font-size: 10px;
+            color: var(--dark-grey);
+        }
+
+        .directory-notice strong {
+            display: block;
+            margin-bottom: 7px;
+            color: var(--black);
+            letter-spacing: 0.7px;
+        }
+
+
+        /* =========================
+           FOOTNOTE
+        ========================= */
+
+        .directory-footnote {
+            padding-top: 30px;
+            border-top: 1px solid var(--light-grey);
+
+            font-family: "Courier New", monospace;
+            font-size: 9px;
+            color: var(--grey);
+            line-height: 1.8;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: var(--black);
+            color: var(--white);
+            padding: 30px 0;
+            font-family: "Courier New", monospace;
+            font-size: 10px;
+        }
+
+        .footer-grid {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .footer-right {
+            text-align: right;
+            color: #aaa;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .personnel-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+        }
+
+        @media (max-width: 650px) {
+
+            .personnel-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px 18px;
+            }
+
+            .page-header h1 {
+                font-size: 34px;
+            }
+
+            .footer-grid {
+                flex-direction: column;
+            }
+
+            .footer-right {
+                text-align: left;
+            }
+
+        }
+
+        @media (max-width: 450px) {
+
+            .personnel-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .header-top {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .header-meta {
+                text-align: left;
+            }
+
+            .cas-title {
+                flex-direction: column;
+                gap: 2px;
+            }
+
+        }
