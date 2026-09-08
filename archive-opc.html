@@ -1,0 +1,2262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Operation: PC | CAS</title>
+    <link rel="shortcut icon" href="https://i.imgur.com/7PMCzUN.png">
+        <link rel="stylesheet" href="./css/main.css">
+        <link rel="stylesheet" href="./css/indexing.css">
+    <link rel="stylesheet" href="./css/microfiche.css">
+</head>
+
+
+<style>
+
+
+
+</style>
+
+
+
+<body>
+
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+
+    <header class="site-header">
+
+        <div class="header-inner">
+
+            <a href="index.html" class="cas-logo">
+                <span class="logo-acronym">CAS</span>
+
+                <span class="logo-name">
+                    CENTRAL AUTHORITY<br>
+                    OF SAFETY
+                </span>
+            </a>
+
+            <div class="header-information">
+                <span>GOVERNMENT INFORMATION PORTAL</span>
+                <span>DOCUMENT ACCESS SYSTEM</span>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================
+         MAIN NAVIGATION
+    ========================================== -->
+
+    <nav class="main-navigation">
+
+        <div class="navigation-inner">
+
+            <a href="./index.html">HOME</a>
+
+            <a href="./about.html">ABOUT</a>
+
+            <a href="./personnel.html">PERSONNEL</a>
+
+            <a href="./facilities.html">FACILITIES</a>
+
+            <a href="./records.html">RECORDS</a>
+
+            <a href="./research.html">RESEARCH</a>
+
+            <a href="./archive.html" class="active">ARCHIVE</a>
+
+        </div>
+
+    </nav>
+
+
+</header>
+
+
+
+<main class="container">
+
+
+        <!-- BREADCRUMB -->
+
+        <div class="breadcrumb">
+
+            <a href="./index.html">CAS</a> / <a href="./archives.html">ARCHIVES</a> / OPERATION: PEST CONTROL
+
+        </div>
+
+
+        <!-- PAGE HEADER -->
+
+        <section class="page-header">
+
+            <div class="page-code">
+                Microfiche Archive / RESTRICTED ACCESS
+            </div>
+
+            <h1>
+                Operation:
+                <br>Pest Control
+            </h1>
+
+            <div class="page-description">
+
+                Digitized records of collected materials, supporting documentation,
+            and physical evidence associated with CAS reports.
+
+            </div>
+
+        </section>
+
+
+    <div class="notice">
+
+        <strong>NOTICE:</strong>
+        This archive contains reproductions of physical records.
+        Original materials remain subject to applicable retention,
+        storage, and access requirements.
+
+    </div>
+
+
+    <div class="archive-terminal">
+
+
+        <!-- LEFT PANEL -->
+
+        <aside class="reel-panel">
+
+            <div class="panel-heading">
+                ARCHIVE REEL
+            </div>
+
+            <div class="reel-info">
+
+                <strong>C-02 / FACILITIES</strong>
+
+                <small>
+                    Facilities documentation and associated
+                    material records.
+                </small>
+
+            </div>
+
+            <div class="panel-heading">
+                FRAMES
+            </div>
+
+            <div id="frameList" class="frame-list"></div>
+
+        </aside>
+
+
+        <!-- VIEWER -->
+
+        <section class="viewer">
+
+            <div class="viewer-toolbar">
+
+                <div class="toolbar-group">
+
+                    <span class="toolbar-label">
+                        VIEW
+                    </span>
+
+                    <button class="toolbar-button" onclick="zoomOut()">
+                        −
+                    </button>
+
+                    <span id="zoomValue" class="zoom-value">
+                        100%
+                    </span>
+
+                    <button class="toolbar-button" onclick="zoomIn()">
+                        +
+                    </button>
+
+                    <button class="toolbar-button" onclick="resetZoom()">
+                        FIT
+                    </button>
+
+                </div>
+
+
+                <div class="toolbar-group">
+
+                    <button class="toolbar-button" onclick="rotateScan(-1)">
+                        ↶
+                    </button>
+
+                    <button class="toolbar-button" onclick="rotateScan(1)">
+                        ↷
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="scan-area">
+
+                <div id="scan" class="scan">
+
+                    <!-- DOCUMENT GENERATED HERE -->
+
+                </div>
+
+            </div>
+
+
+            <div class="viewer-navigation">
+
+                <button
+                    id="previousButton"
+                    class="nav-button"
+                    onclick="previousFrame()"
+                >
+                    ◀ PREVIOUS
+                </button>
+
+                <div
+                    id="frameCounter"
+                    class="frame-counter"
+                >
+                    FRAME 004182 / 004193
+                </div>
+
+                <button
+                    id="nextButton"
+                    class="nav-button"
+                    onclick="nextFrame()"
+                >
+                    NEXT ▶
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- RIGHT PANEL -->
+
+        <aside class="info-panel">
+
+            <div class="panel-heading">
+                RECORD INFORMATION
+            </div>
+
+
+            <div class="info-block">
+
+                <div class="info-label">
+                    Reel
+                </div>
+
+                <div
+                    id="infoReel"
+                    class="info-value"
+                >
+                    C-02 / FACILITIES
+                </div>
+
+            </div>
+
+
+            <div class="info-block">
+
+                <div class="info-label">
+                    Frame
+                </div>
+
+                <div
+                    id="infoFrame"
+                    class="info-value"
+                >
+                    004182
+                </div>
+
+            </div>
+
+
+            <div class="info-block">
+
+                <div class="info-label">
+                    Record Type
+                </div>
+
+                <div
+                    id="infoType"
+                    class="info-value"
+                >
+                    Maintenance Record
+                </div>
+
+            </div>
+
+
+            <div class="info-block">
+
+                <div class="info-label">
+                    Classification
+                </div>
+
+                <div
+                    id="infoClassification"
+                    class="info-value"
+                >
+                    INTERNAL
+                </div>
+
+            </div>
+
+
+            <div class="info-block">
+
+                <div class="info-label">
+                    Frame Navigation
+                </div>
+
+                <div class="frame-jump">
+
+                    <input
+                        id="frameInput"
+                        class="frame-input"
+                        type="text"
+                        placeholder="004182"
+                        maxlength="6"
+                    >
+
+                    <button
+                        class="go-button"
+                        onclick="jumpToFrame()"
+                    >
+                        GO
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="info-block">
+
+                <div class="info-label">
+                    Archive Status
+                </div>
+
+                <div class="info-value">
+                    AVAILABLE
+                </div>
+
+            </div>
+
+
+            <div class="info-block">
+
+                <div class="info-label">
+                    Source
+                </div>
+
+                <div
+                    id="infoSource"
+                    class="info-value"
+                >
+                    Facilities Department
+                </div>
+
+            </div>
+
+        </aside>
+
+    </div>
+
+
+    <footer>
+
+        <div>
+            CAS INFORMATION MANAGEMENT SYSTEM
+        </div>
+
+        <div>
+            MICROFICHE DATABASE REV. 4.17
+        </div>
+
+    </footer>
+
+</main>
+
+
+        </main>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================== -->
+
+<footer class="site-footer">
+
+    <div class="footer-inner">
+
+
+        <div>
+
+            <strong>
+                CENTRAL AUTHORITY OF SAFETY
+            </strong>
+
+            <span>
+                National Safety Administration
+            </span>
+
+        </div>
+
+
+
+        <div class="footer-links">
+
+            <a href="#">
+                ACCESSIBILITY
+            </a>
+
+            <a href="#">
+                PRIVACY
+            </a>
+
+            <a href="#">
+                CONTACT
+            </a>
+
+        </div>
+
+
+
+        <div class="footer-meta">
+
+            <span>
+                CAS INFORMATION SYSTEM
+            </span>
+
+            <span>
+                VERSION 1.0.0
+            </span>
+
+            <span>
+                © 2026 CAS
+            </span>
+
+        </div>
+
+
+    </div>
+
+</footer>
+
+
+
+
+<script>
+
+/* =========================================
+   ARCHIVE DATA
+========================================= */
+
+const archive = [
+
+{
+    frame: "006421",
+    title: "Operation: PEST CONTROL — Cover Sheet",
+    type: "Operational Report",
+    classification: "RESTRICTED",
+    source: "Special Operations",
+    date: "14/08/2024",
+    report: "OPS-2024-0814",
+
+    content: `
+
+    <div class="document-header">
+
+        <h2>Operation: PEST CONTROL</h2>
+
+        <p>
+            CENTRAL AUTHORITY OF SAFETY
+            — SPECIAL OPERATIONS DIVISION
+        </p>
+
+        <p>
+            OPERATIONAL RECOVERY REPORT
+        </p>
+
+    </div>
+
+
+    <div class="document-meta">
+
+        <strong>Operation</strong>
+        <span>PEST CONTROL</span>
+
+        <strong>Operation No.</strong>
+        <span>OPS-2024-0814</span>
+
+        <strong>Date</strong>
+        <span>14/08/2024</span>
+
+        <strong>Location</strong>
+        <span>████████████████</span>
+
+        <strong>Classification</strong>
+        <span>RESTRICTED</span>
+
+        <strong>Personnel</strong>
+        <span>████████████████</span>
+
+    </div>
+
+
+    <div class="document-section">
+
+        <h3>1. PURPOSE</h3>
+
+        <p>
+            Operation PEST CONTROL was authorized following the
+            identification of an unauthorized underground facility
+            operated by ███████████████████.
+        </p>
+
+        <p>
+            Intelligence indicated the site was being utilized for
+            unauthorized experimentation involving human subjects
+            and phenomena of possible othernatural origin.
+        </p>
+
+    </div>
+
+
+    <div class="document-section">
+
+        <h3>2. RECOVERY</h3>
+
+        <p>
+            CAS personnel entered the facility at approximately
+            0317 hours. Resistance was encountered during entry.
+            Facility personnel were subsequently neutralized or
+            evacuated.
+        </p>
+
+        <p>
+            Two living human subjects were recovered from an
+            underground medical area.
+        </p>
+
+    </div>
+
+
+    <div class="document-section">
+
+        <h3>3. INITIAL DETERMINATION</h3>
+
+        <p>
+            Neither recovered subject demonstrated characteristics
+            sufficient for immediate classification as a naturally
+            occurring othernatural entity.
+        </p>
+
+        <p>
+            Both subjects exhibit extensive artificial anatomical
+            modification consistent with prolonged experimentation.
+        </p>
+
+        <p>
+            Subjects have been transferred to CAS custody pending
+            medical, legal, and classification review.
+        </p>
+
+    </div>
+
+
+    <div class="document-section">
+
+        <h3>4. STATUS</h3>
+
+        <p>
+            OPERATION COMPLETE.
+        </p>
+
+        <p>
+            TWO SUBJECTS RECOVERED ALIVE.
+        </p>
+
+    </div>
+
+
+    <div class="document-footer">
+
+        <span>CAS-OPS-006421</span>
+
+        <span>PAGE 1 OF 1</span>
+
+    </div>
+
+    `
+},
+
+
+{
+    frame: "006422",
+    title: "Site Description",
+    type: "Site Assessment",
+    classification: "RESTRICTED",
+    source: "Special Operations",
+    date: "14/08/2024",
+    report: "OPS-2024-0814",
+
+    content: `
+
+    <div class="document-header">
+
+        <h2>Site Description</h2>
+
+        <p>
+            OPERATION: PEST CONTROL
+        </p>
+
+    </div>
+
+
+    <div class="document-meta">
+
+        <strong>Site</strong>
+        <span>████████████████</span>
+
+        <strong>Structure</strong>
+        <span>Decommissioned industrial facility</span>
+
+        <strong>Sublevel</strong>
+        <span>Three (3) confirmed</span>
+
+        <strong>Primary Use</strong>
+        <span>Underground medical research facility</span>
+
+    </div>
+
+
+    <div class="document-section">
+
+        <h3>1. GENERAL DESCRIPTION</h3>
+
+        <p>
+            Above-ground structures appeared abandoned and had
+            received no documented occupancy for approximately
+            eleven years.
+        </p>
+
+        <p>
+            Access to the lower facility was concealed behind a
+            reinforced service wall.
+        </p>
+
+        <p>
+            Lower levels contained examination rooms, surgical
+            equipment, holding areas, laboratory spaces, and
+            personnel accommodation.
+        </p>
+
+    </div>
+
+
+    <div class="document-section">
+
+        <h3>2. MEDICAL AREAS</h3>
+
+        <p>
+            Surgical equipment was present throughout Levels
+            B2 and B3.
+        </p>
+
+        <p>
+            Evidence of repeated surgical intervention was
+            identified on equipment, restraints, flooring,
+            and disposable medical materials.
+        </p>
+
+        <p>
+            Several operating areas contained unidentified
+            biological material.
+        </p>
+
+    </div>
+
+
+    <div class="document-section">
+
+        <h3>3. DOCUMENTATION</h3>
+
+        <p>
+            Approximately 2,800 pages of handwritten and
+            electronic documentation were recovered.
+        </p>
+
+        <p>
+            Documentation refers to test subjects using numerical
+            designations. Names were not routinely recorded.
+        </p>
+
+    </div>
+
+
+    <div class="document-footer">
+
+        <span>CAS-OPS-006422</span>
+
+        <span>PAGE 1 OF 1</span>
+
+    </div>
+
+    `
+},
+
+
+{
+    frame: "006423",
+    title: "Entry and Recovery Summary",
+    type: "Recovery Record",
+    classification: "RESTRICTED",
+    source: "Special Operations",
+    date: "14/08/2024",
+    report: "OPS-2024-0814",
+
+    content: `
+
+    <div class="document-header">
+
+        <h2>Entry and Recovery Summary</h2>
+
+        <p>
+            OPERATION: PEST CONTROL
+        </p>
+
+    </div>
+
+
+    <div class="document-meta">
+
+        <strong>Entry Time</strong>
+        <span>0317 hours</span>
+
+        <strong>Subject Recovery</strong>
+        <span>0341 hours</span>
+
+        <strong>Medical Extraction</strong>
+        <span>0418 hours</span>
+
+        <strong>Site Secured</strong>
+        <span>0527 hours</span>
+
+    </div>
+
+
+    <div class="document-section">
+
+        <h3>1. RECOVERY CONDITIONS</h3>
+
+        <p>
+            Two living subjects were located within separate
+            reinforced medical holding rooms.
+        </p>
+
+        <p>
+            Both subjects displayed significant physical injury,
+            malnutrition, and evidence of prolonged restraint.
+        </p>
+
+        <p>
+            Neither subject was capable of verbal communication
+            at the time of recovery.
+        </p>
+
+    </div>
+
+
+    <div class="document-section">
+
+        <h3>2. IDENTIFICATION</h3>
+
+        <table class="document-table">
+
+            <tr>
+                <th>CAS Designation</th>
+                <th>Facility Designation</th>
+                <th>Condition</th>
+            </tr>
+
+            <tr>
+                <td>SUBJECT A</td>
+                <td>ARACHNE</td>
+                <td>ALIVE</td>
+            </tr>
+
+            <tr>
+                <td>SUBJECT B</td>
+                <td>LYCAON</td>
+                <td>ALIVE</td>
+            </tr>
+
+        </table>
+
+    </div>
+
+
+    <div class="document-section">
+
+        <h3>3. NOTE</h3>
+
+        <p>
+            Facility documentation suggests both subjects were
+            acquired through kidnapping or other involuntary means.
+        </p>
+
+    </div>
+
+
+    <div class="document-footer">
+
+        <span>CAS-OPS-006423</span>
+
+        <span>PAGE 1 OF 1</span>
+
+    </div>
+
+    `
+},
+
+
+{
+    frame: "006424",
+    title: "Recovered Subject A — ARACHNE",
+    type: "Medical Assessment",
+    classification: "RESTRICTED",
+    source: "Medical Division",
+    date: "14/08/2024",
+    report: "MED-2024-0814-A",
+
+    content: `
+
+    <div class="document-header">
+
+        <h2>Recovered Subject A — ARACHNE</h2>
+
+        <p>
+            INITIAL MEDICAL ASSESSMENT
+        </p>
+
+    </div>
+
+
+    <div class="document-meta">
+
+        <strong>CAS Designation</strong>
+        <span>SUBJECT A</span>
+
+        <strong>Facility Designation</strong>
+        <span>ARACHNE</span>
+
+        <strong>Sex</strong>
+        <span>Female</span>
+
+        <strong>Speech</strong>
+        <span>Absent</span>
+
+        <strong>Condition</strong>
+        <span>Critical / Stable</span>
+
+    </div>
+
+
+    <div class="document-section">
+
+        <h3>1. GENERAL OBSERVATION</h3>
+
+        <p>
+            Subject appears to be an adult human female who has
+            undergone extensive surgical modification.
+        </p>
+
+        <p>
+            Subject retains two naturally positioned upper limbs.
+            Four additional limbs have been surgically attached, set
+            one from the scapula, set two beginning at the floating ribs.
+        </p>
+
+    </div>
+
+
+    <div class="document-section">
+
+        <h3>2. ADDITIONAL LIMBS</h3>
+
+        <p>
+            Additional limbs consist of mixed biological and
+            mechanical construction.
+        </p>
+
+        <p>
+            Biological components appear to originate from multiple
+            human donors. Exact number of donors cannot currently
+            be established.
+        </p>
+
+        <p>
+            Distal portions have been replaced or reinforced with
+            metallic structures terminating in elongated metallic
+            digits.
+        </p>
+
+        <p>
+            Digits possess sufficient structural strength to
+            penetrate standard medical examination surfaces.
+        </p>
+
+    </div>
+
+
+    <div class="document-section">
+
+        <h3>3. NEUROLOGICAL RESPONSE</h3>
+
+        <p>
+            Subject demonstrates consistent response to visual
+            stimuli and individual personnel, and apparent recognition 
+            of repeated individuals and locations.
+        </p>
+
+        <p>
+            Subject has demonstrated extreme aggressive attachment when 
+            personnel attempted to seperate from Subject B.
+        </p>
+
+        <p>
+            During examination, subject repeatedly attempted to
+            shield her face and torso from medical personnel.
+        </p>
+
+    </div>
+
+
+    <div class="document-section">
+
+        <h3>4. PRELIMINARY ASSESSMENT</h3>
+
+        <p>
+            Subject demonstrates significantly greater apparent
+            cognitive and social function than Subject B.
+        </p>
+
+        <p>
+            Classification as non-sentient or purely reactive
+            organism is not recommended.
+        </p>
+
+    </div>
+
+
+    <div class="document-footer">
+
+        <span>CAS-OPS-006424</span>
+
+        <span>PAGE 1 OF 2</span>
+
+    </div>
+
+    `
+},
+
+
+{
+    frame: "006425",
+    title: "Recovered Subject B — LYCAON",
+    type: "Medical Assessment",
+    classification: "RESTRICTED",
+    source: "Medical Division",
+    date: "14/08/2024",
+    report: "MED-2024-0814-B",
+
+    content: `
+
+    <div class="document-header">
+
+        <h2>Recovered Subject B — LYCAON</h2>
+
+        <p>
+            INITIAL MEDICAL ASSESSMENT
+        </p>
+
+    </div>
+
+
+    <div class="document-meta">
+
+        <strong>CAS Designation</strong>
+        <span>SUBJECT B</span>
+
+        <strong>Facility Designation</strong>
+        <span>LYCAON</span>
+
+        <strong>Sex</strong>
+        <span>Male</span>
+
+        <strong>Speech</strong>
+        <span>Absent</span>
+
+        <strong>Condition</strong>
+        <span>Critical / Stable</span>
+
+    </div>
+
+
+    <div class="document-section">
+
+        <h3>1. GENERAL OBSERVATION</h3>
+
+        <p>
+            Subject appears to be an adult human male exhibiting
+            extensive surgical and anatomical modification.
+        </p>
+
+        <p>
+            Cranial structure demonstrates significant alteration
+            consistent with forced dental and facial modification.
+        </p>
+
+    </div>
+
+
+    <div class="document-section">
+
+        <h3>2. DENTAL MODIFICATION</h3>
+
+        <p>
+            Subject possesses multiple oversized metallic dental
+            structures fixed directly into the jaw.
+        </p>
+
+        <p>
+            Several teeth appear to have been removed to permit
+            implantation.
+        </p>
+
+        <p>
+            Metallic structures remain permanently affixed.
+        </p>
+
+    </div>
+
+
+    <div class="document-section">
+
+        <h3>3. OTHER MODIFICATIONS</h3>
+
+        <p>
+            External ears have been surgically altered and exhibit
+            extensive scarring.
+        </p>
+
+        <p>
+            Nasal structure has been modified.
+        </p>
+
+        <p>
+            Upper limbs display significant scarring and structural
+            alteration.
+        </p>
+
+        <p>
+            Subject exhibits heightened response to sudden movement,
+            unfamiliar personnel, and high-frequency sound.
+        </p>
+
+    </div>
+
+
+    <div class="document-section">
+
+        <h3>4. PRELIMINARY ASSESSMENT</h3>
+
+        <p>
+            Subject exhibits limited observable communication and
+            does not appear capable of conventional speech.
+        </p>
+
+        <p>
+            Subject demonstrates repeated defensive behaviour.
+        </p>
+
+        <p>
+            Cognitive capacity cannot currently be established.
+        </p>
+
+    </div>
+
+
+    <div class="document-footer">
+
+        <span>CAS-OPS-006425</span>
+
+        <span>PAGE 2 OF 2</span>
+
+    </div>
+
+    `
+},
+
+
+{
+    frame: "006426",
+    title: "Medical Assessment — Comparative Findings",
+    type: "Medical Record",
+    classification: "RESTRICTED",
+    source: "Medical Division",
+    date: "15/08/2024",
+    report: "MED-2024-0814",
+
+    content: `
+
+    <div class="document-header">
+
+        <h2>Medical Assessment — Comparative Findings</h2>
+
+        <p>
+            RECOVERED SUBJECTS A AND B
+        </p>
+
+    </div>
+
+
+    <div class="document-section">
+
+        <h3>1. SUMMARY</h3>
+
+        <p>
+            Both recovered subjects demonstrate extensive evidence
+            of non-consensual surgical intervention.
+        </p>
+
+        <p>
+            Neither subject displays sufficient characteristics
+            for classification as naturally occurring othernatural
+            phenomena.
+        </p>
+
+    </div>
+
+
+    <div class="document-section">
+
+        <h3>2. COMPARATIVE ASSESSMENT</h3>
+
+        <table class="document-table">
+
+            <tr>
+                <th>Characteristic</th>
+                <th>Subject A</th>
+                <th>Subject B</th>
+            </tr>
+
+            <tr>
+                <td>Speech</td>
+                <td>Absent</td>
+                <td>Absent</td>
+            </tr>
+
+            <tr>
+                <td>Voluntary movement</td>
+                <td>Present</td>
+                <td>Present</td>
+            </tr>
+
+            <tr>
+                <td>Recognition of personnel</td>
+                <td>Observed</td>
+                <td>Unconfirmed</td>
+            </tr>
+
+            <tr>
+                <td>Response to written symbols</td>
+                <td>Possible</td>
+                <td>Not observed</td>
+            </tr>
+
+            <tr>
+                <td>Defensive behaviour</td>
+                <td>Present</td>
+                <td>Severe</td>
+            </tr>
+
+        </table>
+
+    </div>
+
+
+    <div class="document-section">
+
+        <h3>3. CLASSIFICATION ISSUE</h3>
+
+        <p>
+            Subjects cannot presently be assigned to an existing
+            CAS othernatural classification.
+        </p>
+
+        <p>
+            Current working designation:
+        </p>
+
+        <p>
+            <strong>
+                ARTIFICIALLY MODIFIED HUMAN SUBJECT
+            </strong>
+        </p>
+
+    </div>
+
+
+    <div class="document-footer">
+
+        <span>CAS-OPS-006426</span>
+
+        <span>PAGE 1 OF 1</span>
+
+    </div>
+
+    `
+},
+
+
+{
+    frame: "006427",
+    title: "Behavioural Observation — Subject A",
+    type: "Behavioural Record",
+    classification: "RESTRICTED",
+    source: "Medical Division",
+    date: "16/08/2024",
+    report: "MED-2024-0814-A",
+
+    content: `
+
+    <div class="document-header">
+
+        <h2>Behavioural Observation — Subject A</h2>
+
+        <p>
+            SUBJECT A / ARACHNE
+        </p>
+
+    </div>
+
+
+    <div class="document-meta">
+
+        <strong>Observation Period</strong>
+        <span>0800 — 1600</span>
+
+        <strong>Observer</strong>
+        <span>Dr. █████████</span>
+
+    </div>
+
+
+    <div class="document-section">
+
+        <h3>1. OBSERVATION</h3>
+
+        <p>
+            Subject remained seated for the majority of the
+            observation period.
+        </p>
+
+        <p>
+            Subject visually tracked personnel entering and
+            exiting the room.
+        </p>
+
+        <p>
+            Subject responded to her facility designation.
+        </p>
+
+    </div>
+
+
+    <div class="document-section">
+
+        <h3>2. COMMUNICATION</h3>
+
+        <p>
+            Subject does not vocalize.
+        </p>
+
+        <p>
+            Subject has demonstrated repeated use of hand
+            movements to indicate direction, refusal, and
+            apparent requests.
+        </p>
+
+        <p>
+            Interpretation remains uncertain.
+        </p>
+
+    </div>
+
+
+    <div class="document-section">
+
+        <h3>3. INCIDENT</h3>
+
+        <p>
+            At 1322 hours Subject used one additional limb to
+            retrieve a blanket that had fallen outside the
+            designated bedding area.
+        </p>
+
+        <p>
+            Subject then returned the blanket to the bed of
+            Subject B.
+        </p>
+
+        <p>
+            No equivalent behaviour has been documented from
+            Subject B.
+        </p>
+
+    </div>
+
+
+    <div class="document-section">
+
+        <h3>4. NOTE</h3>
+
+        <p>
+            Recommend continued observation before determining
+            cognitive classification.
+        </p>
+
+    </div>
+
+
+    <div class="document-footer">
+
+        <span>CAS-OPS-006427</span>
+
+        <span>PAGE 1 OF 1</span>
+
+    </div>
+
+    `
+},
+
+
+{
+    frame: "006428",
+    title: "Containment Recommendations",
+    type: "Medical / Security Record",
+    classification: "RESTRICTED",
+    source: "Medical Division",
+    date: "17/08/2024",
+    report: "MED-2024-0814",
+
+    content: `
+
+    <div class="document-header">
+
+        <h2>Containment Recommendations</h2>
+
+        <p>
+            RECOVERED SUBJECTS A AND B
+        </p>
+
+    </div>
+
+
+    <div class="document-section">
+
+        <h3>1. GENERAL</h3>
+
+        <p>
+            Subjects should not be housed within standard
+            othernatural containment facilities.
+        </p>
+
+        <p>
+            Subjects should instead receive medical accommodation
+            appropriate for severely injured human patients.
+        </p>
+
+    </div>
+
+
+    <div class="document-section">
+
+        <h3>2. SUBJECT A</h3>
+
+        <p>
+            Subject A demonstrates apparent awareness of
+            surroundings and should not be restrained except
+            where medically necessary.
+        </p>
+
+        <p>
+            Additional limbs present a physical hazard during
+            examination.
+        </p>
+
+    </div>
+
+
+    <div class="document-section">
+
+        <h3>3. SUBJECT B</h3>
+
+        <p>
+            Subject B should be housed separately during the
+            initial observation period.
+        </p>
+
+        <p>
+            Subject displays unpredictable defensive behaviour.
+        </p>
+
+        <p>
+            Sedation should not be utilized as a routine behavioural
+            management measure.
+        </p>
+
+    </div>
+
+
+    <div class="document-section">
+
+        <h3>4. RECOMMENDATION</h3>
+
+        <p>
+            Both subjects should be considered persons under
+            provisional CAS medical custody pending legal review.
+        </p>
+
+    </div>
+
+
+    <div class="document-footer">
+
+        <span>CAS-OPS-006428</span>
+
+        <span>PAGE 1 OF 1</span>
+
+    </div>
+
+    `
+},
+
+
+{
+    frame: "006429",
+    title: "Disposition Review",
+    type: "Administrative Review",
+    classification: "RESTRICTED",
+    source: "Central Administration",
+    date: "19/08/2024",
+    report: "ADM-2024-0819",
+
+    content: `
+
+    <div class="document-header">
+
+        <h2>Disposition Review</h2>
+
+        <p>
+            RECOVERED SUBJECTS — PEST CONTROL
+        </p>
+
+    </div>
+
+
+    <div class="document-section">
+
+        <h3>1. QUESTION PRESENTED</h3>
+
+        <p>
+            Determine appropriate long-term disposition of two
+            individuals recovered from the █████████████ facility.
+        </p>
+
+    </div>
+
+
+    <div class="document-section">
+
+        <h3>2. CONSIDERATIONS</h3>
+
+        <p>
+            Subjects were apparently unwilling participants in
+            unauthorized experimentation.
+        </p>
+
+        <p>
+            Subjects have no known family contacts currently
+            identified.
+        </p>
+
+        <p>
+            Subjects cannot communicate through conventional
+            speech.
+        </p>
+
+        <p>
+            Subjects possess substantial physical modifications
+            that may prevent reintegration into civilian society.
+        </p>
+
+    </div>
+
+
+    <div class="document-section">
+
+        <h3>3. CLASSIFICATION</h3>
+
+        <p>
+            Current classification remains unresolved.
+        </p>
+
+        <p>
+            Subjects are neither conventional human patients
+            nor confirmed othernatural entities.
+        </p>
+
+    </div>
+
+
+    <div class="document-section">
+
+        <h3>4. DISPOSITION</h3>
+
+        <p>
+            NO DETERMINATION.
+        </p>
+
+        <p>
+            Subjects are to remain in CAS custody until further
+            instruction.
+        </p>
+
+    </div>
+
+
+    <div class="document-footer">
+
+        <span>CAS-OPS-006429</span>
+
+        <span>PAGE 1 OF 1</span>
+
+    </div>
+
+    `
+},
+
+
+{
+    frame: "006430",
+    title: "Addendum — Subject A Communication",
+    type: "Behavioural Addendum",
+    classification: "RESTRICTED",
+    source: "Medical Division",
+    date: "21/08/2024",
+    report: "MED-2024-0814-A",
+
+    content: `
+
+    <div class="document-header">
+
+        <h2>Addendum — Subject A Communication</h2>
+
+        <p>
+            ADDENDUM TO BEHAVIOURAL OBSERVATION
+        </p>
+
+    </div>
+
+
+    <div class="document-section">
+
+        <h3>1. INCIDENT</h3>
+
+        <p>
+            During morning examination Subject A was provided
+            with a blank sheet of paper and graphite writing
+            instrument.
+        </p>
+
+        <p>
+            Subject initially did not interact with either item.
+        </p>
+
+        <p>
+            At approximately 0916 hours Subject began making
+            marks on the paper.
+        </p>
+
+    </div>
+
+
+    <div class="document-section">
+
+        <h3>2. RESULT</h3>
+
+        <p>
+            Subject produced a repeated geometric pattern.
+        </p>
+
+        <p>
+            Pattern consisted of intersecting lines and circular
+            forms.
+        </p>
+
+        <p>
+            Subject then placed the paper against the observation
+            window.
+        </p>
+
+    </div>
+
+
+    <div class="document-section">
+
+        <h3>3. OBSERVATION</h3>
+
+        <p>
+            Subject maintained eye contact with observing personnel
+            for approximately thirty-seven seconds.
+        </p>
+
+        <p>
+            Subject subsequently pointed toward the adjacent
+            holding room containing Subject B.
+        </p>
+
+    </div>
+
+
+    <div class="document-section">
+
+        <h3>4. NOTE</h3>
+
+        <p>
+            Drawing retained as evidence.
+        </p>
+
+        <p>
+            Interpretation pending.
+        </p>
+
+    </div>
+
+
+    <div class="document-footer">
+
+        <span>CAS-OPS-006430</span>
+
+        <span>PAGE 1 OF 1</span>
+
+    </div>
+
+    `
+},
+
+
+{
+    frame: "006431",
+    title: "Photographic Record — Subjects",
+    type: "Photographic Record",
+    classification: "RESTRICTED",
+    source: "Information Management",
+    date: "21/08/2024",
+    report: "IMG-2024-0814",
+
+    content: `
+
+    <div class="document-header">
+
+        <h2>Photographic Record</h2>
+
+        <p>
+            OPERATION: PEST CONTROL
+        </p>
+
+    </div>
+
+
+    <div class="document-meta">
+
+        <strong>Images</strong>
+        <span>06</span>
+
+        <strong>Subjects</strong>
+        <span>A / B</span>
+
+        <strong>Status</strong>
+        <span>PARTIAL</span>
+
+    </div>
+
+
+    <div class="document-section">
+
+        <h3>1. IMAGE INVENTORY</h3>
+
+        <table class="document-table">
+
+            <tr>
+                <th>Image</th>
+                <th>Subject</th>
+                <th>Status</th>
+            </tr>
+
+            <tr>
+                <td>01</td>
+                <td>Subject A — frontal</td>
+                <td>AVAILABLE</td>
+            </tr>
+
+            <tr>
+                <td>02</td>
+                <td>Subject A — rear</td>
+                <td>AVAILABLE</td>
+            </tr>
+
+            <tr>
+                <td>03</td>
+                <td>Subject B — frontal</td>
+                <td>AVAILABLE</td>
+            </tr>
+
+            <tr>
+                <td>04</td>
+                <td>Subject B — left profile</td>
+                <td>AVAILABLE</td>
+            </tr>
+
+            <tr>
+                <td>05</td>
+                <td>Subject A and B</td>
+                <td>UNAVAILABLE</td>
+            </tr>
+
+            <tr>
+                <td>06</td>
+                <td>Facility medical area</td>
+                <td>UNAVAILABLE</td>
+            </tr>
+
+        </table>
+
+    </div>
+
+
+    <div class="document-section">
+
+        <h3>2. NOTE</h3>
+
+        <p>
+            Images 05 and 06 could not be retrieved from the
+            original storage medium.
+        </p>
+
+    </div>
+
+
+    <div class="document-footer">
+
+        <span>CAS-OPS-006431</span>
+
+        <span>PAGE 1 OF 1</span>
+
+    </div>
+
+    `
+},
+
+
+{
+    frame: "006432",
+    title: "Final Authorization",
+    type: "Administrative Record",
+    classification: "RESTRICTED",
+    source: "Central Administration",
+    date: "24/08/2024",
+    report: "OPS-2024-0814",
+
+    content: `
+
+    <div class="document-header">
+
+        <h2>Final Authorization</h2>
+
+        <p>
+            OPERATION: PEST CONTROL
+        </p>
+
+    </div>
+
+
+    <div class="document-section">
+
+        <h3>1. OPERATIONAL STATUS</h3>
+
+        <p>
+            Operation PEST CONTROL is hereby designated COMPLETE.
+        </p>
+
+        <p>
+            The associated facility has been secured and removed
+            from civilian access.
+        </p>
+
+    </div>
+
+
+    <div class="document-section">
+
+        <h3>2. RECOVERED PERSONNEL</h3>
+
+        <table class="document-table">
+
+            <tr>
+                <th>Designation</th>
+                <th>Status</th>
+                <th>Disposition</th>
+            </tr>
+
+            <tr>
+                <td>SUBJECT A / ARACHNE</td>
+                <td>ALIVE</td>
+                <td>CAS MEDICAL CUSTODY</td>
+            </tr>
+
+            <tr>
+                <td>SUBJECT B / LYCAON</td>
+                <td>ALIVE</td>
+                <td>CAS MEDICAL CUSTODY</td>
+            </tr>
+
+        </table>
+
+    </div>
+
+
+    <div class="document-section">
+
+        <h3>3. FINAL NOTE</h3>
+
+        <p>
+            No existing CAS department has accepted permanent
+            responsibility for either recovered subject.
+        </p>
+
+        <p>
+            Temporary responsibility remains with Medical Division.
+        </p>
+
+        <p>
+            Further classification review scheduled for
+            01/10/2024.
+        </p>
+
+    </div>
+
+
+    <div class="document-section">
+
+        <h3>4. AUTHORIZATION</h3>
+
+        <p>
+            APPROVED
+        </p>
+
+        <p>
+            CENTRAL AUTHORITY OF SAFETY<br>
+            █████████████████
+        </p>
+
+    </div>
+
+
+    <div class="document-footer">
+
+        <span>CAS-OPS-006432</span>
+
+        <span>END OF RECORD</span>
+
+    </div>
+
+    `
+}
+
+];
+
+
+/* =========================================
+   STATE
+========================================= */
+
+let currentIndex = 0;
+
+let zoom = 1;
+
+let rotation = 0;
+
+
+/* =========================================
+   DOM
+========================================= */
+
+const scan = document.getElementById("scan");
+
+const frameList = document.getElementById("frameList");
+
+const frameCounter = document.getElementById("frameCounter");
+
+const previousButton =
+    document.getElementById("previousButton");
+
+const nextButton =
+    document.getElementById("nextButton");
+
+const zoomValue =
+    document.getElementById("zoomValue");
+
+const infoFrame =
+    document.getElementById("infoFrame");
+
+const infoType =
+    document.getElementById("infoType");
+
+const infoClassification =
+    document.getElementById("infoClassification");
+
+const infoSource =
+    document.getElementById("infoSource");
+
+const frameInput =
+    document.getElementById("frameInput");
+
+
+/* =========================================
+   BUILD FRAME LIST
+========================================= */
+
+function buildFrameList() {
+
+    frameList.innerHTML = "";
+
+    archive.forEach((item, index) => {
+
+        const element = document.createElement("div");
+
+        element.className = "frame-item";
+
+        element.innerHTML = `
+            <div class="frame-number">
+                FRAME ${item.frame}
+            </div>
+
+            <div class="frame-title">
+                ${item.title}
+            </div>
+        `;
+
+        element.onclick = function() {
+            loadFrame(index);
+        };
+
+        frameList.appendChild(element);
+
+    });
+
+}
+
+
+/* =========================================
+   LOAD FRAME
+========================================= */
+
+function loadFrame(index, updateHash = true) {
+
+    if (index < 0) {
+        index = 0;
+    }
+
+    if (index >= archive.length) {
+        index = archive.length - 1;
+    }
+
+    currentIndex = index;
+
+    const item = archive[currentIndex];
+
+    scan.innerHTML = item.content;
+
+    scan.style.transform =
+        `scale(${zoom}) rotate(${rotation}deg)`;
+
+    frameCounter.textContent =
+        `FRAME ${item.frame} / ${archive[archive.length - 1].frame}`;
+
+    infoFrame.textContent = item.frame;
+
+    infoType.textContent = item.type;
+
+    infoClassification.textContent =
+        item.classification;
+
+    infoSource.textContent =
+        item.source;
+
+    frameInput.value = item.frame;
+
+    previousButton.disabled =
+        currentIndex === 0;
+
+    nextButton.disabled =
+        currentIndex === archive.length - 1;
+
+
+    document.querySelectorAll(".frame-item")
+        .forEach((element, i) => {
+
+            element.classList.toggle(
+                "active",
+                i === currentIndex
+            );
+
+        });
+
+
+    if (updateHash) {
+
+        history.replaceState(
+            null,
+            "",
+            "#" + item.frame
+        );
+
+    }
+
+}
+
+
+/* =========================================
+   NEXT / PREVIOUS
+========================================= */
+
+function nextFrame() {
+
+    if (currentIndex < archive.length - 1) {
+
+        loadFrame(currentIndex + 1);
+
+    }
+
+}
+
+
+function previousFrame() {
+
+    if (currentIndex > 0) {
+
+        loadFrame(currentIndex - 1);
+
+    }
+
+}
+
+
+/* =========================================
+   JUMP TO FRAME
+========================================= */
+
+function jumpToFrame() {
+
+    const value =
+        frameInput.value.trim();
+
+    const index =
+        archive.findIndex(
+            item => item.frame === value
+        );
+
+    if (index !== -1) {
+
+        loadFrame(index);
+
+    } else {
+
+        alert(
+            "FRAME NOT FOUND\n\n" +
+            "The requested frame is not available " +
+            "in this archive."
+        );
+
+    }
+
+}
+
+
+/* =========================================
+   ZOOM
+========================================= */
+
+function updateZoom() {
+
+    scan.style.transform =
+        `scale(${zoom}) rotate(${rotation}deg)`;
+
+    zoomValue.textContent =
+        Math.round(zoom * 100) + "%";
+
+}
+
+
+function zoomIn() {
+
+    zoom += 0.1;
+
+    if (zoom > 2) {
+        zoom = 2;
+    }
+
+    updateZoom();
+
+}
+
+
+function zoomOut() {
+
+    zoom -= 0.1;
+
+    if (zoom < 0.5) {
+        zoom = 0.5;
+    }
+
+    updateZoom();
+
+}
+
+
+function resetZoom() {
+
+    zoom = 1;
+    rotation = 0;
+
+    updateZoom();
+
+}
+
+
+/* =========================================
+   ROTATION
+========================================= */
+
+function rotateScan(direction) {
+
+    rotation += direction;
+
+    if (rotation > 3) {
+        rotation = 0;
+    }
+
+    if (rotation < -3) {
+        rotation = 0;
+    }
+
+    updateZoom();
+
+}
+
+
+/* =========================================
+   KEYBOARD NAVIGATION
+========================================= */
+
+document.addEventListener(
+    "keydown",
+    function(event) {
+
+        if (event.key === "ArrowRight") {
+
+            nextFrame();
+
+        }
+
+        if (event.key === "ArrowLeft") {
+
+            previousFrame();
+
+        }
+
+    }
+);
+
+
+/* =========================================
+   HASH NAVIGATION
+========================================= */
+
+function loadHashFrame() {
+
+    const hash =
+        window.location.hash
+            .replace("#", "")
+            .trim();
+
+    if (!hash) {
+
+        loadFrame(0, false);
+
+        return;
+
+    }
+
+    const index =
+        archive.findIndex(
+            item => item.frame === hash
+        );
+
+    if (index !== -1) {
+
+        loadFrame(index, false);
+
+    } else {
+
+        loadFrame(0, false);
+
+    }
+
+}
+
+
+/* =========================================
+   INITIALIZE
+========================================= */
+
+buildFrameList();
+
+loadHashFrame();
+
+</script>
+
+
+</body>
+
+</html>
