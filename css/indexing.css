@@ -1,0 +1,431 @@
+
+
+        :root {
+            --black: #111111;
+            --dark-grey: #333333;
+            --grey: #777777;
+            --light-grey: #dcdcdc;
+            --very-light-grey: #eeeeee;
+            --white: #ffffff;
+            --warning: #9b0000;
+            --max-width: 1280px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--white);
+            color: var(--black);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            width: 92%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+
+
+/* ============================================
+   SECTION HEADINGS
+============================================ */
+
+.section-heading {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-top: 1px solid var(--black);
+
+    border-bottom: 1px solid var(--light-grey);
+
+    padding: 13px 0;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.section-code {
+
+    color: var(--grey);
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-weight: 400;
+
+}
+
+        /* ============================================
+   HEADER
+============================================ */
+
+.site-header {
+
+    border-bottom: 1px solid var(--black);
+
+    background: var(--white);
+
+}
+
+
+.header-inner {
+
+    width: min(
+        calc(100% - 48px),
+        var(--max-width)
+    );
+
+    min-height: 110px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+/* ============================================
+   CAS LOGO
+============================================ */
+
+.cas-logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+}
+
+
+.logo-acronym {
+
+    font-size: 38px;
+
+    font-weight: 800;
+
+    letter-spacing: -2px;
+
+    line-height: 1;
+
+}
+
+
+.logo-name {
+
+    border-left: 1px solid var(--black);
+
+    padding-left: 18px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    line-height: 1.35;
+
+    letter-spacing: 1px;
+
+}
+
+
+.header-information {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-end;
+
+    gap: 2px;
+
+    color: var(--grey);
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* ============================================
+   NAVIGATION
+============================================ */
+
+.main-navigation {
+
+    border-bottom: 1px solid var(--light-grey);
+
+    background: var(--white);
+
+}
+
+
+.navigation-inner {
+
+    width: min(
+        calc(100% - 48px),
+        var(--max-width)
+    );
+
+    margin: 0 auto;
+
+    display: flex;
+
+    overflow-x: auto;
+
+}
+
+
+.navigation-inner a {
+
+    position: relative;
+
+    padding: 17px 20px;
+
+    color: var(--grey);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    white-space: nowrap;
+
+    transition:
+        background 0.15s ease,
+        color 0.15s ease;
+
+}
+
+
+.navigation-inner a:hover {
+
+    background: var(--very-light-grey);
+
+    color: var(--black);
+
+}
+
+
+.navigation-inner a.active {
+
+    color: var(--black);
+
+}
+
+
+.navigation-inner a.active::after {
+
+    content: "";
+
+    position: absolute;
+
+    bottom: -1px;
+
+    left: 20px;
+
+    right: 20px;
+
+    height: 2px;
+
+    background: var(--black);
+
+}
+
+
+
+        /* =========================
+           BREADCRUMB
+        ========================= */
+
+        .breadcrumb {
+            padding: 18px 0 0;
+            font-family: "Courier New", monospace;
+            font-size: 10px;
+            color: var(--grey);
+            letter-spacing: 0.3px;
+        }
+
+        .breadcrumb a {
+            color: var(--grey);
+        }
+
+
+        /* =========================
+           PAGE HEADER
+        ========================= */
+
+        .page-header {
+            padding: 52px 0 42px;
+            border-bottom: 1px solid var(--light-grey);
+        }
+
+        .page-code {
+            font-family: "Courier New", monospace;
+            font-size: 11px;
+            color: var(--grey);
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        .page-header h1 {
+            margin: 0;
+            font-size: 42px;
+            line-height: 1.05;
+            letter-spacing: -1.5px;
+        }
+
+        .page-description {
+            max-width: 760px;
+            margin-top: 15px;
+            color: var(--dark-grey);
+        }
+
+        .page-meta {
+            margin-top: 25px;
+            font-family: "Courier New", monospace;
+            font-size: 10px;
+            color: var(--grey);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+
+
+
+/* ============================================
+   FOOTER
+============================================ */
+
+.site-footer {
+
+    border-top: 1px solid var(--black);
+
+    background: var(--black);
+
+    color: var(--white);
+
+}
+
+
+.footer-inner {
+
+    width: min(
+        calc(100% - 48px),
+        var(--max-width)
+    );
+
+    margin: 0 auto;
+
+    padding: 45px 0;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr 1fr;
+
+    gap: 40px;
+
+}
+
+
+.footer-inner > div {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+
+}
+
+
+.footer-inner strong {
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+}
+
+
+.footer-inner span {
+
+    color: #999999;
+
+    font-size: 9px;
+
+    letter-spacing: 0.5px;
+
+}
+
+
+.footer-links {
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-direction: row !important;
+
+    gap: 25px !important;
+
+}
+
+
+.footer-links a {
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+}
+
+
+.footer-links a:hover {
+
+    text-decoration: underline;
+
+}
+
+
+.footer-meta {
+
+    align-items: flex-end;
+
+}
