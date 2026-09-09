@@ -119,32 +119,6 @@ body {
 }
 
 
-
-
-/* MAIN */
-
-main {
-    max-width: var(--max-width);
-    margin: auto;
-    padding: 30px;
-}
-
-.breadcrumb {
-    font-family: "Courier New", monospace;
-    font-size: 10px;
-    color: var(--grey);
-    margin-bottom: 35px;
-}
-
-.breadcrumb a {
-    color: var(--grey);
-    text-decoration: none;
-}
-
-.breadcrumb a:hover {
-    text-decoration: underline;
-}
-
 /* PAGE HEADER */
 
 .record-header {
@@ -307,27 +281,7 @@ main {
     margin-bottom: 3px;
 }
 
-/* FOOTER */
 
-footer {
-    margin-top: 60px;
-    background: var(--black);
-    color: #ffffff;
-    padding: 30px;
-}
-
-.footer-inner {
-    max-width: var(--max-width);
-    margin: auto;
-    font-family: "Courier New", monospace;
-    font-size: 9px;
-    line-height: 1.7;
-}
-
-.footer-warning {
-    color: #cccccc;
-    margin-top: 10px;
-}
 
 /* MOBILE */
 
