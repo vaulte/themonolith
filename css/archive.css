@@ -746,14 +746,14 @@
         }
     }
 
-.status-row {
+.classification-row {
     margin-top: 1px;
     display: flex;
     flex-wrap: wrap;
     gap: 7px;
 }
 
-.status {
+.classification {
     margin-top: 15px;
     display: inline-block;
     border: 1px solid var(--light-grey);
@@ -763,7 +763,7 @@
     letter-spacing: 1px;
 }
 
-.status-red {
+.classification-red {
     color: var(--warning);
     border-color: #c9aaaa;
 }
