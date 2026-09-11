@@ -440,7 +440,7 @@
 
     /* NOTICE */
 
-    .notice {
+    .notices {
         border: 1px solid #bbb;
         background: #fafafa;
         padding: 12px 15px;
@@ -449,7 +449,7 @@
         line-height: 1.6;
     }
 
-    .notice strong {
+    .notices strong {
         font-weight: bold;
     }
 
