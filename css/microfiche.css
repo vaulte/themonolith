@@ -467,7 +467,7 @@
    NOTICE
 ========================= */
 
-.notice {
+.notices {
     border: 1px solid #aaa;
     background: #fff;
     padding: 10px 12px;
@@ -476,7 +476,7 @@
     margin-top:-20px;
 }
 
-.notice strong {
+.notices strong {
     font-weight: bold;
 }
 
