@@ -1,0 +1,2028 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Autopsy: Umbra | CAS</title>
+    <link rel="shortcut icon" href="https://i.imgur.com/7PMCzUN.png">
+        <link rel="stylesheet" href="./css/main.css">
+        <link rel="stylesheet" href="./css/indexing.css">
+    <link rel="stylesheet" href="./css/microfiche.css">
+</head>
+
+<body>
+
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+
+    <header class="site-header">
+
+        <div class="header-inner">
+
+            <a href="index.html" class="cas-logo">
+                <span class="logo-acronym">CAS</span>
+
+                <span class="logo-name">
+                    CENTRAL AUTHORITY<br>
+                    OF SAFETY
+                </span>
+            </a>
+
+            <div class="header-information">
+                <span>GOVERNMENT INFORMATION PORTAL</span>
+                <span>DOCUMENT ACCESS SYSTEM</span>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================
+         MAIN NAVIGATION
+    ========================================== -->
+
+    <nav class="main-navigation">
+
+        <div class="navigation-inner">
+
+            <a href="./index.html">HOME</a>
+
+            <a href="./about.html">ABOUT</a>
+
+            <a href="./personnel.html">PERSONNEL</a>
+
+            <a href="./facilities.html">FACILITIES</a>
+
+            <a href="./records.html">RECORDS</a>
+
+            <a href="./research.html">RESEARCH</a>
+
+            <a href="./archive.html" class="active">ARCHIVE</a>
+
+        </div>
+
+    </nav>
+
+
+</header>
+
+
+
+<main class="container">
+
+
+        <!-- BREADCRUMB -->
+
+        <div class="breadcrumb">
+
+            <a href="./index.html">CAS</a> / <a href="./archives.html">ARCHIVES</a> / AUTOPSY REPORT: UMBRA
+
+        </div>
+
+
+        <!-- PAGE HEADER -->
+
+        <section class="page-header">
+
+            <div class="page-code">
+                Microfiche Archive / RESTRICTED ACCESS
+            </div>
+
+            <h1>
+                Autopsy Report:
+                <br>Umbra
+            </h1>
+
+            <div class="page-description">
+
+                Digitized records of collected materials, supporting documentation,
+            and physical evidence associated with CAS reports.
+
+            </div>
+
+        </section>
+
+
+    <div class="notice">
+
+        <strong>NOTICE:</strong>
+        This archive contains reproductions of physical records.
+        Original materials remain subject to applicable retention,
+        storage, and access requirements.
+
+    </div>
+
+
+    <div class="archive-terminal">
+
+
+        <!-- LEFT PANEL -->
+
+        <aside class="reel-panel">
+
+            <div class="panel-heading">
+                ARCHIVE REEL
+            </div>
+
+            <div class="reel-info">
+
+                <strong>C-02 / FACILITIES</strong>
+
+                <small>
+                    Facilities documentation and associated
+                    material records.
+                </small>
+
+            </div>
+
+            <div class="panel-heading">
+                FRAMES
+            </div>
+
+            <div id="frameList" class="frame-list"></div>
+
+        </aside>
+
+
+        <!-- VIEWER -->
+
+        <section class="viewer">
+
+            <div class="viewer-toolbar">
+
+                <div class="toolbar-group">
+
+                    <span class="toolbar-label">
+                        VIEW
+                    </span>
+
+                    <button class="toolbar-button" onclick="zoomOut()">
+                        −
+                    </button>
+
+                    <span id="zoomValue" class="zoom-value">
+                        100%
+                    </span>
+
+                    <button class="toolbar-button" onclick="zoomIn()">
+                        +
+                    </button>
+
+                    <button class="toolbar-button" onclick="resetZoom()">
+                        FIT
+                    </button>
+
+                </div>
+
+
+                <div class="toolbar-group">
+
+                    <button class="toolbar-button" onclick="rotateScan(-1)">
+                        ↶
+                    </button>
+
+                    <button class="toolbar-button" onclick="rotateScan(1)">
+                        ↷
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="scan-area">
+
+                <div id="scan" class="scan">
+
+                    <!-- DOCUMENT GENERATED HERE -->
+
+                </div>
+
+            </div>
+
+
+            <div class="viewer-navigation">
+
+                <button
+                    id="previousButton"
+                    class="nav-button"
+                    onclick="previousFrame()"
+                >
+                    ◀ PREVIOUS
+                </button>
+
+                <div
+                    id="frameCounter"
+                    class="frame-counter"
+                >
+                    FRAME 004182 / 004193
+                </div>
+
+                <button
+                    id="nextButton"
+                    class="nav-button"
+                    onclick="nextFrame()"
+                >
+                    NEXT ▶
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- RIGHT PANEL -->
+
+        <aside class="info-panel">
+
+            <div class="panel-heading">
+                RECORD INFORMATION
+            </div>
+
+
+            <div class="info-block">
+
+                <div class="info-label">
+                    Reel
+                </div>
+
+                <div
+                    id="infoReel"
+                    class="info-value"
+                >
+                    C-02 / FACILITIES
+                </div>
+
+            </div>
+
+
+            <div class="info-block">
+
+                <div class="info-label">
+                    Frame
+                </div>
+
+                <div
+                    id="infoFrame"
+                    class="info-value"
+                >
+                    004182
+                </div>
+
+            </div>
+
+
+            <div class="info-block">
+
+                <div class="info-label">
+                    Record Type
+                </div>
+
+                <div
+                    id="infoType"
+                    class="info-value"
+                >
+                    Maintenance Record
+                </div>
+
+            </div>
+
+
+            <div class="info-block">
+
+                <div class="info-label">
+                    Classification
+                </div>
+
+                <div
+                    id="infoClassification"
+                    class="info-value"
+                >
+                    INTERNAL
+                </div>
+
+            </div>
+
+
+            <div class="info-block">
+
+                <div class="info-label">
+                    Frame Navigation
+                </div>
+
+                <div class="frame-jump">
+
+                    <input
+                        id="frameInput"
+                        class="frame-input"
+                        type="text"
+                        placeholder="004182"
+                        maxlength="6"
+                    >
+
+                    <button
+                        class="go-button"
+                        onclick="jumpToFrame()"
+                    >
+                        GO
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="info-block">
+
+                <div class="info-label">
+                    Archive Status
+                </div>
+
+                <div class="info-value">
+                    AVAILABLE
+                </div>
+
+            </div>
+
+
+            <div class="info-block">
+
+                <div class="info-label">
+                    Source
+                </div>
+
+                <div
+                    id="infoSource"
+                    class="info-value"
+                >
+                    Facilities Department
+                </div>
+
+            </div>
+
+        </aside>
+
+    </div>
+
+
+    <footer>
+
+        <div>
+            CAS INFORMATION MANAGEMENT SYSTEM
+        </div>
+
+        <div>
+            MICROFICHE DATABASE REV. 4.17
+        </div>
+
+    </footer>
+
+</main>
+
+
+        </main>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================== -->
+
+<footer class="site-footer">
+
+    <div class="footer-inner">
+
+
+        <div>
+
+            <strong>
+                CENTRAL AUTHORITY OF SAFETY
+            </strong>
+
+            <span>
+                National Safety Administration
+            </span>
+
+        </div>
+
+
+
+        <div class="footer-links">
+
+            <a href="#">
+                ACCESSIBILITY
+            </a>
+
+            <a href="#">
+                PRIVACY
+            </a>
+
+            <a href="#">
+                CONTACT
+            </a>
+
+        </div>
+
+
+
+        <div class="footer-meta">
+
+            <span>
+                CAS INFORMATION SYSTEM
+            </span>
+
+            <span>
+                VERSION 1.0.0
+            </span>
+
+            <span>
+                © 2026 CAS
+            </span>
+
+        </div>
+
+
+    </div>
+
+</footer>
+
+
+
+
+<script>
+
+/* =========================================
+   ARCHIVE DATA
+========================================= */
+
+const archive = [
+
+{
+    frame: "006421",
+    title: "Autopsy: UMBRA — Cover Sheet",
+    type: "Autopsy Report",
+    classification: "RESTRICTED",
+    source: "Investigation Division",
+    date: "04/02/2025",
+    report: "CASE NUMBER: -",
+
+    content: `
+
+    <div class="document-header">
+
+        <h2>Necropsy report: UMBRA</h2>
+
+        <p>
+            CENTRAL AUTHORITY OF SAFETY
+            — SPECIAL OPERATIONS DIVISION
+        </p>
+
+        <p>
+            NECROPSY REPORT
+        </p>
+
+    </div>
+
+
+    <div class="document-meta">
+
+        <strong>Necropsy Report</strong>
+        <span>UMBRA-001</span>
+
+        <strong>Case Number:</strong>
+        <span>-</span>
+
+        <strong>Date</strong>
+        <span>04/02/2025</span>
+
+        <strong>Location</strong>
+        <span>████████████████</span>
+
+        <strong>Classification</strong>
+        <span>RESTRICTED</span>
+
+        <strong>Personnel</strong>
+        <span>████████████████</span>
+
+    </div>
+
+
+    <div class="document-section">
+
+        <h3>1. CONTEXT</h3>
+
+        <p>
+            After the neutralisation of the species now referred to as <b>UMBRRA</b>, 
+            Dr. NAME preformed a necropsy on the subject.
+        </p>
+
+    </div>
+
+
+    <div class="document-section">
+
+        <h3>2. EVENT SUMMARY</h3>
+
+                <p>
+                    At approximately 08:40 hours, Medical Services
+                    reported repeated complaints from Employee
+                    04-771 regarding persistent cold sensation and
+                    continuous bilateral tinnitus.
+                </p>
+
+                <p>
+                    Environmental readings taken at the employee's
+                    workstation were within normal operating range.
+                    No temperature irregularities were detected.
+                </p>
+
+                <p>
+                    Employee reported that the sensation of cold
+                    appeared to originate from the area immediately
+                    behind the upper back and shoulders.
+                </p>
+
+                <p>
+                    Subsequent examination identified an anomalous
+                    region of reduced illumination surrounding the
+                    employee.
+                </p>
+
+                <p>
+                    The employee was initially unaware of the
+                    presence of the material.
+                </p>
+
+                <div class="notice">NOTE: SUBJECT DID NOT REPORT AN ATTACHMENT,
+                    ENTITY, OR FOREIGN OBJECT.</div>
+                </p>
+
+    </div>
+
+
+    <div class="document-section">
+
+        <h3>3. STATUS</h3>
+
+        <p>
+            NECROPSY COMPLETE.
+        </p>
+
+    </div>
+
+
+    <div class="document-footer">
+
+        <span>CAS-OPS-006421</span>
+
+        <span>PAGE 1 OF 1</span>
+
+    </div>
+
+    `
+},
+
+
+{
+    frame: "006422",
+    title: "Medical Assessment",
+    type: "Medical Assessment",
+    classification: "RESTRICTED",
+    source: "Investigation Division",
+    date: "04/02/2025",
+    report: "CASE NUMBER: -",
+
+    content: `
+
+    <div class="document-header">
+
+        <h2>Medical History</h2>
+
+        <p>
+             SUBJECT: EMPLOYEE 04-771 
+        </p>
+
+    </div>
+
+    <div class="document-section">
+
+        <h3>1. BASIC MEDICAL HISTORY</h3>
+
+        <table class="document-table">
+
+            <tr>
+                <th style="width:25%">AGE</th>
+                <th>34</th>
+            </tr>
+
+            <tr>
+                <td>SEX A</td>
+                <td>Female</td>
+            </tr>
+
+            <tr>
+                <td>DEPARTMENT</td>
+                <td>ARCHIVAL SERVICES</td>
+            </tr>
+
+            <tr>
+                <td>EMPLOYMENT LENGTH</td>
+                <td>6 YEARS, 4 MONTHS</td>
+            </tr>
+            
+            <tr>
+                <td>EMPLOYMENT LENGTH</td>
+                <td>ARCHIVAL SERVICES</td>
+            </tr>
+            
+            <tr>
+                <td>PREVIOUS CONDITIONS</td>
+                <td>NONE RELEVANT</td>
+            </tr>
+            
+            <tr>
+                <td>MEDICATION</td>
+                <td>NONE</td>
+            </tr>
+
+        </table>
+
+    </div>
+
+
+    <div class="document-section">
+
+        <h3>2. REPORTED SYMPTOMS</h3>
+
+        <p>
+                <ul>
+                    <li>Persistent sensation of cold.</li>
+                    <li>Intermittent ear pressure.</li>
+                    <li>Continuous high-frequency tinnitus.</li>
+                    <li>Difficulty sleeping.</li>
+                    <li>Occasional sensation of being observed.</li>
+                    <li>Reduced tolerance for brightly illuminated areas.</li>
+                </ul>
+
+                <p>
+                    Employee temperature remained within normal
+                    physiological limits.
+                </p>
+
+                <p>
+                    No evidence of infection, neurological disorder,
+                    or conventional auditory pathology was identified.
+                </p>
+
+                <div class="handwritten">
+                    "Patient insists something is standing behind her.
+                    There is nobody there."
+                </div>
+        </p>
+
+    </div>
+
+    <div class="document-footer">
+
+        <span>CAS-OPS-006422</span>
+
+        <span>PAGE 1 OF 1</span>
+
+    </div>
+
+    `
+},
+
+
+{
+    frame: "006423",
+    title: "Photographic Record",
+    type: "Autopsy Report",
+    classification: "RESTRICTED",
+    source: "Investigation Division",
+    date: "04/02/2025",
+    report: "CASE NUMBER: -",
+
+    content: `
+
+    <div class="document-header">
+
+        <h2>Photographic Record</h2>
+
+        <p>
+             PRE-NEUTRALISATION — IMAGE 01 
+        </p>
+
+    </div>
+
+
+    <div class="document-section">
+
+                <div class="photo-plate">
+
+                    <img
+                        src="images/attachment-pre.jpg"
+                        alt="Pre-neutralisation photograph"
+                    >
+
+                    <div class="photo-caption">
+
+                        <strong>
+                            PLATE 01 — PERSONNEL CORRIDOR C
+                        </strong>
+
+                        <br>
+
+                        SUBJECT 04-771 APPROXIMATELY 11 MINUTES
+                        PRIOR TO SPECIAL OPERATIONS INTERVENTION.
+
+                        <br><br>
+
+                        <span>
+                            ANOMALOUS MATERIAL IS NOT VISIBLE UNDER
+                            NORMAL VIEWING CONDITIONS.
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="image-note">
+                    IMAGE ENHANCED 400% FOR SECONDARY EXAMINATION.
+                </div>
+
+    </div>
+
+
+
+
+
+    <div class="document-footer">
+
+        <span>CAS-OPS-006423</span>
+
+        <span>PAGE 1 OF 1</span>
+
+    </div>
+
+    `
+},
+
+
+{
+    frame: "006424",
+    title: "Neutralisation",
+    type: "Neutralisation Report",
+    classification: "RESTRICTED",
+    source: "Investigation Division",
+    date: "04/02/2025",
+    report: "CASE NUMBER: -",
+
+    content: `
+
+    <div class="document-header">
+
+        <h2>Neutralisation Report</h2>
+
+        <p>
+             SPECIAL OPERATIONS DIVISION 
+        </p>
+
+    </div>
+
+    <div class="document-section">
+
+        <p>
+                    Special Operations personnel were dispatched at
+                    09:12 hours following confirmation of an
+                    anomalous attachment.
+                </p>
+
+                <p>
+                    Conventional attempts to photograph, illuminate,
+                    or physically separate the material produced no
+                    measurable response.
+                </p>
+
+                <p>
+                    The material remained partially co-located with
+                    Employee 04-771 despite the employee being moved
+                    approximately 42 metres from the original location.
+                </p>
+
+                <p>
+                    At 09:27 hours, the employee was placed inside an
+                    illuminated containment enclosure.
+                </p>
+
+                <p>
+                    Following exposure to the enclosure's full-spectrum
+                    lighting system, the anomalous region became
+                    temporarily visible.
+                </p>
+
+                <p>
+                    Material was subsequently removed from the subject
+                    using thermal separation equipment.
+                </p>
+
+                <div class="warning-box">
+
+                    <strong>
+                        WARNING
+                    </strong>
+
+                    <br><br>
+
+                    TWO SPECIAL OPERATIONS PERSONNEL REPORTED
+                    TEMPORARY HEARING LOSS DURING REMOVAL.
+
+                </div>
+
+                <p>
+                    The anomaly ceased movement at approximately
+                    09:31 hours.
+                </p>
+
+                <p>
+                    Subject 04-771 was transferred to Medical Services
+                    and subsequently returned to duty following
+                    observation.
+                </p>
+
+    </div>
+
+
+    <div class="document-footer">
+
+        <span>CAS-OPS-006424</span>
+
+        <span>PAGE 1 OF 2</span>
+
+    </div>
+
+    `
+},
+
+
+{
+    frame: "006425",
+    title: "Necropsy Report — EXTERNAL",
+    type: "Autopsy Report",
+    classification: "RESTRICTED",
+    source: "Investigation Division",
+    date: "04/02/2025",
+    report: "CASE NUMBER: -",
+
+    content: `
+
+    <div class="document-header">
+
+        <h2>Necropsy Report — EXTERNAL</h2>
+
+        <p>
+             AUTOPSY RECORD — SECTION I
+        </p>
+
+    </div>
+
+    <div class="document-section">
+
+        <p>
+                    <strong>SPECIMEN:</strong> CAS-ON-214
+                </p>
+
+                <p>
+                    <strong>POST-NEUTRALISATION MASS:</strong>
+                    1.8 kg
+                </p>
+
+                <p>
+                    <strong>AMBIENT TEMPERATURE:</strong>
+                    21.4°C
+                </p>
+
+                <p>
+                    <strong>SPECIMEN TEMPERATURE:</strong>
+                    −3.7°C
+                </p>
+
+                <p>
+                    The specimen presents as an irregular,
+                    approximately humanoid mass measuring
+                    61 cm in maximum length.
+                </p>
+
+                <p>
+                    Under conventional illumination, the specimen
+                    cannot be distinguished from the surrounding
+                    surface with sufficient reliability for
+                    unaided observation.
+                </p>
+
+                <p>
+                    The outer surface demonstrates no apparent skin,
+                    membrane, fur, scales, or conventional biological
+                    covering.
+                </p>
+
+                <p>
+                    Surface examination identified numerous thin,
+                    filamentous structures extending from the primary
+                    mass.
+                </p>
+
+                <p>
+                    These structures demonstrated no independent
+                    movement following neutralisation.
+                </p>
+
+                <div class="notice">
+                    SPECIMEN DOES NOT REFLECT VISIBLE LIGHT IN A
+                    CONSISTENT MANNER.
+                </div>
+
+    </div>
+
+
+    <div class="document-footer">
+
+        <span>CAS-OPS-006425</span>
+
+        <span>PAGE 2 OF 2</span>
+
+    </div>
+
+    `
+},
+
+
+{
+    frame: "006426",
+    title: "Photographic Plate A",
+    type: "Autopsy Report",
+    classification: "RESTRICTED",
+    source: "Investigation Division",
+    date: "04/02/2025",
+    report: "CASE NUMBER: -",
+
+    content: `
+
+    <div class="document-header">
+
+        <h2>Photographic Plate A</h2>
+
+        <p>
+             EXTERNAL EXAMINATION
+        </p>
+
+    </div>
+
+
+    <div class="document-section">
+
+        <div class="photo-plate">
+
+                    <img
+                        src="images/attachment-plate-a.jpg"
+                        alt="CAS-ON-214 external examination"
+                    >
+
+                    <div class="photo-caption">
+
+                        <strong>
+                            PLATE A
+                        </strong>
+
+                        <br>
+
+                        SPECIMEN CAS-ON-214 FOLLOWING
+                        NEUTRALISATION.
+
+                        <br><br>
+
+                        DARK REGION INDICATES ANOMALOUS MATERIAL
+                        IDENTIFIED DURING EXTERNAL EXAMINATION.
+
+                    </div>
+
+                </div>
+
+                <div class="image-note">
+                    IMAGE CAPTURED UNDER FULL-SPECTRUM ILLUMINATION.
+                </div>
+
+    </div>
+
+
+
+    <div class="document-footer">
+
+        <span>CAS-OPS-006426</span>
+
+        <span>PAGE 1 OF 1</span>
+
+    </div>
+
+    `
+},
+
+
+{
+    frame: "006427",
+    title: "Necropsy Report — INTERNAL",
+    type: "Autopsy Report",
+    classification: "RESTRICTED",
+    source: "Investigation Division",
+    date: "04/02/2025",
+    report: "CASE NUMBER: -",
+
+    content: `
+
+    <div class="document-header">
+
+        <h2>Necropsy Report — INTERNAL</h2>
+
+        <p>
+            AUTOPSY RECORD — SECTION II
+        </p>
+
+    </div>
+
+    <div class="document-section">
+
+
+        <p>
+                    Incision of the primary mass produced no bleeding,
+                    fluid loss, or observable physiological response.
+                </p>
+
+                <p>
+                    Internal structure consists of multiple overlapping
+                    layers of dense filamentous material.
+                </p>
+
+                <p>
+                    No conventional organs were identified.
+                </p>
+
+                <p>
+                    The specimen contains a central cavity measuring
+                    approximately 14 cm in diameter.
+                </p>
+
+                <p>
+                    The cavity contains no identifiable solid organ,
+                    fluid, or air.
+                </p>
+
+                <p>
+                    When illuminated directly, the cavity appears
+                    significantly deeper than its measured physical
+                    dimensions permit.
+                </p>
+
+                <p>
+                    Attempts to determine cavity depth using
+                    conventional optical equipment produced
+                    inconsistent results.
+                </p>
+
+                <div class="redaction-block">
+                    DEPTH MEASUREMENT:
+                    ███████████████████████████
+                </div>
+
+                <p>
+                    Technician reports hearing a low-frequency tone
+                    while examining the cavity.
+                </p>
+
+    </div>
+
+
+    <div class="document-footer">
+
+        <span>CAS-OPS-006427</span>
+
+        <span>PAGE 1 OF 1</span>
+
+    </div>
+
+    `
+},
+
+
+{
+    frame: "006428",
+    title: "Photographic Plate B",
+    type: "Autopsy Report",
+    classification: "RESTRICTED",
+    source: "Investigation Division",
+    date: "04/02/2025",
+    report: "CASE NUMBER: -",
+
+    content: `
+
+    <div class="document-header">
+
+        <h2>Photographic Plate B</h2>
+
+        <p>
+            INTERNAL EXAMINATION
+        </p>
+
+    </div>
+
+
+    <div class="document-section">
+
+        <div class="photo-plate">
+
+                    <img
+                        src="images/attachment-plate-b.jpg"
+                        alt="Internal examination of CAS-ON-214"
+                    >
+
+                    <div class="photo-caption">
+
+                        <strong>
+                            PLATE B — INTERNAL STRUCTURE
+                        </strong>
+
+                        <br>
+
+                        CENTRAL CAVITY FOLLOWING SECTIONING.
+
+                        <br><br>
+
+                        IMAGE QUALITY DEGRADED DURING EXPOSURE.
+                        NO ADDITIONAL DIGITAL PROCESSING HAS BEEN
+                        PERFORMED.
+
+                    </div>
+
+                </div>
+
+                <div class="image-note">
+                    NOTE: IMAGE FILE CONTAINS NO RECORDED AUDIO.
+                </div>
+
+    </div>
+
+
+    <div class="document-footer">
+
+        <span>CAS-OPS-006428</span>
+
+        <span>PAGE 1 OF 1</span>
+
+    </div>
+
+    `
+},
+
+
+{
+    frame: "006429",
+    title: "Histology",
+    type: "Autopsy Report",
+    classification: "RESTRICTED",
+    source: "Investigation Division",
+    date: "04/02/2025",
+    report: "CASE NUMBER: -",
+
+    content: `
+
+    <div class="document-header">
+
+        <h2>Histological Review</h2>
+
+        <p>
+             SAMPLE SERIES: ON214-H01 THROUGH ON214-H07 
+        </p>
+
+    </div>
+
+
+    <div class="document-section">
+
+        <p>
+                    Tissue samples were submitted for microscopic
+                    examination.
+                </p>
+
+                <p>
+                    Conventional staining produced no identifiable
+                    cellular structures.
+                </p>
+
+                <p>
+                    Samples appear to consist of repeating
+                    filamentous structures arranged in irregular
+                    concentric formations.
+                </p>
+
+                <div class="photo-plate">
+
+                    <img
+                        src="images/attachment-histology.jpg"
+                        alt="Histological sample of CAS-ON-214"
+                    >
+
+                    <div class="photo-caption">
+
+                        <strong>
+                            PLATE C — MICROSCOPIC EXAMINATION
+                        </strong>
+
+                        <br>
+
+                        SAMPLE ON214-H04, MAGNIFICATION ×400.
+
+                    </div>
+
+                </div>
+
+                <p>
+                    Structures display no identifiable nuclei,
+                    membranes, or conventional intracellular
+                    components.
+                </p>
+
+    </div>
+
+
+    <div class="document-footer">
+
+        <span>CAS-OPS-006429</span>
+
+        <span>PAGE 1 OF 1</span>
+
+    </div>
+
+    `
+},
+
+
+{
+    frame: "006430",
+    title: "Audiological",
+    type: "Autopsy Report",
+    classification: "RESTRICTED",
+    source: "Investigation Division",
+    date: "04/02/2025",
+    report: "CASE NUMBER: -",
+
+    content: `
+
+    <div class="document-header">
+
+        <h2>Audiological Review</h2>
+
+        <p>
+            MEDICAL SERVICES / AUDIOLOGY
+        </p>
+
+    </div>
+
+
+    <div class="document-section">
+
+        <p>
+                    Employee 04-771 reported continuous tinnitus for
+                    approximately six days prior to neutralisation.
+                </p>
+
+                <p>
+                    Audiometric testing conducted after neutralisation
+                    demonstrated significant reduction in perceived
+                    tinnitus.
+                </p>
+
+                <table class="document-table">
+
+                    <tr>
+                        <td style="width:25%">BEFORE REMOVAL</td>
+                        <td>7.2 kHz — 8.1 kHz</td>
+                    </tr>
+
+                    <tr>
+                        <td>AFTER REMOVAL</td>
+                        <td>NO PERSISTENT TONE</td>
+                    </tr>
+
+                    <tr>
+                        <td>HEARING LOSS</td>
+                        <td>NONE DETECTED</td>
+                    </tr>
+
+                </table>
+
+                <p><p>
+                    Three personnel present during specimen sectioning
+                    independently reported hearing a tone not detected
+                    by recording equipment.
+                </p>
+
+                <div class="warning-box">
+
+                    THE POSSIBILITY THAT CAS-ON-214 UTILISES
+                    AUDITORY PHENOMENA FOR LOCALISATION CANNOT
+                    BE EXCLUDED.
+
+                </div>
+
+    </div>
+
+
+    <div class="document-footer">
+
+        <span>CAS-OPS-006430</span>
+
+        <span>PAGE 1 OF 1</span>
+
+    </div>
+
+    `
+},
+
+
+{
+    frame: "006431",
+    title: "Behavioural Analysis",
+    type: "Autopsy Report",
+    classification: "RESTRICTED",
+    source: "Investigation Division",
+    date: "04/02/2025",
+    report: "CASE NUMBER: -",
+
+    content: `
+
+    <div class="document-header">
+
+        <h2>Behavioural Analysis</h2>
+
+        <p>
+             OBSERVATIONAL SUMMARY 
+        </p>
+
+    </div>
+
+
+    <div class="document-section">
+
+        <p>
+                    Prior to neutralisation, CAS-ON-214 demonstrated
+                    behaviour consistent with a parasitic or attached
+                    phenomenon.
+                </p>
+
+                <p>
+                    The specimen remained in close proximity to the
+                    original host at all times.
+                </p>
+
+                <p>
+                    No feeding behaviour was observed.
+                </p>
+
+                <p>
+                    No conventional respiration was detected.
+                </p>
+
+                <p>
+                    No vocalisation was recorded.
+                </p>
+
+                <p>
+                    The specimen did not respond to physical contact.
+                </p>
+
+                <p>
+                    The specimen did, however, demonstrate a measurable
+                    response to changes in ambient temperature and
+                    full-spectrum illumination.
+                </p>
+
+                <div class="notice">
+
+                    WORKING THEORY:
+                    CAS-ON-214 MAY NOT "ATTACH" TO A HOST.
+
+                    IT MAY ALTER THE HOST'S RELATIONSHIP TO
+                    SURROUNDING SPACE.
+
+                </div>
+
+    </div>
+
+
+    <div class="document-footer">
+
+        <span>CAS-OPS-006431</span>
+
+        <span>PAGE 1 OF 1</span>
+
+    </div>
+
+    `
+},
+
+
+{
+    frame: "006432",
+    title: "Classification",
+    type: "Autopsy Report",
+    classification: "RESTRICTED",
+    source: "Investigation Division",
+    date: "04/02/2025",
+    report: "CASE NUMBER: -",
+
+    content: `
+
+    <div class="document-header">
+
+        <h2>Final Classification</h2>
+
+        <p>
+             CAS-ON-214 
+        </p>
+
+    </div>
+
+
+    <div class="document-section">
+
+        <table class="document-table">
+
+                    <tr>
+                        <td style="width:25%">DESIGNATION</td>
+                        <td>CAS-ON-214</td>
+                    </tr>
+
+                    <tr>
+                        <td>COMMON NAME</td>
+                        <td>ATTACHMENT PHENOMENON</td>
+                    </tr>
+
+                    <tr>
+                        <td>TYPE</td>
+                        <td>OTHERNATURAL ENTITY</td>
+                    </tr>
+
+                    <tr>
+                        <td>THREAT LEVEL</td>
+                        <td>LOW (?) / CONDITIONAL</td>
+                    </tr>
+
+                    <tr>
+                        <td>TRANSMISSION</td>
+                        <td>UNKNOWN</td>
+                    </tr>
+
+                    <tr>
+                        <td>HOST DEPENDENCY</td>
+                        <td>PROBABLE</td>
+                    </tr>
+
+                    <tr>
+                        <td>STATUS</td>
+                        <td>NEUTRALISED</td>
+                    </tr>
+
+                </table>
+
+                <h3 1. DISPOSITION</h3>
+
+                <p>
+                    Remaining specimen material is to be stored in
+                    Sublevel Containment Storage under standard
+                    Othernatural Materials Protocol.
+                </p>
+
+                <p>
+                    Further contact with personnel is prohibited
+                    without written approval from the Othernatural
+                    Investigation Division.
+                </p>
+
+              
+
+            </article>
+
+
+
+    </div>
+
+
+    <div class="document-section">
+
+        <h3>2. FINAL NOTE</h3>
+
+        <p>
+            No existing CAS department has accepted permanent
+            responsibility for either recovered subject.
+        </p>
+
+        <p>
+            Temporary responsibility remains with Medical Division.
+        </p>
+
+        <p>
+            Further classification review scheduled for
+            01/10/2024.
+        </p>
+
+    </div>
+
+
+    <div class="document-section">
+
+        <h3>3. AUTHORIZATION</h3>
+
+        <p>
+            APPROVED
+        </p>
+
+        <p>
+            CENTRAL AUTHORITY OF SAFETY<br>
+            █████████████████
+        </p>
+
+    </div>
+    
+<div class="stamp">
+                    CASE CLOSED
+                </div>
+
+    <div class="document-footer">
+
+        <span>CAS-OPS-006432</span>
+
+        <span>END OF RECORD</span>
+
+    </div>
+
+    `
+},
+
+{
+    frame: "006433",
+    title: "Addendum",
+    type: "Autopsy Report",
+    classification: "RESTRICTED",
+    source: "Investigation Division",
+    date: "04/02/2025",
+    report: "CASE NUMBER: -",
+
+    content: `
+
+    <div class="document-header">
+
+        <h2>Addendum</h2>
+
+        <p>
+              FILED 21/08/2026 
+        </p>
+
+    </div>
+
+
+    <div class="document-section">
+
+       
+
+                <p>
+                    On 21/08/2026, Employee 04-771 returned to
+                    normal duties.
+                </p>
+
+                <p>
+                    Employee reported no recurrence of cold sensation,
+                    tinnitus, or perceived presence.
+                </p>
+
+                <p>
+                    During routine exit screening, the employee was
+                    photographed using standard personnel imaging
+                    equipment.
+                </p>
+
+                <p>
+                    The resulting photograph demonstrated no
+                    abnormalities.
+                </p>
+
+                <p>
+                    A second photograph was taken approximately
+                    four seconds later.
+                </p>
+
+                <p>
+                    The second photograph was found to contain a
+                    darkened region immediately behind the employee.
+                </p>
+
+                <div class="redaction-block">
+
+                    IMAGE ATTACHED TO ORIGINAL RECORD:
+                    ████████████████████████████████████
+
+                    <br><br>
+
+                    IMAGE STATUS:
+                    NOT FOUND
+
+                </div>
+
+                <p>
+                    Employee 04-771 was not informed.
+                </p>
+
+                <div class="final-note">
+
+                    END OF RECORD.
+
+                    <br><br>
+
+                    CAS-ON-214 REMAINS CLASSIFIED AS NEUTRALISED.
+
+                </div>
+
+    </div>
+
+
+    <div class="document-footer">
+
+        <span>CAS-OPS-006431</span>
+
+        <span>PAGE 1 OF 1</span>
+
+    </div>
+
+    `
+}
+
+
+];
+
+
+/* =========================================
+   STATE
+========================================= */
+
+let currentIndex = 0;
+
+let zoom = 1;
+
+let rotation = 0;
+
+
+/* =========================================
+   DOM
+========================================= */
+
+const scan = document.getElementById("scan");
+
+const frameList = document.getElementById("frameList");
+
+const frameCounter = document.getElementById("frameCounter");
+
+const previousButton =
+    document.getElementById("previousButton");
+
+const nextButton =
+    document.getElementById("nextButton");
+
+const zoomValue =
+    document.getElementById("zoomValue");
+
+const infoFrame =
+    document.getElementById("infoFrame");
+
+const infoType =
+    document.getElementById("infoType");
+
+const infoClassification =
+    document.getElementById("infoClassification");
+
+const infoSource =
+    document.getElementById("infoSource");
+
+const frameInput =
+    document.getElementById("frameInput");
+
+
+/* =========================================
+   BUILD FRAME LIST
+========================================= */
+
+function buildFrameList() {
+
+    frameList.innerHTML = "";
+
+    archive.forEach((item, index) => {
+
+        const element = document.createElement("div");
+
+        element.className = "frame-item";
+
+        element.innerHTML = `
+            <div class="frame-number">
+                FRAME ${item.frame}
+            </div>
+
+            <div class="frame-title">
+                ${item.title}
+            </div>
+        `;
+
+        element.onclick = function() {
+            loadFrame(index);
+        };
+
+        frameList.appendChild(element);
+
+    });
+
+}
+
+
+/* =========================================
+   LOAD FRAME
+========================================= */
+
+function loadFrame(index, updateHash = true) {
+
+    if (index < 0) {
+        index = 0;
+    }
+
+    if (index >= archive.length) {
+        index = archive.length - 1;
+    }
+
+    currentIndex = index;
+
+    const item = archive[currentIndex];
+
+    scan.innerHTML = item.content;
+
+    scan.style.transform =
+        `scale(${zoom}) rotate(${rotation}deg)`;
+
+    frameCounter.textContent =
+        `FRAME ${item.frame} / ${archive[archive.length - 1].frame}`;
+
+    infoFrame.textContent = item.frame;
+
+    infoType.textContent = item.type;
+
+    infoClassification.textContent =
+        item.classification;
+
+    infoSource.textContent =
+        item.source;
+
+    frameInput.value = item.frame;
+
+    previousButton.disabled =
+        currentIndex === 0;
+
+    nextButton.disabled =
+        currentIndex === archive.length - 1;
+
+
+    document.querySelectorAll(".frame-item")
+        .forEach((element, i) => {
+
+            element.classList.toggle(
+                "active",
+                i === currentIndex
+            );
+
+        });
+
+
+    if (updateHash) {
+
+        history.replaceState(
+            null,
+            "",
+            "#" + item.frame
+        );
+
+    }
+
+}
+
+
+/* =========================================
+   NEXT / PREVIOUS
+========================================= */
+
+function nextFrame() {
+
+    if (currentIndex < archive.length - 1) {
+
+        loadFrame(currentIndex + 1);
+
+    }
+
+}
+
+
+function previousFrame() {
+
+    if (currentIndex > 0) {
+
+        loadFrame(currentIndex - 1);
+
+    }
+
+}
+
+
+/* =========================================
+   JUMP TO FRAME
+========================================= */
+
+function jumpToFrame() {
+
+    const value =
+        frameInput.value.trim();
+
+    const index =
+        archive.findIndex(
+            item => item.frame === value
+        );
+
+    if (index !== -1) {
+
+        loadFrame(index);
+
+    } else {
+
+        alert(
+            "FRAME NOT FOUND\n\n" +
+            "The requested frame is not available " +
+            "in this archive."
+        );
+
+    }
+
+}
+
+
+/* =========================================
+   ZOOM
+========================================= */
+
+function updateZoom() {
+
+    scan.style.transform =
+        `scale(${zoom}) rotate(${rotation}deg)`;
+
+    zoomValue.textContent =
+        Math.round(zoom * 100) + "%";
+
+}
+
+
+function zoomIn() {
+
+    zoom += 0.1;
+
+    if (zoom > 2) {
+        zoom = 2;
+    }
+
+    updateZoom();
+
+}
+
+
+function zoomOut() {
+
+    zoom -= 0.1;
+
+    if (zoom < 0.5) {
+        zoom = 0.5;
+    }
+
+    updateZoom();
+
+}
+
+
+function resetZoom() {
+
+    zoom = 1;
+    rotation = 0;
+
+    updateZoom();
+
+}
+
+
+/* =========================================
+   ROTATION
+========================================= */
+
+function rotateScan(direction) {
+
+    rotation += direction;
+
+    if (rotation > 3) {
+        rotation = 0;
+    }
+
+    if (rotation < -3) {
+        rotation = 0;
+    }
+
+    updateZoom();
+
+}
+
+
+/* =========================================
+   KEYBOARD NAVIGATION
+========================================= */
+
+document.addEventListener(
+    "keydown",
+    function(event) {
+
+        if (event.key === "ArrowRight") {
+
+            nextFrame();
+
+        }
+
+        if (event.key === "ArrowLeft") {
+
+            previousFrame();
+
+        }
+
+    }
+);
+
+
+/* =========================================
+   HASH NAVIGATION
+========================================= */
+
+function loadHashFrame() {
+
+    const hash =
+        window.location.hash
+            .replace("#", "")
+            .trim();
+
+    if (!hash) {
+
+        loadFrame(0, false);
+
+        return;
+
+    }
+
+    const index =
+        archive.findIndex(
+            item => item.frame === hash
+        );
+
+    if (index !== -1) {
+
+        loadFrame(index, false);
+
+    } else {
+
+        loadFrame(0, false);
+
+    }
+
+}
+
+
+/* =========================================
+   INITIALIZE
+========================================= */
+
+buildFrameList();
+
+loadHashFrame();
+
+</script>
+
+
+</body>
+
+</html>
