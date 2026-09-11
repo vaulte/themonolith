@@ -1,4 +1,5 @@
 
+
         :root {
             --black: #111111;
             --dark-grey: #333333;
@@ -642,7 +643,7 @@
 .scan {
     width: 700px;
     min-height: 900px;
-    background: #f2f0e9;
+    background: #fff;
     color: #171717;
     box-shadow: 0 2px 12px rgba(0,0,0,0.5);
     padding: 55px 60px;
@@ -770,6 +771,239 @@
     font-size: 8px;
     color: #555;
 }
+
+.document-section mark {
+    margin: 30px 0;
+    padding: 15px;
+    border: 1px solid #111;
+    background: #e8e8e8;
+    font-size: 10px;
+    line-height: 1.7;
+    width: 100%;
+}
+
+.document-section warning {
+    margin: 30px 0;
+    padding: 18px;
+    border: 2px solid #111;
+    font-size: 10px;
+    line-height: 1.8;
+}
+
+
+.document-section blocking {
+    margin: 25px 0;
+    padding: 15px;
+    background: #111;
+    color: #fff;
+    font-size: 10px;
+    line-height: 1.8;
+    letter-spacing: 1px;
+}
+
+
+.document-section redacted {
+    position: relative;
+}
+
+
+
+.handwritten {
+
+    margin-top: 50px;
+
+    font-family:
+        "Comic Sans MS",
+        cursive;
+
+    font-size: 14px;
+
+    transform: rotate(-2deg);
+
+    color: #333;
+}
+
+
+/* =========================================================
+   CASE CLOSED STAMP
+========================================================= */
+
+.stamp {
+
+    width: 190px;
+
+    margin: 70px auto 20px;
+
+    padding: 12px;
+
+    border: 3px double #111;
+
+    text-align: center;
+
+    font-weight: bold;
+
+    transform: rotate(-4deg);
+
+    letter-spacing: 2px;
+}
+
+
+.record-number {
+
+    font-size: 10px;
+
+    color: #555;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================================
+   NOTICES
+========================================================= */
+
+.notice {
+
+    margin: 30px 0;
+
+    padding: 15px;
+
+    border: 1px solid #111;
+
+    background: #e8e8e8;
+
+    font-size: 10px;
+
+    line-height: 1.7;
+}
+
+
+.warning-box {
+
+    margin: 30px 0;
+
+    padding: 18px;
+
+    border: 2px solid #111;
+
+    font-size: 10px;
+
+    line-height: 1.8;
+}
+
+
+.redaction-block {
+
+    margin: 25px 0;
+
+    padding: 15px;
+
+    background: #111;
+
+    color: #fff;
+
+    font-size: 10px;
+
+    line-height: 1.8;
+
+    letter-spacing: 1px;
+}
+
+
+.redacted {
+
+    position: relative;
+}
+
+
+/* =========================================================
+   PHOTOGRAPHIC PLATES
+========================================================= */
+
+.image-frame {
+
+    text-align: center;
+}
+
+
+.image-frame h1,
+.image-frame .record-number {
+
+    text-align: left;
+}
+
+
+.photo-plate {
+
+    margin: 30px auto;
+
+    max-width: 650px;
+
+    background: #111;
+
+    padding: 14px;
+
+    border: 1px solid #444;
+
+    overflow: hidden;
+}
+
+
+.photo-plate img {
+
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+    transform-origin: center center;
+
+    transition: transform .2s ease;
+
+    filter:
+        grayscale(100%)
+        contrast(115%);
+}
+
+
+.photo-caption {
+
+    margin-top: 12px;
+
+    padding-top: 12px;
+
+    border-top: 1px solid #777;
+
+    color: #ddd;
+
+    font-size: 9px;
+
+    text-align: left;
+
+    line-height: 1.7;
+}
+
+
+.photo-caption span {
+
+    color: #aaa;
+}
+
+
+.image-note {
+
+    font-size: 9px;
+
+    color: #555;
+
+    text-align: left;
+
+    border-top: 1px solid #aaa;
+
+    padding-top: 8px;
+}
+
 
 /* =========================
    RIGHT PANEL
@@ -913,4 +1147,7 @@ footer {
         width: 650px;
     }
 
-}
+/* =========================================================
+   NOTICES
+========================================================= */
+
