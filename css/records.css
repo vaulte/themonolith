@@ -716,5 +716,25 @@
             display: block;
             margin-top: 8px;
         }
-    }
+  .level-row {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+.level {
+    margin-top: 15px;
+    display: inline-block;
+    border: 1px solid var(--light-grey);
+    padding: 4px 9px;
+    font-family: "Courier New", monospace;
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+.level-red {
+    color: var(--warning);
+    border-color: #c9aaaa;
+}
 
