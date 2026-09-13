@@ -746,14 +746,14 @@
         }
     }
 
-.classification-row {
-    margin-top: 1px;
+  .level-row {
+    margin-top: 15px;
     display: flex;
     flex-wrap: wrap;
     gap: 7px;
 }
 
-.classification {
+.level {
     margin-top: 15px;
     display: inline-block;
     border: 1px solid var(--light-grey);
@@ -763,7 +763,7 @@
     letter-spacing: 1px;
 }
 
-.classification-red {
+.level-red {
     color: var(--warning);
     border-color: #c9aaaa;
 }
