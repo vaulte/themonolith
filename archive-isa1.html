@@ -1,0 +1,1741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Interview: Steven Altmann | CAS</title>
+    <link rel="shortcut icon" href="https://i.imgur.com/7PMCzUN.png">
+        <link rel="stylesheet" href="./css/main.css">
+        <link rel="stylesheet" href="./css/indexing.css">
+    <link rel="stylesheet" href="./css/microfiche.css">
+</head>
+
+
+
+
+<body>
+
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+
+    <header class="site-header">
+
+        <div class="header-inner">
+
+            <a href="index.html" class="cas-logo">
+                <span class="logo-acronym">CAS</span>
+
+                <span class="logo-name">
+                    CENTRAL AUTHORITY<br>
+                    OF SAFETY
+                </span>
+            </a>
+
+            <div class="header-information">
+                <span>GOVERNMENT INFORMATION PORTAL</span>
+                <span>DOCUMENT ACCESS SYSTEM</span>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================
+         MAIN NAVIGATION
+    ========================================== -->
+
+    <nav class="main-navigation">
+
+        <div class="navigation-inner">
+
+            <a href="./index.html">HOME</a>
+
+            <a href="./about.html">ABOUT</a>
+
+            <a href="./personnel.html">PERSONNEL</a>
+
+            <a href="./facilities.html">FACILITIES</a>
+
+            <a href="./records.html">RECORDS</a>
+
+            <a href="./research.html">RESEARCH</a>
+
+            <a href="./archive.html" class="active">ARCHIVE</a>
+
+        </div>
+
+    </nav>
+
+
+</header>
+
+
+
+<main class="container">
+
+
+        <!-- BREADCRUMB -->
+
+        <div class="breadcrumb">
+
+            <a href="./index.html">CAS</a> / <a href="./archives.html">ARCHIVES</a> / INTERVIEW: STEVEN ALTMANN
+
+        </div>
+
+
+        <!-- PAGE HEADER -->
+
+        <section class="page-header">
+
+            <div class="page-code">
+                Microfiche Archive / RESTRICTED ACCESS
+            </div>
+
+            <h1>
+                Interview: 
+                <br>Steven Altmann
+            </h1>
+
+            <div class="page-description">
+
+                Digitized records of collected materials, supporting documentation,
+            and physical evidence associated with CAS reports.
+
+            </div>
+
+        </section>
+
+
+    <div class="boxing">
+
+        <strong>Notice:N</strong>
+        This archive contains reproductions of physical records.
+        Original materials remain subject to applicable retention,
+        storage, and access requirements.
+
+    </div>
+
+
+    <div class="archive-terminal">
+
+
+        <!-- LEFT PANEL -->
+
+        <aside class="reel-panel">
+
+            <div class="panel-heading">
+                ARCHIVE REEL
+            </div>
+
+            <div class="reel-info">
+
+                <strong>C-02 / FACILITIES</strong>
+
+                <small>
+                    Facilities documentation and associated
+                    material records.
+                </small>
+
+            </div>
+
+            <div class="panel-heading">
+                FRAMES
+            </div>
+
+            <div id="frameList" class="frame-list"></div>
+
+        </aside>
+
+
+        <!-- VIEWER -->
+
+        <section class="viewer">
+
+            <div class="viewer-toolbar">
+
+                <div class="toolbar-group">
+
+                    <span class="toolbar-label">
+                        VIEW
+                    </span>
+
+                    <button class="toolbar-button" onclick="zoomOut()">
+                        −
+                    </button>
+
+                    <span id="zoomValue" class="zoom-value">
+                        100%
+                    </span>
+
+                    <button class="toolbar-button" onclick="zoomIn()">
+                        +
+                    </button>
+
+                    <button class="toolbar-button" onclick="resetZoom()">
+                        FIT
+                    </button>
+
+                </div>
+
+
+                <div class="toolbar-group">
+
+                    <button class="toolbar-button" onclick="rotateScan(-1)">
+                        ↶
+                    </button>
+
+                    <button class="toolbar-button" onclick="rotateScan(1)">
+                        ↷
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="scan-area">
+
+                <div id="scan" class="scan">
+
+                    <!-- DOCUMENT GENERATED HERE -->
+
+                </div>
+
+            </div>
+
+
+            <div class="viewer-navigation">
+
+                <button
+                    id="previousButton"
+                    class="nav-button"
+                    onclick="previousFrame()"
+                >
+                    ◀ PREVIOUS
+                </button>
+
+                <div
+                    id="frameCounter"
+                    class="frame-counter"
+                >
+                    FRAME 004182 / 004193
+                </div>
+
+                <button
+                    id="nextButton"
+                    class="nav-button"
+                    onclick="nextFrame()"
+                >
+                    NEXT ▶
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- RIGHT PANEL -->
+
+        <aside class="info-panel">
+
+            <div class="panel-heading">
+                RECORD INFORMATION
+            </div>
+
+
+            <div class="info-block">
+
+                <div class="info-label">
+                    Reel
+                </div>
+
+                <div
+                    id="infoReel"
+                    class="info-value"
+                >
+                    C-02 / FACILITIES
+                </div>
+
+            </div>
+
+
+            <div class="info-block">
+
+                <div class="info-label">
+                    Frame
+                </div>
+
+                <div
+                    id="infoFrame"
+                    class="info-value"
+                >
+                    004182
+                </div>
+
+            </div>
+
+
+            <div class="info-block">
+
+                <div class="info-label">
+                    Record Type
+                </div>
+
+                <div
+                    id="infoType"
+                    class="info-value"
+                >
+                    Maintenance Record
+                </div>
+
+            </div>
+
+
+            <div class="info-block">
+
+                <div class="info-label">
+                    Classification
+                </div>
+
+                <div
+                    id="infoClassification"
+                    class="info-value"
+                >
+                    INTERNAL
+                </div>
+
+            </div>
+
+
+            <div class="info-block">
+
+                <div class="info-label">
+                    Frame Navigation
+                </div>
+
+                <div class="frame-jump">
+
+                    <input
+                        id="frameInput"
+                        class="frame-input"
+                        type="text"
+                        placeholder="004182"
+                        maxlength="6"
+                    >
+
+                    <button
+                        class="go-button"
+                        onclick="jumpToFrame()"
+                    >
+                        GO
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="info-block">
+
+                <div class="info-label">
+                    Archive Status
+                </div>
+
+                <div class="info-value">
+                    AVAILABLE
+                </div>
+
+            </div>
+
+
+            <div class="info-block">
+
+                <div class="info-label">
+                    Source
+                </div>
+
+                <div
+                    id="infoSource"
+                    class="info-value"
+                >
+                    Facilities Department
+                </div>
+
+            </div>
+
+        </aside>
+
+    </div>
+
+
+    <footer>
+
+        <div>
+            CAS INFORMATION MANAGEMENT SYSTEM
+        </div>
+
+        <div>
+            MICROFICHE DATABASE REV. 4.17
+        </div>
+
+    </footer>
+
+</main>
+
+
+        </main>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================== -->
+
+<footer class="site-footer">
+
+    <div class="footer-inner">
+
+
+        <div>
+
+            <strong>
+                CENTRAL AUTHORITY OF SAFETY
+            </strong>
+
+            <span>
+                National Safety Administration
+            </span>
+
+        </div>
+
+
+
+        <div class="footer-links">
+
+            <a href="#">
+                ACCESSIBILITY
+            </a>
+
+            <a href="#">
+                PRIVACY
+            </a>
+
+            <a href="#">
+                CONTACT
+            </a>
+
+        </div>
+
+
+
+        <div class="footer-meta">
+
+            <span>
+                CAS INFORMATION SYSTEM
+            </span>
+
+            <span>
+                VERSION 1.0.0
+            </span>
+
+            <span>
+                © 2026 CAS
+            </span>
+
+        </div>
+
+
+    </div>
+
+</footer>
+
+
+
+
+<script>
+
+/* =========================================
+   ARCHIVE DATA
+========================================= */
+
+const archive = [
+
+{
+    frame: "006421",
+    title: "Interview: Steven Altmann — Cover Sheet",
+    type: "Interview",
+    classification: "RESTRICTED",
+    source: "Investigation Division",
+    date: "04/02/2021",
+    report: "CASE NUMBER: -",
+
+    content: `
+
+    <div class="document-header">
+
+        <h2>Interview: Steven Altmann</h2>
+
+        <p>
+            CENTRAL AUTHORITY OF SAFETY
+            — SPECIAL OPERATIONS DIVISION
+        </p>
+
+        <p>
+            INTRVIEW TRANSCRIPT
+        </p>
+
+    </div>
+
+
+    <div class="document-meta">
+
+        <strong>Subject</strong>
+        <span>Steven Peter Altmann</span>
+
+        <strong>Case Number:</strong>
+        <span>-</span>
+        
+        <strong>Incident Type</strong>
+        <span>Unauthorised Othernatural Exposure</span>
+
+        <strong>Date</strong>
+        <span>04/02/2025</span>
+
+        <strong>Location</strong>
+        <span>████████████████</span>
+
+        <strong>Classification</strong>
+        <span>RESTRICTED</span>
+
+        <strong>Personnel</strong>
+        <span>████████████████</span>
+
+    </div>
+
+
+    <div class="document-section">
+
+        <h3>1. CONTEXT</h3>
+
+        <p>
+            Civilian subject Steven Altmann witnessed an unidentified othernatural 
+            entity while returning to his residence following employment. 
+        </p>
+        
+        <p>
+           Subject was located at the incident site by Special Operations personnel 
+           approximately 18 minutes following initial detection.</p>
+        <p>
+         Subject displayed no significant signs of psychological distress. 
+         </p>
+         
+         <div class="boxing">SUBJECT DESCRIBED THE EVENT AS "WEIRD" BUT DID NOT APPEAR TO CONSIDER IT THREATENING.</div>
+                </p>
+                 <p>
+                    Standard civilian memory-treatment procedure
+                    was recommended.
+                </p>
+
+
+                <p>
+                    Subject subsequently declined.
+                </p>
+
+    </div>
+
+
+
+    <div class="document-footer">
+
+        <span>CAS-OPS-006421</span>
+
+        <span>PAGE 1 OF 1</span>
+
+    </div>
+
+    `
+},
+
+
+{
+    frame: "006422",
+    title: "Subject Information",
+    type: "Interview",
+    classification: "RESTRICTED",
+    source: "Investigation Division",
+    date: "04/02/2021",
+    report: "CASE NUMBER: -",
+
+    content: `
+
+    <div class="document-header">
+
+        <h2>Medical History</h2>
+
+        <p>
+             SUBJECT: EMPLOYEE 04-771 
+        </p>
+
+    </div>
+
+    <div class="document-section">
+
+        <h3>1. BASIC MEDICAL HISTORY</h3>
+
+        <table class="document-table">
+
+            <tr>
+                <td style="width:25%">FULL NAME</td>
+                <td>Steven Peter Altmann</td>
+            </tr>
+            
+            <tr>
+                <td>AGE</td>
+                <td>27</td>
+            </tr>
+
+            <tr>
+                <td>SEX</td>
+                <td>Male</td>
+            </tr>
+
+            <tr>
+                <td>EMPLOYMENT</td>
+                <td>SELF-EMPLOYED</td>
+            </tr>
+
+            <tr>
+                <td>RESIDENCE</td>
+                <td>WHATEVER</td>
+            </tr>
+            
+            <tr>
+                <td>MEDICAL STATUS</td>
+                <td>NO RELEVANT CONDITIONS</td>
+            </tr>
+            
+            <tr>
+                <td>PSYCHOLOGICAL STATUS</td>
+                <td>WITHIN NORMAL PARAMETERS</td>
+            </tr>
+            
+            <tr>
+                <td>PREVIOUS CAS CONTACT</td>
+                <td>NONE</td>
+            </tr>
+
+        </table>
+
+    </div>
+
+
+    <div class="document-section">
+
+        <h3>2.  OBSERVED DISPOSITION</h3>
+
+        <p>
+                <ul>
+
+                    <li>Calm.</li>
+
+                    <li>Cooperative.</li>
+
+                    <li>Highly curious.</li>
+
+                    <li>Frequent questioning.</li>
+
+                    <li>No apparent fear response.</li>
+
+                    <li>
+                        Repeatedly attempted to determine
+                        interviewer occupation.
+                    </li>
+
+                </ul>
+
+
+                <div class="handwritten">
+
+                    "Seems more interested in us than
+                    the incident."
+
+                </div>
+        </p>
+
+    </div>
+
+    <div class="document-footer">
+
+        <span>CAS-OPS-006422</span>
+
+        <span>PAGE 1 OF 1</span>
+
+    </div>
+
+    `
+},
+
+
+{
+    frame: "006423",
+    title: "Incident Summary",
+    type: "Interview",
+    classification: "RESTRICTED",
+    source: "Investigation Division",
+    date: "04/02/2021",
+    report: "CASE NUMBER: -",
+
+    content: `
+
+    <div class="document-header">
+
+        <h2>Photographic Record</h2>
+
+        <p>
+             CAS-CIV-1187 / PRE-INTERVIEW
+        </p>
+
+    </div>
+
+
+    <div class="document-section">
+
+                <p>
+                    At approximately 22:14 hours, subject was
+                    walking through an underground pedestrian
+                    passageway approximately 700 metres from
+                    the subject's residence.
+                </p>
+
+
+                <p>
+                    Subject observed what he initially described
+                    as "someone standing underneath the light."
+                </p>
+
+
+                <p>
+                    Subject approached the figure after observing
+                    that it appeared to be obstructing the
+                    passageway.
+                </p>
+
+
+                <p>
+                    At a distance of approximately four metres,
+                    subject determined that the figure did not
+                    appear to possess conventional physical
+                    characteristics.
+                </p>
+
+
+                <p>
+                    The entity appeared predominantly as a
+                    vertical region of reduced illumination.
+                </p>
+
+
+                <p>
+                    Subject reported that the entity appeared
+                    "like a person-shaped shadow, except the
+                    shadow was standing where there wasn't
+                    anything to cast it."
+                </p>
+
+
+                <div class="boxing">
+
+                    SUBJECT REMAINED AT LOCATION FOR
+                    APPROXIMATELY 47 SECONDS AFTER INITIAL
+                    OBSERVATION.
+
+                </div>
+
+
+                <p>
+                    Subject stated that the entity appeared to
+                    observe him.
+                </p>
+
+
+                <p>
+                    Entity subsequently moved behind a concrete
+                    support column and was no longer visible.
+                </p>
+
+
+                <p>
+                    Special Operations arrived 18 minutes later.
+                </p>
+
+    </div>
+
+
+
+
+
+    <div class="document-footer">
+
+        <span>CAS-OPS-006423</span>
+
+        <span>PAGE 1 OF 1</span>
+
+    </div>
+
+    `
+},
+
+
+{
+    frame: "006424",
+    title: "Interview — I",
+    type: "Interview",
+    classification: "RESTRICTED",
+    source: "Investigation Division",
+    date: "04/02/2021",
+    report: "CASE NUMBER: -",
+
+    content: `
+
+    <div class="document-header">
+
+        <h2>Interview — I</h2>
+
+        <p>
+             TRANSCRIPT I / INITIAL CONTACT 
+        </p>
+
+    </div>
+
+    <div class="document-section">
+
+
+
+
+                <code>
+                <p><b>CAS-03:</b> For the record, please state your full name.</p>
+                <p><b>ALTMANN:</b> Uh, Steven Altmann... Steven Peter Altmann?</p>
+                <p><b>CAS-03:</b>  Do you understand why you have been brought here? </p>
+                <p><b>ALTMANN:</b> Sort of. </p>
+                <p><b>CAS-03:</b> Clarify.</p>
+                <p><b>ALTMANN:</b> I saw the weird shadow thing. </p>
+                <p><b>CAS-03:</b> Describe what you saw? </p>
+                <p><b>ALTMANN:</b>  A shadow.</p>
+                
+                <p style="text-align: center;"><b>[</b> ALTMANN PAUSES FOR FIFTEEN SECONDS <b>]</b></p>
+                
+                <p><b>ALTMANN:</b>  Except it wasn't really a shadow.</p>
+                <p><b>CAS-03:</b>  Were you afraid?</p>
+                <p><b>ALTMANN:</b> No.</p>
+                
+                <p style="text-align: center;"><b>[</b> CAS-03 PAUSES, LIKELY SURPRISE <b>]</b></p>
+                
+                <p><b>CAS-03:</b> Why not?</p>
+                <p><b>ALTMANN:</b>  I don't know. </p>
+                <p><b>ALTMANN:</b> It wasn't doing anything.</p>
+                </code>
+                </div>
+
+    </div>
+
+
+    <div class="document-footer">
+
+        <span>CAS-OPS-006424</span>
+
+        <span>PAGE 1 OF 5</span>
+
+    </div>
+
+    `
+},
+
+
+{
+    frame: "006425",
+    title: "Interview — II",
+    type: "Interview",
+    classification: "RESTRICTED",
+    source: "Investigation Division",
+    date: "04/02/2021",
+    report: "CASE NUMBER: -",
+
+    content: `
+
+    <div class="document-header">
+
+        <h2>Interview — II</h2>
+
+        <p>
+              TRANSCRIPT II / ENTITY DESCRIPTION 
+        </p>
+
+    </div>
+
+    <div class="document-section">
+              <code>
+                <p><b>CAS-03:</b> Did the entity have eyes? </p>
+                <p><b>ALTMANN:</b> Not that I could see. </p>
+                <p><b>CAS-03:</b>  A mouth? </p>
+                <p><b>ALTMANN:</b> Maybe. </p>
+                <p><b>CAS-03:</b> Maybe?</p>
+                <p><b>ALTMANN:</b> It was difficult to look at. </p>
+                <p><b>CAS-03:</b> Explain. </p>
+                <p><b>ALTMANN:</b> You know when you look at something really dark and your eyes start trying to fill in the details?</p>
+                <p><b>ALTMANN:</b> It was like that.</p>
+                <p><b>CAS-03:</b> Did it speak to you? </p>
+                <p><b>ALTMANN:</b> No.</p>
+                <p><b>CAS-03:</b> Did it make any sound?</p>
+                <p><b>ALTMANN:</b> No.</p>
+                <p><b>ALTMANN:</b> Although the lights were buzzing. And I could feel a ringing in my ears.</p>
+                
+                <p style="text-align: center;"><b>[</b> ALTMANN PAUSES AGAIN <b>]</b></p>
+                
+                <p><b>CAS-03:</b> But it was in my head, not like... I could hear it? Does that make sense?</p>
+                <p><b>ALTMANN:</b> It makes enough sense.</p>
+                <p><b>CAS-03:</b> Were the lights functioning normally? </p>
+                <p><b>ALTMANN:</b> Before or after it disappeared? </p>
+                
+                <p style="text-align: center;"><b>[</b> INTERVIEWER IS SILENT <b>]</b></p>
+                
+
+
+
+              </code>
+    </div>
+
+
+    <div class="document-footer">
+
+        <span>CAS-OPS-006425</span>
+
+        <span>PAGE 2 OF 5</span>
+
+    </div>
+
+    `
+},
+
+
+{
+    frame: "006426",
+    title: "Interview — III",
+    type: "Interview",
+    classification: "RESTRICTED",
+    source: "Investigation Division",
+    date: "04/02/2021",
+    report: "CASE NUMBER: -",
+
+    content: `
+
+    <div class="document-header">
+
+        <h2>Interview — III</h2>
+
+        <p>
+             TRANSCRIPT III / CAS PERSONNEL 
+        </p>
+
+    </div>
+
+
+    <div class="document-section">
+<code>
+                <p><b>ALTMANN:</b> So what exactly do you people do?</p>
+                <p><b>CAS-03:</b>  That is not relevant to this interview. </p>
+                <p><b>ALTMANN:</b> Right.</p>
+                <p><b>ALTMANN:</b>  But you knew what it was. </p>
+                <p><b>CAS-03:</b> We were aware that an anomalous event had occurred. </p>
+                <p><b>ALTMANN:</b>  That's a very careful way of saying that. </p>
+                <p><b>CAS-03:</b>  Mr. Altmann. </p>
+                <p><b>ALTMANN:</b>  Sorry.</p>
+                <p><b>ALTMANN:</b> Is this your job? </p>
+                <p><b>CAS-03:</b>  My occupation is not relevant. </p>
+                <p><b>ALTMANN:</b> It seems pretty interesting. </p>
+                <p><b>CAS-03:</b> Do you have any additional information regarding the entity?</p>
+                <p><b>ALTMANN:</b> It didn't seem dangerous. </p>
+                <p><b>CAS-03:</b>  You cannot determine that. </p>
+                <p><b>ALTMANN:</b> Neither can you.</p>
+                <p style="text-align: center;"><b>[</b> INTERVIEWER MAKES A SOUND OF IRRITATION <b>]</b></p>
+
+    </code></div>
+
+
+
+    <div class="document-footer">
+
+        <span>CAS-OPS-006426</span>
+
+        <span>PAGE 3 OF 5</span>
+
+    </div>
+
+    `
+},
+
+
+{
+    frame: "006427",
+    title: "Interview — IV",
+     type: "Interview",
+    classification: "RESTRICTED",
+    source: "Investigation Division",
+    date: "04/02/2021",
+    report: "CASE NUMBER: -",
+
+    content: `
+
+    <div class="document-header">
+
+        <h2>Interview — IV</h2>
+
+        <p>
+            TRANSCRIPT IV / MEMORY PROCEDURE 
+        </p>
+
+    </div>
+
+    <div class="document-section">
+
+
+        <code>
+                <p><b>CAS-03:</b> You will be required to undergo a standard memory-treatment procedure. </p>
+                <p><b>ALTNMANN:</b> What does that mean? </p>
+                <p><b>CAS-03:</b> Your recollection of the incident will be removed. </p>
+                <p><b>ALTNMANN:</b> Oh.</p>
+                <p><b>ALTNMANN:</b> No thank you.</p>
+                <p><b>CAS-03:</b> Mr. Altmann, this is standard procedure. </p>
+                <p><b>ALTNMANN:</b> I don't want it. </p>
+                <p><b>CAS-03:</b> You may not fully understand the implications of retaining this memory.</p>
+                <p><b>ALTNMANN:</b> I understand that I saw something weird. </p>
+                <p><b>ALTNMANN:</b> I also understand that you're apparently studying weird things for a living. </p>
+                <p><b>CAS-03:</b> That is not an accurate description of Central Authority operations. </p>
+                <p><b>ALTNMANN:</b> Okay. </p>
+                <p><b>ALTNMANN:</b> Whatever you say. </p>
+                <p><b>CAS-03:</b> </p>
+                <p><b>ALTNMANN:</b> </p>
+                
+                
+
+    </code></div>
+
+
+    <div class="document-footer">
+
+        <span>CAS-OPS-006427</span>
+
+        <span>PAGE 4 OF 51</span>
+
+    </div>
+
+    `
+},
+
+
+{
+    frame: "006428",
+    title: "Interview — V",
+    type: "Interview",
+    classification: "RESTRICTED",
+    source: "Investigation Division",
+    date: "04/02/2021",
+    report: "CASE NUMBER: -",
+
+    content: `
+
+    <div class="document-header">
+
+        <h2>Interview — V</h2>
+
+        <p>
+            TRANSCRIPT V / EMPLOYMENT REQUEST 
+        </p>
+
+    </div>
+
+
+    <div class="document-section">
+
+                <code>
+                <p><b>ALTNMANN:</b>  Actually, can I ask you something?</p>
+                <p><b>CAS-03:</b> Yes. </p>
+                <p><b>ALTNMANN:</b> Are you hiring? </p>
+                <p><b>CAS-03:</b> Excuse me? </p>
+                <p><b>ALTNMANN:</b>  For this. </p>
+                <p><b>ALTNMANN:</b> Whatever this is. </p>
+                <p><b>CAS-03:</b>  Why would you want to work here? </p>
+                <p><b>ALTNMANN:</b> Because this is the strangest thing that's happened to me in my entire life. </p>
+                <p><b>ALTNMANN:</b> And you people apparently deal with it every day. </p>
+                <p><b>CAS-03:</b> You are aware that the circumstances of this interview are confidential? </p>
+                <p><b>ALTNMANN:</b> Yes. </p>
+                <p><b>CAS-03:</b>  You understand that employment with CAS would involve considerably more than observing unusual phenomena? </p>
+                <p><b>ALTNMANN:</b> That's fine. </p>
+                <p><b>ALTNMANN:</b>  I'm good with weird. </p>
+                <p><b>CAS-03:</b> This interview is over.</p>
+                <p style="text-align: center;"><b>[</b> ALTMANN MAKES A SOUND OF DISAPPOINTMENT <b>]</b></p>
+
+
+    </div>
+
+
+    <div class="document-footer">
+
+        <span>CAS-OPS-006428</span>
+
+        <span>PAGE 5 OF 5</span>
+
+    </div>
+
+    `
+},
+
+
+{
+    frame: "006429",
+    title: "Memory Treatment Record",
+    type: "Interview",
+    classification: "RESTRICTED",
+    source: "Investigation Division",
+    date: "04/02/2021",
+    report: "CASE NUMBER: -",
+
+    content: `
+
+    <div class="document-header">
+
+        <h2>Memory Treatment Record</h2>
+
+        <p>
+              CIVILIAN SUBJECT — CAS-CIV-1187 
+        </p>
+
+    </div>
+
+
+    <div class="document-section">
+
+        <p>
+                    Memory-treatment procedure was authorised
+                    following conclusion of interview.
+                </p>
+
+
+                <p>
+                    Subject refused treatment.
+                </p>
+
+
+                <p>
+                    Subject was informed that refusal would
+                    require continued restrictions regarding
+                    disclosure of CAS activities.
+                </p>
+
+
+                <p>
+                    Subject acknowledged this requirement.
+                </p>
+
+
+                <p>
+                    Subject was asked whether he understood
+                    that disclosure of classified information
+                    could result in criminal penalties.
+                </p>
+
+
+                <p>
+                    Subject responded:
+                </p>
+
+                    <p><code><b>ALTNMANN:</b>  Yes. I'm not planning on telling anyone.</code></p>
+                    
+                    <p>
+                    Subject was subsequently asked why he
+                    continued to refuse treatment.
+                </p>
+                
+                <p><code><b>ALTNMANN:</b>  Because it was weird and I don't want to forget.</code></p>
+                
+                <p>
+                
+                <p>After deliberation, Doctor Hoffmann and  ████████ ███████ agreed Altmann could leave withhout memory treatment.</p>
+                
+                <div class="boxing">
+
+                    MEMORY TREATMENT:
+                    <strong>DECLINED</strong>
+
+                    <br><br>
+
+                    SUBJECT RETAINS FULL RECOLLECTION OF
+                    INCIDENT.
+
+                </div>
+
+    </div>
+
+
+    <div class="document-footer">
+
+        <span>CAS-OPS-006429</span>
+
+        <span>PAGE 1 OF 1</span>
+
+    </div>
+
+    `
+},
+
+
+{
+    frame: "006430",
+    title: "Follow Up Assessment",
+    type: "Interview",
+    classification: "RESTRICTED",
+    source: "Investigation Division",
+    date: "04/02/2021",
+    report: "CASE NUMBER: -",
+
+    content: `
+
+    <div class="document-header">
+
+        <h2>Follow Up Assessment</h2>
+
+        <p>
+             72 HOURS AFTER INITIAL CONTACT 
+        </p>
+
+    </div>
+
+
+    <div class="document-section">
+
+              <p>
+                    Subject was contacted by Civilian Affairs
+                    personnel 72 hours following the interview.
+                </p>
+
+
+                <p>
+                    Subject reported no recurrence of anomalous
+                    activity.
+                </p>
+
+
+                <p>
+                    Subject continued to demonstrate complete
+                    recollection of the event.
+                </p>
+
+
+                <p>
+                    Subject again requested information regarding
+                    employment opportunities with CAS.
+                </p>
+
+
+                <p>
+                    Subject was informed that civilian recruitment
+                    information was not available.
+                </p>
+
+
+                <p>
+                    Subject requested that his contact information
+                    remain on file "just in case."
+                </p>
+
+
+                <div class="boxing">
+
+                    CONTACT INFORMATION RETAINED.
+
+                    <br><br>
+
+                    REASON:
+                    POTENTIAL FUTURE RECRUITMENT.
+
+                </div>
+
+
+                <p>
+                    No further action required at this time.
+                </p>
+
+
+    </div>
+
+
+    <div class="document-footer">
+
+        <span>CAS-OPS-006430</span>
+
+        <span>PAGE 1 OF 1</span>
+
+    </div>
+
+    `
+},
+
+
+{
+    frame: "006431",
+    title: "Personnel Note",
+    type: "Interview",
+    classification: "RESTRICTED",
+    source: "Investigation Division",
+    date: "04/02/2021",
+    report: "CASE NUMBER: -",
+
+    content: `
+
+    <div class="document-header">
+
+        <h2>Personnel Note</h2>
+
+        <p>
+              INTERNAL — CIVILIAN CONTACT DIVISION 
+        </p>
+
+    </div>
+
+
+    <div class="document-section">
+
+        <p>
+                    Interviewer CAS-03 has recommended that
+                    subject Steven Altmann be considered for
+                    future employment.
+                </p>
+
+
+                <p>
+                    Recommendation is based primarily on the
+                    subject's composure during anomalous exposure,
+                    willingness to cooperate with CAS personnel,
+                    and demonstrated observational ability.
+                </p>
+
+
+                <p>
+                    Subject displayed no evidence of panic,
+                    dissociation, or other acute psychological
+                    response.
+                </p>
+
+
+                <p>
+                    Subject's curiosity regarding CAS operations
+                    is considered noteworthy.
+                </p>
+
+
+                <div class="handwritten large-note">
+
+                    "He asked if we were hiring before he asked
+                    whether he was in danger."
+
+                </div>
+
+
+                <br><br><p>
+                    Recruitment request forwarded to Personnel
+                    Division for review.
+                </p>
+
+
+                <div class="stamp">
+
+                    CANDIDATE
+
+                </div>
+
+
+                <div class="boxing">
+
+                    END OF RECORD.
+
+                    <br><br>
+
+                    CAS-CIV-1187 REMAINS ACTIVE.
+
+                </div>
+
+    </div>
+
+
+    <div class="document-footer">
+
+        <span>CAS-OPS-006431</span>
+
+        <span>PAGE 1 OF 1</span>
+
+    </div>
+
+    `
+}
+
+
+];
+
+
+/* =========================================
+   STATE
+========================================= */
+
+let currentIndex = 0;
+
+let zoom = 1;
+
+let rotation = 0;
+
+
+/* =========================================
+   DOM
+========================================= */
+
+const scan = document.getElementById("scan");
+
+const frameList = document.getElementById("frameList");
+
+const frameCounter = document.getElementById("frameCounter");
+
+const previousButton =
+    document.getElementById("previousButton");
+
+const nextButton =
+    document.getElementById("nextButton");
+
+const zoomValue =
+    document.getElementById("zoomValue");
+
+const infoFrame =
+    document.getElementById("infoFrame");
+
+const infoType =
+    document.getElementById("infoType");
+
+const infoClassification =
+    document.getElementById("infoClassification");
+
+const infoSource =
+    document.getElementById("infoSource");
+
+const frameInput =
+    document.getElementById("frameInput");
+
+
+/* =========================================
+   BUILD FRAME LIST
+========================================= */
+
+function buildFrameList() {
+
+    frameList.innerHTML = "";
+
+    archive.forEach((item, index) => {
+
+        const element = document.createElement("div");
+
+        element.className = "frame-item";
+
+        element.innerHTML = `
+            <div class="frame-number">
+                FRAME ${item.frame}
+            </div>
+
+            <div class="frame-title">
+                ${item.title}
+            </div>
+        `;
+
+        element.onclick = function() {
+            loadFrame(index);
+        };
+
+        frameList.appendChild(element);
+
+    });
+
+}
+
+
+/* =========================================
+   LOAD FRAME
+========================================= */
+
+function loadFrame(index, updateHash = true) {
+
+    if (index < 0) {
+        index = 0;
+    }
+
+    if (index >= archive.length) {
+        index = archive.length - 1;
+    }
+
+    currentIndex = index;
+
+    const item = archive[currentIndex];
+
+    scan.innerHTML = item.content;
+
+    scan.style.transform =
+        `scale(${zoom}) rotate(${rotation}deg)`;
+
+    frameCounter.textContent =
+        `FRAME ${item.frame} / ${archive[archive.length - 1].frame}`;
+
+    infoFrame.textContent = item.frame;
+
+    infoType.textContent = item.type;
+
+    infoClassification.textContent =
+        item.classification;
+
+    infoSource.textContent =
+        item.source;
+
+    frameInput.value = item.frame;
+
+    previousButton.disabled =
+        currentIndex === 0;
+
+    nextButton.disabled =
+        currentIndex === archive.length - 1;
+
+
+    document.querySelectorAll(".frame-item")
+        .forEach((element, i) => {
+
+            element.classList.toggle(
+                "active",
+                i === currentIndex
+            );
+
+        });
+
+
+    if (updateHash) {
+
+        history.replaceState(
+            null,
+            "",
+            "#" + item.frame
+        );
+
+    }
+
+}
+
+
+/* =========================================
+   NEXT / PREVIOUS
+========================================= */
+
+function nextFrame() {
+
+    if (currentIndex < archive.length - 1) {
+
+        loadFrame(currentIndex + 1);
+
+    }
+
+}
+
+
+function previousFrame() {
+
+    if (currentIndex > 0) {
+
+        loadFrame(currentIndex - 1);
+
+    }
+
+}
+
+
+/* =========================================
+   JUMP TO FRAME
+========================================= */
+
+function jumpToFrame() {
+
+    const value =
+        frameInput.value.trim();
+
+    const index =
+        archive.findIndex(
+            item => item.frame === value
+        );
+
+    if (index !== -1) {
+
+        loadFrame(index);
+
+    } else {
+
+        alert(
+            "FRAME NOT FOUND\n\n" +
+            "The requested frame is not available " +
+            "in this archive."
+        );
+
+    }
+
+}
+
+
+/* =========================================
+   ZOOM
+========================================= */
+
+function updateZoom() {
+
+    scan.style.transform =
+        `scale(${zoom}) rotate(${rotation}deg)`;
+
+    zoomValue.textContent =
+        Math.round(zoom * 100) + "%";
+
+}
+
+
+function zoomIn() {
+
+    zoom += 0.1;
+
+    if (zoom > 2) {
+        zoom = 2;
+    }
+
+    updateZoom();
+
+}
+
+
+function zoomOut() {
+
+    zoom -= 0.1;
+
+    if (zoom < 0.5) {
+        zoom = 0.5;
+    }
+
+    updateZoom();
+
+}
+
+
+function resetZoom() {
+
+    zoom = 1;
+    rotation = 0;
+
+    updateZoom();
+
+}
+
+
+/* =========================================
+   ROTATION
+========================================= */
+
+function rotateScan(direction) {
+
+    rotation += direction;
+
+    if (rotation > 3) {
+        rotation = 0;
+    }
+
+    if (rotation < -3) {
+        rotation = 0;
+    }
+
+    updateZoom();
+
+}
+
+
+/* =========================================
+   KEYBOARD NAVIGATION
+========================================= */
+
+document.addEventListener(
+    "keydown",
+    function(event) {
+
+        if (event.key === "ArrowRight") {
+
+            nextFrame();
+
+        }
+
+        if (event.key === "ArrowLeft") {
+
+            previousFrame();
+
+        }
+
+    }
+);
+
+
+/* =========================================
+   HASH NAVIGATION
+========================================= */
+
+function loadHashFrame() {
+
+    const hash =
+        window.location.hash
+            .replace("#", "")
+            .trim();
+
+    if (!hash) {
+
+        loadFrame(0, false);
+
+        return;
+
+    }
+
+    const index =
+        archive.findIndex(
+            item => item.frame === hash
+        );
+
+    if (index !== -1) {
+
+        loadFrame(index, false);
+
+    } else {
+
+        loadFrame(0, false);
+
+    }
+
+}
+
+
+/* =========================================
+   INITIALIZE
+========================================= */
+
+buildFrameList();
+
+loadHashFrame();
+
+</script>
+
+
+</body>
+
+</html>
