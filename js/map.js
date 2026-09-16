@@ -117,15 +117,32 @@ function selectRoom(name) {
   status.textContent = `${data.code} // ${name}`;
 }
 
-document.querySelectorAll(".hitbox").forEach(hitbox => {
-  hitbox.addEventListener("click", e => {
-    e.stopPropagation();
-    selectRoom(hitbox.dataset.room);
+// ROOM SELECTION
+// Listen on the SVG itself so both the visible room geometry and
+// transparent click-targets always trigger the same room record.
+blueprint.addEventListener("click", event => {
+  const target = event.target.closest("[data-room]");
+  if (!target || !blueprint.contains(target)) return;
+
+  event.stopPropagation();
+  selectRoom(target.dataset.room);
+});
+
+// Room index buttons on the left.
+document.querySelectorAll(".room-link").forEach(button => {
+  button.addEventListener("click", event => {
+    event.preventDefault();
+    selectRoom(button.dataset.room);
   });
 });
 
-document.querySelectorAll(".room-link").forEach(button => {
-  button.addEventListener("click", () => selectRoom(button.dataset.room));
+// Also allow clicking the visible room rectangles directly.
+document.querySelectorAll(".room").forEach(room => {
+  room.style.pointerEvents = "all";
+  room.addEventListener("click", event => {
+    event.stopPropagation();
+    selectRoom(room.dataset.room);
+  });
 });
 
 document.getElementById("zoomIn").addEventListener("click", () => {
@@ -187,7 +204,6 @@ wrap.addEventListener("pointercancel", () => {
 });
 
 renderTransform();
-
 
 // Initial room selection.
 selectRoom("THE LOBBY");
