@@ -14,28 +14,64 @@ let startY = 0;
 
 const roomData = {
   "THE LOBBY": {
-    id: "ROOM 01",
-    description: "Main public entrance and reception area."
+    code: "01-101",
+    roomNumber: "00-101",
+    department: "ADMINISTRATION",
+    windows: "2",
+    doors: "1",
+    status: "ACTIVE",
+    notes: "Standard public reception area. No architectural discrepancies recorded.",
+    revision: "REV. 01"
   },
   "SECURITY CHECKPOINT": {
-    id: "ROOM 02",
-    description: "Controlled access checkpoint between the lobby and internal facility areas."
+    code: "01-102",
+    roomNumber: "00-102",
+    department: "SECURITY",
+    windows: "0",
+    doors: "2",
+    status: "CONTROLLED",
+    notes: "Primary access-control point. Staff screening and visitor processing.",
+    revision: "REV. 01"
   },
   "STORAGE ROOM": {
-    id: "ROOM 03",
-    description: "General facility storage."
+    code: "01-103",
+    roomNumber: "00-103",
+    department: "FACILITIES",
+    windows: "0",
+    doors: "1",
+    status: "ACTIVE",
+    notes: "General storage allocation. Inventory records maintained separately.",
+    revision: "REV. 01"
   },
   "JANITORIAL OFFICE": {
-    id: "ROOM 04",
-    description: "Janitorial supplies and staff workspace."
+    code: "01-104",
+    roomNumber: "00-104",
+    department: "FACILITIES",
+    windows: "1",
+    doors: "1",
+    status: "ACTIVE",
+    notes: "Janitorial workspace and supplies. Access restricted to facilities personnel.",
+    revision: "REV. 01"
   },
   "STAIRWELL": {
-    id: "ROOM 05",
-    description: "Vertical circulation between building levels."
+    code: "STAIR-01",
+    roomNumber: "STAIR-B",
+    department: "FACILITIES",
+    windows: "0",
+    doors: "2",
+    status: "ACTIVE",
+    notes: "Primary vertical circulation. Connects the first floor with adjacent levels.",
+    revision: "REV. 01"
   },
   "OFFICES": {
-    id: "ROOM 06",
-    description: "Administrative and staff office area."
+    code: "01-105",
+    roomNumber: "00-105",
+    department: "ADMINISTRATION",
+    windows: "8",
+    doors: "4",
+    status: "ACTIVE",
+    notes: "General administrative office allocation. Individual room assignments are not shown on this plan.",
+    revision: "REV. 01"
   }
 };
 
@@ -58,14 +94,27 @@ function selectRoom(name) {
   if (button) button.classList.add("selected");
 
   const data = roomData[name];
+  if (!data) return;
 
+  // Keep the compact left-hand selection summary.
   roomInfo.innerHTML = `
     <span class="label">SELECTED ROOM</span>
     <h3>${name}</h3>
-    <p>${data.id}<br><br>${data.description}</p>
+    <p>ROOM ${data.code}<br><br>${data.notes}</p>
   `;
 
-  status.textContent = `${data.id} // ${name}`;
+  // Populate the large room record on the right.
+  document.getElementById("detailCode").textContent = data.code;
+  document.getElementById("detailTitle").textContent = name;
+  document.getElementById("detailRoomNumber").textContent = data.roomNumber;
+  document.getElementById("detailDepartment").textContent = data.department;
+  document.getElementById("detailWindows").textContent = data.windows;
+  document.getElementById("detailDoors").textContent = data.doors;
+  document.getElementById("detailStatus").textContent = data.status;
+  document.getElementById("detailNotes").textContent = data.notes;
+  document.getElementById("detailRevision").textContent = data.revision;
+
+  status.textContent = `${data.code} // ${name}`;
 }
 
 document.querySelectorAll(".hitbox").forEach(hitbox => {
@@ -138,3 +187,7 @@ wrap.addEventListener("pointercancel", () => {
 });
 
 renderTransform();
+
+
+// Initial room selection.
+selectRoom("THE LOBBY");
