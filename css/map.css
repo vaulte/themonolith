@@ -136,7 +136,7 @@ h3 { margin: 8px 0; font-size: 16px; font-weight: 500; }
   filter: drop-shadow(0 0 7px rgba(117, 225, 237, .35));
 }
 
-.hitbox { cursor: pointer; }
+.hitbox { cursor: pointer; pointer-events: all; }
 
 .canvas-ui {
   position: absolute;
