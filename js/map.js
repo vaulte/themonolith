@@ -1,209 +1,133 @@
-const viewport = document.getElementById("svgViewport");
-const wrap = document.getElementById("canvasWrap");
-const blueprint = document.getElementById("blueprint");
-const coordinates = document.getElementById("coordinates");
-const roomInfo = document.getElementById("roomInfo");
-const status = document.getElementById("status");
+(() => {
+        const wrap = document.getElementById("canvasWrap");
+        const viewport = document.getElementById("svgViewport");
+        const blueprint = document.getElementById("blueprint");
+        const coordinates = document.getElementById("coordinates");
+        const status = document.getElementById("status");
+        const roomInfo = document.getElementById("roomInfo");
 
-let scale = 1;
-let offsetX = 0;
-let offsetY = 0;
-let dragging = false;
-let startX = 0;
-let startY = 0;
+        let scale = 1,
+          offsetX = 0,
+          offsetY = 0;
+        let dragging = false,
+          startX = 0,
+          startY = 0;
 
-const roomData = {
-  "THE LOBBY": {
-    code: "01-101",
-    roomNumber: "00-101",
-    department: "ADMINISTRATION",
-    windows: "2",
-    doors: "1",
-    status: "ACTIVE",
-    notes: "Standard public reception area. No architectural discrepancies recorded.",
-    revision: "REV. 01"
-  },
-  "SECURITY CHECKPOINT": {
-    code: "01-102",
-    roomNumber: "00-102",
-    department: "SECURITY",
-    windows: "0",
-    doors: "2",
-    status: "CONTROLLED",
-    notes: "Primary access-control point. Staff screening and visitor processing.",
-    revision: "REV. 01"
-  },
-  "STORAGE ROOM": {
-    code: "01-103",
-    roomNumber: "00-103",
-    department: "FACILITIES",
-    windows: "0",
-    doors: "1",
-    status: "ACTIVE",
-    notes: "General storage allocation. Inventory records maintained separately.",
-    revision: "REV. 01"
-  },
-  "JANITORIAL OFFICE": {
-    code: "01-104",
-    roomNumber: "00-104",
-    department: "FACILITIES",
-    windows: "1",
-    doors: "1",
-    status: "ACTIVE",
-    notes: "Janitorial workspace and supplies. Access restricted to facilities personnel.",
-    revision: "REV. 01"
-  },
-  "STAIRWELL": {
-    code: "STAIR-01",
-    roomNumber: "STAIR-B",
-    department: "FACILITIES",
-    windows: "0",
-    doors: "2",
-    status: "ACTIVE",
-    notes: "Primary vertical circulation. Connects the first floor with adjacent levels.",
-    revision: "REV. 01"
-  },
-  "OFFICES": {
-    code: "01-105",
-    roomNumber: "00-105",
-    department: "ADMINISTRATION",
-    windows: "8",
-    doors: "4",
-    status: "ACTIVE",
-    notes: "General administrative office allocation. Individual room assignments are not shown on this plan.",
-    revision: "REV. 01"
-  }
-};
+        const summaries = {
+          lobby: [
+            "THE LOBBY",
+            "ROOM 01-101",
+            "Standard public reception area.",
+          ],
+          security: [
+            "SECURITY CHECKPOINT",
+            "ROOM 01-102",
+            "Controlled access checkpoint.",
+          ],
+          storage: ["STORAGE ROOM", "ROOM 01-103", "General facility storage."],
+          janitorial: [
+            "JANITORIAL OFFICE",
+            "ROOM 01-104",
+            "Janitorial workspace and supplies.",
+          ],
+          stairwell: ["STAIRWELL", "STAIR-B", "Primary vertical circulation."],
+          offices: [
+            "OFFICES",
+            "ROOM 01-105",
+            "General administrative office allocation.",
+          ],
+        };
 
-function renderTransform() {
-  viewport.style.transform = `translate(${offsetX}px, ${offsetY}px) scale(${scale})`;
-}
+        function render() {
+          viewport.style.transform = `translate(${offsetX}px,${offsetY}px) scale(${scale})`;
+        }
 
-function selectRoom(name) {
-  document.querySelectorAll(".room").forEach(el => el.classList.remove("highlighted"));
-  document.querySelectorAll(".room-link").forEach(el => el.classList.remove("selected"));
+        function selectRoom(id) {
+          document.querySelectorAll(".room-record").forEach((panel) => {
+            panel.classList.toggle("active", panel.dataset.record === id);
+          });
 
-  const room = [...document.querySelectorAll(".room")]
-    .find(el => el.dataset.room === name);
+          document.querySelectorAll(".room-link").forEach((button) => {
+            button.classList.toggle("selected", button.dataset.room === id);
+          });
 
-  if (room) room.classList.add("highlighted");
+          document.querySelectorAll(".room").forEach((room) => {
+            room.classList.toggle("highlighted", room.dataset.room === id);
+          });
 
-  const button = [...document.querySelectorAll(".room-link")]
-    .find(el => el.dataset.room === name);
+          const s = summaries[id];
+          roomInfo.innerHTML = `<span class="label">SELECTED ROOM</span>
+       <h3>${s[0]}</h3>
+       <p class="muted">${s[1]}<br><br>${s[2]}</p>`;
 
-  if (button) button.classList.add("selected");
+          status.textContent = `ROOM ${id.toUpperCase()} // ${s[0]}`;
+        }
 
-  const data = roomData[name];
-  if (!data) return;
+        document.querySelectorAll(".room-link,.hitbox").forEach((el) => {
+          el.addEventListener("click", (e) => {
+            e.stopPropagation();
+            selectRoom(el.dataset.room);
+          });
+        });
 
-  // Keep the compact left-hand selection summary.
-  roomInfo.innerHTML = `
-    <span class="label">SELECTED ROOM</span>
-    <h3>${name}</h3>
-    <p>ROOM ${data.code}<br><br>${data.notes}</p>
-  `;
+        document.getElementById("zoomIn").addEventListener("click", () => {
+          scale = Math.min(3, scale + 0.15);
+          render();
+        });
 
-  // Populate the large room record on the right.
-  document.getElementById("detailCode").textContent = data.code;
-  document.getElementById("detailTitle").textContent = name;
-  document.getElementById("detailRoomNumber").textContent = data.roomNumber;
-  document.getElementById("detailDepartment").textContent = data.department;
-  document.getElementById("detailWindows").textContent = data.windows;
-  document.getElementById("detailDoors").textContent = data.doors;
-  document.getElementById("detailStatus").textContent = data.status;
-  document.getElementById("detailNotes").textContent = data.notes;
-  document.getElementById("detailRevision").textContent = data.revision;
+        document.getElementById("zoomOut").addEventListener("click", () => {
+          scale = Math.max(0.5, scale - 0.15);
+          render();
+        });
 
-  status.textContent = `${data.code} // ${name}`;
-}
+        document.getElementById("zoomReset").addEventListener("click", () => {
+          scale = 1;
+          offsetX = 0;
+          offsetY = 0;
+          render();
+        });
 
-// ROOM SELECTION
-// Listen on the SVG itself so both the visible room geometry and
-// transparent click-targets always trigger the same room record.
-blueprint.addEventListener("click", event => {
-  const target = event.target.closest("[data-room]");
-  if (!target || !blueprint.contains(target)) return;
+        wrap.addEventListener(
+          "wheel",
+          (e) => {
+            e.preventDefault();
+            scale = Math.max(
+              0.5,
+              Math.min(3, scale + (e.deltaY < 0 ? 0.1 : -0.1)),
+            );
+            render();
+          },
+          { passive: false },
+        );
 
-  event.stopPropagation();
-  selectRoom(target.dataset.room);
-});
+        wrap.addEventListener("pointerdown", (e) => {
+          if (e.button !== 0) return;
+          dragging = true;
+          wrap.classList.add("dragging");
+          startX = e.clientX - offsetX;
+          startY = e.clientY - offsetY;
+          wrap.setPointerCapture(e.pointerId);
+        });
 
-// Room index buttons on the left.
-document.querySelectorAll(".room-link").forEach(button => {
-  button.addEventListener("click", event => {
-    event.preventDefault();
-    selectRoom(button.dataset.room);
-  });
-});
+        wrap.addEventListener("pointermove", (e) => {
+          const r = blueprint.getBoundingClientRect();
+          const x = ((e.clientX - r.left) / r.width) * 1200;
+          const y = ((e.clientY - r.top) / r.height) * 800;
+          coordinates.textContent = `X: ${String(Math.max(0, Math.round(x))).padStart(4, "0")}  Y: ${String(Math.max(0, Math.round(y))).padStart(4, "0")}`;
 
-// Also allow clicking the visible room rectangles directly.
-document.querySelectorAll(".room").forEach(room => {
-  room.style.pointerEvents = "all";
-  room.addEventListener("click", event => {
-    event.stopPropagation();
-    selectRoom(room.dataset.room);
-  });
-});
+          if (!dragging) return;
+          offsetX = e.clientX - startX;
+          offsetY = e.clientY - startY;
+          render();
+        });
 
-document.getElementById("zoomIn").addEventListener("click", () => {
-  scale = Math.min(3, scale + 0.15);
-  renderTransform();
-});
+        function stopDrag() {
+          dragging = false;
+          wrap.classList.remove("dragging");
+        }
+        wrap.addEventListener("pointerup", stopDrag);
+        wrap.addEventListener("pointercancel", stopDrag);
 
-document.getElementById("zoomOut").addEventListener("click", () => {
-  scale = Math.max(.5, scale - 0.15);
-  renderTransform();
-});
-
-document.getElementById("zoomReset").addEventListener("click", () => {
-  scale = 1;
-  offsetX = 0;
-  offsetY = 0;
-  renderTransform();
-});
-
-wrap.addEventListener("wheel", e => {
-  e.preventDefault();
-  const direction = e.deltaY < 0 ? 1 : -1;
-  scale = Math.max(.5, Math.min(3, scale + direction * .1));
-  renderTransform();
-}, { passive: false });
-
-wrap.addEventListener("pointerdown", e => {
-  if (e.button !== 0) return;
-  dragging = true;
-  wrap.classList.add("dragging");
-  startX = e.clientX - offsetX;
-  startY = e.clientY - offsetY;
-  wrap.setPointerCapture(e.pointerId);
-});
-
-wrap.addEventListener("pointermove", e => {
-  const rect = blueprint.getBoundingClientRect();
-  const svgX = ((e.clientX - rect.left) / rect.width) * 1200;
-  const svgY = ((e.clientY - rect.top) / rect.height) * 800;
-
-  coordinates.textContent =
-    `X: ${String(Math.round(svgX)).padStart(4, "0")}  Y: ${String(Math.round(svgY)).padStart(4, "0")}`;
-
-  if (!dragging) return;
-  offsetX = e.clientX - startX;
-  offsetY = e.clientY - startY;
-  renderTransform();
-});
-
-wrap.addEventListener("pointerup", e => {
-  dragging = false;
-  wrap.classList.remove("dragging");
-  try { wrap.releasePointerCapture(e.pointerId); } catch (_) {}
-});
-
-wrap.addEventListener("pointercancel", () => {
-  dragging = false;
-  wrap.classList.remove("dragging");
-});
-
-renderTransform();
-
-// Initial room selection.
-selectRoom("THE LOBBY");
+        selectRoom("lobby");
+        render();
+      })();
