@@ -187,3 +187,173 @@ h3 { margin: 8px 0; font-size: 16px; font-weight: 500; }
   .floor-control { display: none; }
   .sidebar { padding: 12px 9px; }
 }
+
+
+/* =========================================================
+   ROOM RECORD PANEL
+========================================================= */
+
+.viewer-shell {
+  grid-template-columns: 235px minmax(520px, 1fr) 505px;
+}
+
+.detail-panel {
+  min-width: 0;
+  overflow: hidden;
+  border-left: 1px solid #1d3942;
+  background: #061218;
+  padding: 64px 58px 45px;
+}
+
+.detail-paper {
+  width: 100%;
+  height: 100%;
+  min-height: 520px;
+  background: #f4f4f1;
+  color: #111;
+  padding: 38px 34px 25px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 0 1px rgba(255,255,255,.05);
+}
+
+.detail-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #111;
+  padding-bottom: 9px;
+  margin-bottom: 17px;
+}
+
+.detail-kicker,
+.detail-code,
+.detail-field span,
+.detail-status span,
+.detail-notes > span,
+.detail-footer {
+  font-family: monospace;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.detail-kicker,
+.detail-code {
+  color: #555;
+}
+
+.detail-title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(22px, 1.8vw, 32px);
+  line-height: 1.05;
+  letter-spacing: -1.5px;
+  margin-bottom: 34px;
+  text-transform: uppercase;
+  overflow-wrap: anywhere;
+}
+
+.detail-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 1px solid #111;
+  border-left: 1px solid #111;
+}
+
+.detail-field {
+  min-height: 76px;
+  padding: 13px 12px 11px;
+  border-right: 1px solid #111;
+  border-bottom: 1px solid #111;
+}
+
+.detail-field span,
+.detail-status span,
+.detail-notes > span {
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+.detail-field strong {
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 1.1;
+  overflow-wrap: anywhere;
+}
+
+.detail-status {
+  margin-top: 28px;
+  border-top: 1px solid #111;
+  padding-top: 15px;
+}
+
+.detail-status strong {
+  display: block;
+  font-family: monospace;
+  font-size: 15px;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.detail-notes {
+  margin-top: 27px;
+  max-width: 32ch;
+}
+
+.detail-notes p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  line-height: 1.32;
+  letter-spacing: -.3px;
+}
+
+.detail-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid #bbb;
+  color: #777;
+}
+
+@media (max-width: 1250px) {
+  .viewer-shell {
+    grid-template-columns: 205px minmax(430px, 1fr) 385px;
+  }
+  .detail-panel {
+    padding: 48px 35px 30px;
+  }
+  .detail-paper {
+    padding: 28px 24px 20px;
+  }
+}
+
+@media (max-width: 1000px) {
+  body {
+    overflow: auto;
+  }
+  .viewer-shell {
+    min-height: 900px;
+    grid-template-columns: 190px 1fr;
+  }
+  .detail-panel {
+    grid-column: 1 / -1;
+    border-left: 0;
+    border-top: 1px solid #1d3942;
+    min-height: 550px;
+  }
+}
+
+@media (max-width: 760px) {
+  .viewer-shell {
+    grid-template-columns: 1fr;
+  }
+  .sidebar {
+    max-height: 300px;
+    border-right: 0;
+    border-bottom: 1px solid #23444e;
+  }
+}
