@@ -652,6 +652,11 @@
         border-color: #222;
     }
 
+    .classification.public {
+        border-color: #aaa;
+        color: #444;
+    }
+
     .status {
         font-size: 9px;
         text-transform: uppercase;
