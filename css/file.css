@@ -1,0 +1,545 @@
+
+
+    /* =========================================================
+       OBJECT RECORD
+    ========================================================= */
+
+    body {
+        overflow-x: hidden;
+    }
+
+
+    /* =========================================================
+       OBJECT HEADER
+    ========================================================= */
+
+    .object-header {
+        padding: 70px 0 55px;
+        border-bottom: 1px solid var(--black);
+    }
+
+    .object-code {
+        margin-bottom: 15px;
+        color: var(--grey);
+        font-family: "Courier New", monospace;
+        font-size: 10px;
+        letter-spacing: 1.5px;
+    }
+
+    .object-header h1 {
+        margin-bottom: 12px;
+        font-size: clamp(42px, 6vw, 76px);
+        font-weight: 700;
+        letter-spacing: -3px;
+        line-height: .95;
+    }
+
+    .object-subtitle {
+        max-width: 700px;
+        color: var(--grey);
+        font-size: 16px;
+    }
+
+
+    /* =========================================================
+       CLASSIFICATION
+    ========================================================= */
+
+    .classification {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        border-bottom: 1px solid var(--light-grey);
+    }
+
+    .classification-item {
+        padding: 20px 20px 20px 0;
+        border-right: 1px solid var(--light-grey);
+    }
+
+    .classification-item:not(:first-child) {
+        padding-left: 20px;
+    }
+
+    .classification-item:last-child {
+        border-right: none;
+    }
+
+    .classification-label {
+        display: block;
+        margin-bottom: 5px;
+        color: var(--grey);
+        font-family: "Courier New", monospace;
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+    .classification-value {
+        font-size: 12px;
+        font-weight: 700;
+    }
+
+
+    /* =========================================================
+       WARNING
+    ========================================================= */
+
+    .object-warning {
+        margin: 40px 0;
+        padding: 20px;
+        border: 1px solid var(--black);
+        background: var(--very-light-grey);
+    }
+
+    .object-warning-title {
+        margin-bottom: 8px;
+        font-family: "Courier New", monospace;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+
+    .object-warning p {
+        max-width: 850px;
+        font-size: 12px;
+    }
+
+
+    /* =========================================================
+       PHOTO PLACEHOLDER
+    ========================================================= */
+
+    .object-photo {
+        position: relative;
+        display: flex;
+        min-height: 430px;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        border: 1px solid var(--light-grey);
+        background: #fafafa;
+    }
+
+    .object-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .photo-placeholder {
+        width: 100%;
+        padding: 70px 30px;
+        text-align: center;
+        color: var(--grey);
+        font-family: "Courier New", monospace;
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+
+    .photo-placeholder strong {
+        display: block;
+        margin-bottom: 12px;
+        color: var(--black);
+        font-size: 13px;
+    }
+
+    .photo-caption {
+        margin-top: 8px;
+        color: var(--grey);
+        font-family: "Courier New", monospace;
+        font-size: 9px;
+    }
+
+
+    /* =========================================================
+       IMAGE ATTEMPT LOG
+    ========================================================= */
+
+    .image-log {
+        margin-top: 20px;
+        border-top: 1px solid var(--light-grey);
+    }
+
+    .image-log-row {
+        display: grid;
+        grid-template-columns: 120px 1fr 100px;
+        gap: 20px;
+        padding: 12px 0;
+        border-bottom: 1px solid var(--light-grey);
+        font-family: "Courier New", monospace;
+        font-size: 10px;
+    }
+
+    .image-log-row span:first-child {
+        color: var(--grey);
+    }
+
+    .failed {
+        color: var(--warning);
+    }
+
+
+    /* =========================================================
+       SECTIONS
+    ========================================================= */
+
+    .object-section {
+        margin: 70px 0;
+    }
+
+    .object-section-heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 25px;
+        padding: 13px 0;
+        border-top: 1px solid var(--black);
+        border-bottom: 1px solid var(--light-grey);
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+    }
+
+    .section-code {
+        color: var(--grey);
+        font-family: "Courier New", monospace;
+        font-weight: 400;
+    }
+
+
+    /* =========================================================
+       INFORMATION TABLE
+    ========================================================= */
+
+    .object-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .object-table tr {
+        border-bottom: 1px solid var(--light-grey);
+    }
+
+    .object-table td {
+        padding: 12px 5px;
+        vertical-align: top;
+    }
+
+    .object-table td:first-child {
+        width: 240px;
+        color: var(--grey);
+        font-family: "Courier New", monospace;
+        font-size: 10px;
+        text-transform: uppercase;
+    }
+
+
+    /* =========================================================
+       TWO COLUMN
+    ========================================================= */
+
+    .two-column {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+    }
+
+
+    /* =========================================================
+       REPORT TEXT
+    ========================================================= */
+
+    .report-text {
+        max-width: 850px;
+    }
+
+    .report-text p {
+        margin-bottom: 20px;
+        color: var(--dark-grey);
+        font-size: 13px;
+    }
+
+
+    /* =========================================================
+       READING RECORD
+    ========================================================= */
+
+    .reading {
+        display: grid;
+        grid-template-columns: 100px 1fr 160px;
+        gap: 20px;
+        padding: 17px 0;
+        border-bottom: 1px solid var(--light-grey);
+    }
+
+    .reading-number {
+        color: var(--grey);
+        font-family: "Courier New", monospace;
+        font-size: 10px;
+    }
+
+    .reading-description {
+        font-size: 12px;
+    }
+
+    .reading-status {
+        text-align: right;
+        color: var(--grey);
+        font-family: "Courier New", monospace;
+        font-size: 9px;
+    }
+
+    .reading-status.bad {
+        color: var(--warning);
+    }
+
+
+    /* =========================================================
+       BOOK EXCERPT
+    ========================================================= */
+
+    .excerpt {
+        position: relative;
+        margin: 35px 0;
+        padding: 35px 40px;
+        border-left: 2px solid var(--black);
+        background: #fafafa;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 15px;
+        font-style: italic;
+        line-height: 1.9;
+    }
+
+    .excerpt::before {
+        content: "UNAUTHORIZED TRANSCRIPTION";
+        position: absolute;
+        top: 8px;
+        right: 12px;
+        color: var(--grey);
+        font-family: "Courier New", monospace;
+        font-size: 8px;
+        font-style: normal;
+        letter-spacing: 1px;
+    }
+
+    .excerpt-note {
+        margin-top: 20px;
+        color: var(--grey);
+        font-family: "Courier New", monospace;
+        font-size: 9px;
+        font-style: normal;
+    }
+
+
+    /* =========================================================
+       RESEARCHER NOTES
+    ========================================================= */
+
+    .research-note {
+        margin: 20px 0;
+        padding: 18px 20px;
+        border-left: 2px solid var(--light-grey);
+    }
+
+    .research-note-meta {
+        margin-bottom: 7px;
+        color: var(--grey);
+        font-family: "Courier New", monospace;
+        font-size: 9px;
+    }
+
+    .research-note p {
+        margin: 0;
+        font-size: 12px;
+    }
+
+    .irritated {
+        border-left-color: var(--black);
+    }
+
+
+    /* =========================================================
+       CENSOR / CORRUPTION
+    ========================================================= */
+
+    .redacted {
+        display: inline-block;
+        padding: 0 5px;
+        background: var(--black);
+        color: var(--black);
+        user-select: none;
+    }
+
+    .wrong {
+        color: var(--warning);
+    }
+
+    .struck {
+        color: #aaa;
+        text-decoration: line-through;
+    }
+
+
+    /* =========================================================
+       ISBN
+    ========================================================= */
+
+    .isbn-box {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+        border: 1px solid var(--light-grey);
+    }
+
+    .isbn-field {
+        padding: 20px;
+        border-right: 1px solid var(--light-grey);
+        border-bottom: 1px solid var(--light-grey);
+    }
+
+    .isbn-field:nth-child(2n) {
+        border-right: none;
+    }
+
+    .isbn-field:nth-last-child(-n+2) {
+        border-bottom: none;
+    }
+
+    .isbn-label {
+        display: block;
+        margin-bottom: 6px;
+        color: var(--grey);
+        font-family: "Courier New", monospace;
+        font-size: 9px;
+    }
+
+
+    /* =========================================================
+       EMPTY IMAGE
+    ========================================================= */
+
+    .blank-image {
+        display: flex;
+        min-height: 300px;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--light-grey);
+        background: white;
+        color: #ddd;
+        font-family: "Courier New", monospace;
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+
+    /* =========================================================
+       FOOTNOTE
+    ========================================================= */
+
+    .footnote {
+        margin-top: 12px;
+        color: var(--grey);
+        font-family: "Courier New", monospace;
+        font-size: 9px;
+    }
+
+
+    /* =========================================================
+       FINAL RECORD
+    ========================================================= */
+
+    .final-record {
+        margin-top: 90px;
+        padding: 30px;
+        background: var(--black);
+        color: white;
+    }
+
+    .final-record-label {
+        margin-bottom: 15px;
+        color: #999;
+        font-family: "Courier New", monospace;
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+    .final-record p {
+        max-width: 800px;
+        font-family: "Courier New", monospace;
+        font-size: 11px;
+        line-height: 1.8;
+    }
+
+
+    /* =========================================================
+       RESPONSIVE
+    ========================================================= */
+
+    @media (max-width: 800px) {
+
+        .classification {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .classification-item:nth-child(2) {
+            border-right: none;
+        }
+
+        .two-column {
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+
+        .image-log-row {
+            grid-template-columns: 80px 1fr;
+        }
+
+        .image-log-row span:last-child {
+            display: none;
+        }
+
+        .reading {
+            grid-template-columns: 70px 1fr;
+        }
+
+        .reading-status {
+            display: none;
+        }
+
+    }
+
+
+    @media (max-width: 550px) {
+
+        .classification {
+            grid-template-columns: 1fr;
+        }
+
+        .classification-item {
+            border-right: none;
+            border-bottom: 1px solid var(--light-grey);
+            padding: 15px 0 !important;
+        }
+
+        .isbn-box {
+            grid-template-columns: 1fr;
+        }
+
+        .isbn-field {
+            border-right: none;
+        }
+
+        .isbn-field:nth-last-child(-n+2) {
+            border-bottom: 1px solid var(--light-grey);
+        }
+
+        .isbn-field:last-child {
+            border-bottom: none;
+        }
+
+        .object-photo {
+            min-height: 280px;
+        }
+
+    }
+
+  
