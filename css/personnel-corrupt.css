@@ -2,7 +2,6 @@
 
 
 
-
         :root {
             --black: #111111;
             --dark-grey: #333333;
@@ -325,6 +324,40 @@
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
+        
+            .classification {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        border-bottom: 1px solid var(--light-grey);
+    }
+
+    .classification-item {
+        padding: 20px 20px 20px 0;
+        border-right: 1px solid var(--light-grey);
+    }
+
+    .classification-item:not(:first-child) {
+        padding-left: 20px;
+    }
+
+    .classification-item:last-child {
+        border-right: none;
+    }
+
+    .classification-label {
+        display: block;
+        margin-bottom: 5px;
+        color: var(--grey);
+        font-family: "Courier New", monospace;
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+    .classification-value {
+        font-size: 12px;
+        font-weight: 700;
+    }
+
 
 
 
@@ -902,7 +935,6 @@
     .data-table td:first-child {
         width: 40%;
     }
-}
 
 
 
